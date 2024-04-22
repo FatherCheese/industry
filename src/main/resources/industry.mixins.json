@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "baboon.industry.mixin",
+  "package": "cookie.industry.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "EntityMixin",

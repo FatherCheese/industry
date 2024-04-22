@@ -30,20 +30,20 @@
   "environment": "*",
   "entrypoints": {
     "beforeGameStart": [
-      "baboon.industry.Industry2"
+      "cookie.industry.Industry2"
     ],
     "beforeClientStart": [
-      "baboon.industry.Industry2"
+      "cookie.industry.Industry2"
     ],
     "recipesReady": [
-      "baboon.industry.recipe.RecipesTrommel",
-      "baboon.industry.recipe.I2Recipes"
+      "cookie.industry.recipe.RecipesTrommel",
+      "cookie.industry.recipe.I2Recipes"
     ],
     "btwaila": [
-      "baboon.industry.compat.btwaila.WailaPlugin"
+      "cookie.industry.compat.btwaila.WailaPlugin"
     ],
     "terrain-api": [
-      "baboon.industry.compat.terrainapi.TerrainAPIPlugin"
+      "cookie.industry.compat.terrainapi.TerrainAPIPlugin"
     ]
   },
   "mixins": [
