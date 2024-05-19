@@ -50,12 +50,11 @@ public class ItemToolNanoSword extends ItemToolElectric {
         world.playSoundAtEntity(null, player, "industry.laser", 1.0f, 1.0f);
         if (!world.isClientSide) {
             active = !active;
+
             if (active) {
                 stack.setMetadata(1);
                 modifyEnergy(stack, -10);
-            } else {
-                stack.setMetadata(0);
-            }
+            } else stack.setMetadata(0);
         }
 
         return stack;
@@ -79,8 +78,6 @@ public class ItemToolNanoSword extends ItemToolElectric {
 
     @Override
     public int getIconFromDamage(int id) {
-        if (id == 1)
-            return iconCoordToIndex(toolTexture[1][0], toolTexture[1][1]);
-        return iconCoordToIndex(toolTexture[0][0], toolTexture[0][1]);
+        return id == 1 ? iconCoordToIndex(toolTexture[1][0], toolTexture[1][1]) : iconCoordToIndex(toolTexture[0][0], toolTexture[0][1]);
     }
 }

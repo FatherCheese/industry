@@ -204,6 +204,19 @@ public class I2Recipes implements RecipeEntrypoint {
                 .addInput('4', I2Items.hvBattery)
                 .create("nanosword", I2Items.toolNanoSword.getDefaultStack());
 
+        new RecipeBuilderShaped(MOD_ID, "12 ", " 3 ", " 4 ")
+                .addInput('1', Item.quartz)
+                .addInput('2', Item.dustGlowstone)
+                .addInput('3', I2Items.hvBattery)
+                .addInput('4', I2Items.plateSteel)
+                .create("nanohoe", I2Items.toolNanoHoe.getDefaultStack());
+
+        new RecipeBuilderShaped(MOD_ID, "1 1", "121", " 3 ")
+                .addInput('1', I2Items.plateIron)
+                .addInput('2', I2Items.ingotBronze)
+                .addInput('3', I2Items.lvBattery)
+                .create("electric_wrench", I2Items.toolElectricWrench.getDefaultStack());
+
         new RecipeBuilderShaped(MOD_ID, "111", "121", " 3 ")
                 .addInput('1', I2Items.rubber)
                 .addInput('2', Block.glass)
@@ -505,7 +518,7 @@ public class I2Recipes implements RecipeEntrypoint {
                 .addInput('1', Block.spikes)
                 .addInput('2', I2Blocks.mvMachineCasing)
                 .addInput('3', I2Items.mvCircuit)
-                .create("mv_machine_meractor", I2Blocks.mvMachineMacerator.getDefaultStack());
+                .create("mv_machine_macerator", I2Blocks.mvMachineMacerator.getDefaultStack());
 
         new RecipeBuilderShaped(MOD_ID, "121", " 3 ")
                 .addInput('1', Block.obsidian)

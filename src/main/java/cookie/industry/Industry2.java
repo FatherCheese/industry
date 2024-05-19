@@ -16,11 +16,11 @@ public class Industry2 implements ModInitializer, GameStartEntrypoint, ClientSta
     public static Logger logger = LoggerFactory.getLogger(MOD_ID);
 
     /* IDEAS */
-    // Electric Wrench
-    // Powered bow : two modes - pulling and machine gun
-    // Chargers : Walk on or wear them
-    // Flight : Chestplate(s) such as jetpacks, or upgrades for the Iridium armor
-    // Oil : Could be used for fuel, plastic, lubricant, and a vehicle (possibly also cooking?)
+    // Chargers : Walk on or wear them.
+    // Farming stuff
+    // Iridium Armor upgrades : such as flight, fire resist, speed, .ect
+    // Flight : Chestplate(s) such as jetpacks
+    // Oil : Could be used for fuel, plastic, lubricant, and a vehicle. (possibly also cooking?)
 
     @Override
     public void onInitialize() {

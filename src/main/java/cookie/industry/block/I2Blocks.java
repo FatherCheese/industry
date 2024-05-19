@@ -143,6 +143,8 @@ public class I2Blocks {
         ItemToolPickaxe.miningLevels.put(blockCopper, 2);
         ItemToolPickaxe.miningLevels.put(blockBronze, 2);
         ItemToolPickaxe.miningLevels.put(lvGenerator, 2);
+        ItemToolPickaxe.miningLevels.put(lvMachineCasing, 2);
+        ItemToolPickaxe.miningLevels.put(mvMachineCasing, 2);
         ItemToolPickaxe.miningLevels.put(lvGeneratorWatermill, 2);
         ItemToolPickaxe.miningLevels.put(lvGeneratorWindmill, 2);
         ItemToolPickaxe.miningLevels.put(lvGeneratorGeothermal, 2);
@@ -259,7 +261,8 @@ public class I2Blocks {
         BlockBuilder machineBuilderBlank = new BlockBuilder(MOD_ID)
                 .setBlockSound(BlockSounds.METAL)
                 .setHardness(5.0f)
-                .setResistance(0.0f);
+                .setResistance(0.0f)
+                .setTags(BlockTags.MINEABLE_BY_PICKAXE);
 
         BlockBuilder machineBuilder = machineBuilderBlank
                 .setTopBottomTexture("machine_casing_basic.png")

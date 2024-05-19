@@ -36,8 +36,9 @@ tile.industry.machine.casing.name=Machine Casing
 tile.industry.machine.casing.desc=A thin iron casing used to make machines.
 tile.industry.machine.casing.advanced.name=Advanced Machine Casing
 tile.industry.machine.casing.advanced.desc=A thin steel casing used to make more advanced machines.
+tile.industry.machine.casing.ehv.name=EHV Machine Casing
 
-tile.industry.generator.name=Generator
+tile.industry.generator.name=LV Generator
 tile.industry.generator.desc=For turning fuel into power.
 tile.industry.generator.watermill.name=Watermill
 tile.industry.generator.watermill.desc=For turning water into power.
@@ -102,7 +103,7 @@ tile.industry.advanced.extractor.name=Advanced Extractor
 tile.industry.advanced.extractor.desc=For extracting blocks and items from other blocks and items.
 
 tile.industry.block.coal.hardened.name=Hardened Carbon
-tile.industry.block.coal.hardened.desc=With a little more compression, can turn into a fine gem.
+tile.industry.block.coal.hardened.desc=With a little more compression, it can turn into a fine gem.
 
 tile.industry.leaves.rubber.name=Rubberwood Leaves
 tile.industry.leaves.rubber.desc=Leaves from a rubberwood tree.

@@ -4,9 +4,13 @@ import cookie.industry.I2Config;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.entity.EntityLiving;
+import net.minecraft.core.entity.player.EntityPlayer;
+import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.item.tool.ItemToolPickaxe;
+import net.minecraft.core.util.helper.Side;
+import net.minecraft.core.world.World;
 
 public class ItemToolDrill extends ItemToolElectric {
     public ItemToolDrill(String name, int id, ToolMaterial toolMaterial) {

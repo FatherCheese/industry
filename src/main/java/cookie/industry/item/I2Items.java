@@ -12,9 +12,7 @@ import cookie.industry.item.radioactive.ItemCellRedstoneT1;
 import cookie.industry.item.radioactive.ItemCellRedstoneT2;
 import cookie.industry.item.radioactive.ItemCellRedstoneT3;
 import cookie.industry.item.radioactive.ItemRadioactive;
-import cookie.industry.item.toolelectric.ItemToolChainsaw;
-import cookie.industry.item.toolelectric.ItemToolDrill;
-import cookie.industry.item.toolelectric.ItemToolNanoSword;
+import cookie.industry.item.toolelectric.*;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemArmor;
 import net.minecraft.core.item.ItemFoodStackable;
@@ -83,6 +81,8 @@ public class I2Items {
     public static Item toolDrillGold;
     public static Item toolDrillDiamond;
     public static Item toolNanoSword;
+    public static Item toolNanoHoe;
+    public static Item toolElectricWrench;
 
     // Armor
     public static Item armorHelmetHazmat;
@@ -308,6 +308,13 @@ public class I2Items {
 
         toolNanoSword = ItemHelper.createItem(MOD_ID,
                 new ItemToolNanoSword("tool.nanosword", nextItemID("toolNanoSword")));
+
+        toolNanoHoe = ItemHelper.createItem(MOD_ID,
+                new ItemToolNanoHoe("tool.nanohoe", nextItemID("")));
+
+        toolElectricWrench = ItemHelper.createItem(MOD_ID,
+                new ItemToolElectricWrench("tool.wrench.electric", nextItemID("")),
+                "tool_electric_wrench.png");
 
         armorHelmetHazmat = ItemHelper.createItem(MOD_ID,
                 new ItemArmor("armor.helmet.hazmat", nextItemID("armorHelmetHazmat"), armorMaterialHazmat, 0),

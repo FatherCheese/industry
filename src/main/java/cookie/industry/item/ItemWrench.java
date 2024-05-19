@@ -11,17 +11,29 @@ public class ItemWrench extends Item {
     public ItemWrench(String name, int id) {
         super(name, id);
         setMaxDamage(127);
+        setFull3D();
+        setMaxStackSize(1);
     }
     @Override
-    public boolean onBlockDestroyed(World world, ItemStack itemstack, int id, int x, int y, int z, EntityLiving entityliving) {
+    public boolean onBlockDestroyed(World world, ItemStack stack, int id, int x, int y, int z, EntityLiving living) {
         Block block = Block.blocksList[id];
-        if (block != null && block.getHardness() > 0.0f && isSilkTouch()) {
-            itemstack.damageItem(1, entityliving);
+        if (block != null && block.getHardness() > 0.0f && block.hasTag(IndustryTags.REQUIRES_WRENCH)) {
+            stack.damageItem(1, living);
+
+            return true;
+        } else {
+            stack.damageItem(2, living);
         }
-        return true;
+
+        return false;
     }
     @Override
     public boolean canHarvestBlock(Block block) {
         return block.hasTag(IndustryTags.REQUIRES_WRENCH);
+    }
+
+    @Override
+    public float getStrVsBlock(ItemStack itemstack, Block block) {
+        return block.hasTag(IndustryTags.REQUIRES_WRENCH) ? 5.0F : 1.0F;
     }
 }
