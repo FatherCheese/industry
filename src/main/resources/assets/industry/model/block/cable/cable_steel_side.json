@@ -1,0 +1,6 @@
+{
+	"parent": "industry:block/cable_base_side",
+	"textures": {
+		"texture": "minecraft:block/block_steel_top"
+	}
+}

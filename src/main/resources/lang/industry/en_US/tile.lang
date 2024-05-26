@@ -128,3 +128,12 @@ tile.industry.fabricator.desc=Turns raw energy into (almost) any block or item.
 
 tile.industry.alarm.name=Alarm
 tile.industry.alarm.desc=Plays a loud sound when powered by redstone.
+
+tile.industry.lv_charger.name=LV Charger
+tile.industry.lv_charger.desc=Charges your electric items when stood on.
+tile.industry.mv_charger.name=MV Charger
+tile.industry.mv_charger.desc=Charges your electric items when stood on.
+tile.industry.hv_charger.name=HV Charger
+tile.industry.hv_charger.desc=Charges your electric items when stood on.
+tile.industry.ehv_charger.name=EHV Charger
+tile.industry.ehv_charger.desc=Charges your electric items when stood on.

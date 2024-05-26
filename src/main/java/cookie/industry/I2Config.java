@@ -24,8 +24,9 @@ public class I2Config {
                 .addEntry("ehvBatteryStorage", 10000000)
                 .addEntry("elvMachineStorage", 100)
                 .addEntry("lvMachineStorage", 1000)
-                .addEntry("mvMachineStorage", 10000)
-                .addEntry("ehvMachineStorage", 100000);
+                .addEntry("hvMachineStorage", 10000)
+                .addEntry("mvMachineStorage", 100000)
+                .addEntry("ehvMachineStorage", 1000000);
 
         properties.addCategory("World Gen")
                 .addEntry("copperOre", true)

@@ -16,6 +16,7 @@ import cookie.industry.item.toolelectric.*;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemArmor;
 import net.minecraft.core.item.ItemFoodStackable;
+import net.minecraft.core.item.ItemPlaceable;
 import net.minecraft.core.item.material.ArmorMaterial;
 import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.item.tag.ItemTags;
@@ -133,6 +134,11 @@ public class I2Items {
     public static Item upgradeBlasting;
 
     public static Item foodJoffos;
+
+    public static Item LV_CHARGER;
+    public static Item MV_CHARGER;
+    public static Item HV_CHARGER;
+    public static Item EHV_CHARGER;
 
     private void tagItems() {
         lvBattery.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
@@ -460,6 +466,19 @@ public class I2Items {
         foodJoffos = ItemHelper.createItem(MOD_ID,
                 new ItemFoodStackable("food.joffos", nextItemID("foodJoffos"), 1, false, 10),
                 "food_joffos.png");
+
+        LV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemPlaceable("lv_charger", nextItemID(""), I2Blocks.LV_CHARGER),
+                "charger_lv.png");
+        MV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemPlaceable("mv_charger", nextItemID(""), I2Blocks.MV_CHARGER),
+                "charger_mv.png");
+        HV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemPlaceable("hv_charger", nextItemID(""), I2Blocks.HV_CHARGER),
+                "charger_hv.png");
+        EHV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemPlaceable("ehv_charger", nextItemID(""), I2Blocks.EHV_CHARGER),
+                "charger_ehv.png");
 
         tagItems();
     }

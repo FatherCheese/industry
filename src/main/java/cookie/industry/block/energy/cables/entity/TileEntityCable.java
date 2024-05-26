@@ -5,14 +5,13 @@ import sunsetsatellite.catalyst.core.util.Connection;
 import sunsetsatellite.catalyst.core.util.Direction;
 
 public class TileEntityCable extends TileEntityEnergyConductorDamageable {
-    public TileEntityCable(){
-
+    public TileEntityCable() {
     }
 
-    public TileEntityCable(int capacity, int energy, int tranfer, int dangerLevel) {
+    public TileEntityCable(int capacity, int energy, int transfer, int dangerLevel) {
         setCapacity(capacity);
         setEnergy(energy);
-        setTransfer(tranfer);
+        setTransfer(transfer);
 
         for (Direction dir : Direction.values())
             setConnection(dir, Connection.BOTH);

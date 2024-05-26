@@ -20,6 +20,7 @@ public class WailaPlugin implements BTWailaCustomTooltipPlugin {
     public static TooltipReactorIO REACTOR_IO = new TooltipReactorIO();
     public static TooltipSolar SOLAR = new TooltipSolar();
     public static TooltipTransformer TRANSFORMER = new TooltipTransformer();
+    public static TooltipCharger CHARGER = new TooltipCharger();
 
     @Override
     public void initializePlugin(TooltipRegistry tooltipRegistry, Logger logger) {
@@ -39,5 +40,6 @@ public class WailaPlugin implements BTWailaCustomTooltipPlugin {
         tooltipRegistry.register(REACTOR_IO);
         tooltipRegistry.register(SOLAR);
         tooltipRegistry.register(TRANSFORMER);
+        tooltipRegistry.register(CHARGER);
     }
 }

@@ -1,0 +1,6 @@
+{
+	"parent": "industry:block/cable_base_side",
+	"textures": {
+		"texture": "industry:block/insulated_cable_copper"
+	}
+}

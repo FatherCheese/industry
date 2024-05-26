@@ -18,4 +18,10 @@ public class RecipesTrommel implements RecipeEntrypoint {
         Registries.RECIPES.TROMMEL.getItem("soul_sand").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawTin), 1), 1.0f);
         Registries.RECIPES.TROMMEL.getItem("soul_sand").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawCopper), 1), 1.0f);
     }
+
+    @Override
+    public void initNamespaces() {
+        Registries.RECIPES.register("industry", I2Recipes.INDUSTRY);
+        I2Recipes.INDUSTRY.register("trommel", Registries.RECIPES.TROMMEL);
+    }
 }

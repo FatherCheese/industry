@@ -18,7 +18,6 @@ public class TileEntityEnergyConductorDamageable extends TileEntityEnergyConduct
 
     private final Random random = new Random();
     private final int maxMachineHealth = 100;
-    private final int healAmount = 1;
     public int machineHealth = maxMachineHealth;
     private Boolean lastTickDamage = false;
     public TileEntityEnergyConductorDamageable() {
@@ -57,6 +56,7 @@ public class TileEntityEnergyConductorDamageable extends TileEntityEnergyConduct
                 worldObj.spawnParticle("flame", randX, randY + 0.22, randZ, 0.0, 0.0, 0.0);
             }
 
+            int healAmount = 1;
             if (!lastTickDamage && random.nextInt(4) == 0 && machineHealth + healAmount <= maxMachineHealth)
                 machineHealth += healAmount;
 

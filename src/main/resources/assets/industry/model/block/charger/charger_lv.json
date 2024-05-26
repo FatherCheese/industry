@@ -1,0 +1,6 @@
+{
+	"parent": "industry:block/charger",
+	"textures": {
+		"texture": "industry:block/charger_lv"
+	}
+}

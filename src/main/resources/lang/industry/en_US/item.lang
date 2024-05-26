@@ -169,3 +169,12 @@ item.industry.upgrade.blasting.desc=Makes your smelting machines burn even hotte
 
 item.industry.food.joffos.name=Joffo Cakes
 item.industry.food.joffos.desc=Delicious enough to spend an entire budget on!
+
+item.industry.lv_charger.name=LV Charger
+item.industry.lv_charger.desc=Charges your electric items when stood on.
+item.industry.mv_charger.name=MV Charger
+item.industry.mv_charger.desc=Charges your electric items when stood on.
+item.industry.hv_charger.name=HV Charger
+item.industry.hv_charger.desc=Charges your electric items when stood on.
+item.industry.ehv_charger.name=EHV Charger
+item.industry.ehv_charger.desc=Charges your electric items when stood on.

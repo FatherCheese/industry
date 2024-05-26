@@ -5,6 +5,12 @@ import cookie.industry.I2Config;
 import cookie.industry.IndustryTags;
 import cookie.industry.block.energy.cables.*;
 import cookie.industry.block.energy.cables.entity.TileEntityCable;
+import cookie.industry.block.energy.cables.metastates.CableMetaStates;
+import cookie.industry.block.energy.charger.BlockChargerEHV;
+import cookie.industry.block.energy.charger.BlockChargerHV;
+import cookie.industry.block.energy.charger.BlockChargerLV;
+import cookie.industry.block.energy.charger.BlockChargerMV;
+import cookie.industry.block.energy.charger.entity.*;
 import cookie.industry.block.energy.generator.*;
 import cookie.industry.block.energy.generator.entity.*;
 import cookie.industry.block.machines.advanced.*;
@@ -42,6 +48,8 @@ import sunsetsatellite.catalyst.Catalyst;
 import sunsetsatellite.catalyst.core.util.MpGuiEntry;
 import turniplabs.halplibe.helper.BlockBuilder;
 import turniplabs.halplibe.helper.EntityHelper;
+import useless.dragonfly.helper.ModelHelper;
+import useless.dragonfly.model.block.BlockModelDragonFly;
 
 public class I2Blocks {
     private final String MOD_ID = Industry2.MOD_ID;
@@ -129,6 +137,10 @@ public class I2Blocks {
     public static Block energyFabricator;
 
     public static Block alarm;
+    public static Block LV_CHARGER;
+    public static Block MV_CHARGER;
+    public static Block HV_CHARGER;
+    public static Block EHV_CHARGER;
 
     private void initializePickaxeLevels() {
         ItemToolPickaxe.miningLevels.put(oreTinStone, 1);
@@ -139,6 +151,7 @@ public class I2Blocks {
         ItemToolPickaxe.miningLevels.put(oreCopperBasalt, 1);
         ItemToolPickaxe.miningLevels.put(oreCopperLimestone, 1);
         ItemToolPickaxe.miningLevels.put(oreCopperGranite, 1);
+        ItemToolPickaxe.miningLevels.put(LV_CHARGER, 1);
         ItemToolPickaxe.miningLevels.put(blockTin, 2);
         ItemToolPickaxe.miningLevels.put(blockCopper, 2);
         ItemToolPickaxe.miningLevels.put(blockBronze, 2);
@@ -160,6 +173,9 @@ public class I2Blocks {
         ItemToolPickaxe.miningLevels.put(transformerEHVtoHV, 2);
         ItemToolPickaxe.miningLevels.put(alarm, 2);
         ItemToolPickaxe.miningLevels.put(ulvGeneratorRTG, 2);
+        ItemToolPickaxe.miningLevels.put(MV_CHARGER, 2);
+        ItemToolPickaxe.miningLevels.put(HV_CHARGER, 2);
+        ItemToolPickaxe.miningLevels.put(EHV_CHARGER, 2);
         ItemToolPickaxe.miningLevels.put(hardenedCoal, 3);
     }
 
@@ -229,6 +245,10 @@ public class I2Blocks {
         EntityHelper.Core.createTileEntity(TileEntityReactorIO.class, "IndustryReactorIO");
         EntityHelper.Core.createTileEntity(TileEntityEnergyFabricator.class, "IndustryFabricator");
         EntityHelper.Core.createTileEntity(TileEntityReactorRTG.class, "IndustryReactorRTG");
+        EntityHelper.Core.createTileEntity(TileEntityChargerLV.class, "IndustryChargerLV");
+        EntityHelper.Core.createTileEntity(TileEntityChargerMV.class, "IndustryChargerMV");
+        EntityHelper.Core.createTileEntity(TileEntityChargerHV.class, "IndustryChargerHV");
+        EntityHelper.Core.createTileEntity(TileEntityChargerEHV.class, "IndustryChargerEHV");
     }
 
     public void initializeBlocks() {
@@ -248,14 +268,12 @@ public class I2Blocks {
                 .setBlockSound(BlockSounds.METAL)
                 .setHardness(0.2f)
                 .setResistance(0.0f)
-                .setBlockModel(new BlockModelRenderBlocks(32))
                 .setTags(BlockTags.NOT_IN_CREATIVE_MENU);
 
         BlockBuilder insulatedCableBuilder = new BlockBuilder(MOD_ID)
                 .setBlockSound(BlockSounds.CLOTH)
                 .setHardness(0.2f)
                 .setResistance(0.0f)
-                .setBlockModel(new BlockModelRenderBlocks(32))
                 .setTags(BlockTags.NOT_IN_CREATIVE_MENU);
 
         BlockBuilder machineBuilderBlank = new BlockBuilder(MOD_ID)
@@ -328,34 +346,58 @@ public class I2Blocks {
 
         blockCableTin = cableBuilder
                 .setTextures("block_tin_top.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "cable_tin.json"), new CableMetaStates(), true))
                 .build(new BlockCableTin("cable.tin", nextBlockID(), Material.metal));
 
         blockCableCopper = cableBuilder
                 .setTextures("block_copper_top.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "cable_copper.json"), new CableMetaStates(), true))
                 .build(new BlockCableCopper("cable.copper", nextBlockID(), Material.metal));
 
         blockCableGold = cableBuilder
                 .setTextures(17, 4)
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "cable_gold.json"), new CableMetaStates(), true))
                 .build(new BlockCableGold("cable.gold", nextBlockID(), Material.metal));
 
         blockCableSteel = cableBuilder
                 .setTextures(19, 4)
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "cable_steel.json"), new CableMetaStates(), true))
                 .build(new BlockCableSteel("cable.steel", nextBlockID(), Material.metal));
 
         blockInsulatedCableTin = insulatedCableBuilder
                 .setTextures("insulated_cable_tin.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_tin.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableTin("cable.tin", nextBlockID(), Material.cloth));
 
         blockInsulatedCableCopper = insulatedCableBuilder
                 .setTextures("insulated_cable_copper.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_copper.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableCopper("cable.copper", nextBlockID(), Material.cloth));
 
         blockInsulatedCableGold = insulatedCableBuilder
                 .setTextures("insulated_cable_gold.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_gold.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableGold("cable.gold", nextBlockID(), Material.cloth));
 
         blockInsulatedCableSteel = insulatedCableBuilder
                 .setTextures("insulated_cable_steel.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
+                        ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_steel.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableSteel("cable.steel", nextBlockID(), Material.cloth));
 
         lvMachineCasing = machineBuilderBlank
@@ -692,6 +734,41 @@ public class I2Blocks {
                 .build(new BlockAlarm("alarm", nextBlockID()))
                 .setTicking(true)
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
+        LV_CHARGER = new BlockBuilder(MOD_ID)
+                .setBlockSound(BlockSounds.WOOD)
+                .setHardness(5.0f)
+                .setResistance(0.0f)
+                .setTextures("charger_lv.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/charger/charger_lv.json"))
+                )
+                .setTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_PICKAXE)
+                .build(new BlockChargerLV("lv_charger", nextBlockID()));
+
+        MV_CHARGER = machineBuilder
+                .setTextures("charger_mv.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/charger/charger_mv.json"))
+                )
+                .setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+                .build(new BlockChargerMV("mv_charger", nextBlockID()));
+
+        HV_CHARGER = machineBuilder
+                .setTextures("charger_hv.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/charger/charger_hv.json"))
+                )
+                .setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+                .build(new BlockChargerHV("hv_charger", nextBlockID()));
+
+        EHV_CHARGER = machineBuilder
+                .setTextures("charger_ehv.png")
+                .setBlockModel(new BlockModelDragonFly(
+                        ModelHelper.getOrCreateBlockModel(MOD_ID, "block/charger/charger_ehv.json"))
+                )
+                .setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+                .build(new BlockChargerEHV("ehv_charger", nextBlockID()));
 
         registerGUIs();
         createTileEntities();

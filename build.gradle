@@ -15,7 +15,9 @@ loom {
 
 repositories {
 	mavenCentral()
-	maven { url = "https://jitpack.io" }
+	maven {
+		url = "https://jitpack.io"
+	}
 	maven {
 		name = 'Babric'
 		url = 'https://maven.glass-launcher.net/babric'
@@ -109,17 +111,17 @@ dependencies {
 	modImplementation "com.github.Turnip-Labs:bta-halplibe:${project.halplibe_version}"
 
 	// Energy API
-	modImplementation files('dependencies/catalyst-core-1.1.8.jar')
-	modImplementation files('dependencies/catalyst-energy-1.0.8.jar')
+	modImplementation files('dependencies/catalyst-core-1.2.0.jar')
+	modImplementation files('dependencies/catalyst-energy-1.0.9.jar')
 
 	// Terrain API
 	modImplementation "TerrainAPI:terrainapi:${project.terrain_api_version}"
+	modImplementation "DragonFly:dragonfly:${project.dragonfly_version}"
 
 	// Mod Compatability
 	modImplementation "btwaila:btwaila:1.0.9-7.1"
 
 	modImplementation "ModMenu:ModMenu:2.0.5"
-
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"
 	implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"
