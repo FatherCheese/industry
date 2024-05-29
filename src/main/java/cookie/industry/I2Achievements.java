@@ -14,38 +14,38 @@ import turniplabs.halplibe.util.achievements.GuiAchievements;
 import java.util.Random;
 
 public class I2Achievements extends AchievementPage {
-    public static final Achievement ROOT1 = new Achievement(AchievementList.achievementList.size() + 1,"industry.resin", -3, -1, I2Items.resin, null);
-    public static final Achievement ROOT2 = new Achievement(AchievementList.achievementList.size() + 1,"industry.ores", -3, 1, I2Blocks.oreCopperStone, ROOT1);
-    public static final Achievement TOOL1 = new Achievement(AchievementList.achievementList.size() + 1,"industry.hammer", -1, 0, I2Items.toolHammer, ROOT2);
-    public static final Achievement TOOL2 = new Achievement(AchievementList.achievementList.size() + 1,"industry.cutters", 0, 0, I2Items.toolCutters, TOOL1);
-    public static final Achievement CABLES = new Achievement(AchievementList.achievementList.size() + 1, "industry.cables", 2, 0, I2Items.itemInsulatedCableTin, TOOL2);
-    public static final Achievement GENERATOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.generator", 5, 0, I2Blocks.lvGenerator, CABLES);
-    public static final Achievement FURNACE = new Achievement(AchievementList.achievementList.size() + 1, "industry.furnace", 4, -1, I2Blocks.lvMachineFurnace, GENERATOR);
-    public static final Achievement MACERATOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.macerator", 4, -2, I2Blocks.lvMachineMacerator, GENERATOR);
-    public static final Achievement COMPRESSOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.compressor", 4, -3, I2Blocks.lvMachineCompressor, GENERATOR);
-    public static final Achievement WIREMILL = new Achievement(AchievementList.achievementList.size() + 1, "industry.wiremill", 4, -4, I2Blocks.lvMachineWiremill, GENERATOR);
-    public static final Achievement EXTRACTOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.extractor", 6, -1, I2Blocks.lvMachineExtractor, GENERATOR);
-    public static final Achievement RECYCLER = new Achievement(AchievementList.achievementList.size() + 1, "industry.recycler", 6, -2, I2Blocks.lvMachineRecycler, GENERATOR);
-    public static final Achievement CANNERY = new Achievement(AchievementList.achievementList.size() + 1, "industry.cannery", 6, -3, I2Blocks.machineCannery, GENERATOR);
-    public static final Achievement TROMMEL = new Achievement(AchievementList.achievementList.size() + 1, "industry.trommel", 6, -4, I2Blocks.lvMachineTrommel, GENERATOR);
-    public static final Achievement WATERMILL = new Achievement(AchievementList.achievementList.size() + 1, "industry.watermill", 4, 1, I2Blocks.lvGeneratorWatermill, GENERATOR);
-    public static final Achievement WINDMILL = new Achievement(AchievementList.achievementList.size() + 1, "industry.windmill", 4, 2, I2Blocks.lvGeneratorWindmill, GENERATOR);
-    public static final Achievement GEOTHERMAL = new Achievement(AchievementList.achievementList.size() + 1, "industry.geothermal", 4, 3, I2Blocks.lvGeneratorGeothermal, GENERATOR);
-    public static final Achievement SOLAR = new Achievement(AchievementList.achievementList.size() + 1, "industry.solar", 6, 1, I2Blocks.ulvGeneratorSolar, GENERATOR);
-    public static final Achievement ARRAY1 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.lv", 6, 2, I2Blocks.lvGeneratorSolar, SOLAR);
-    public static final Achievement ARRAY2 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.mv", 6, 3, I2Blocks.mvGeneratorSolar, ARRAY1);
-    public static final Achievement ARRAY3 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.hv", 6, 4, I2Blocks.hvGeneratorSolar, ARRAY2);
-    public static final Achievement ARRAY4 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.ehv", 6, 5, I2Blocks.ehvGeneratorSolar, ARRAY3);
-    public static final Achievement BATBOX1 = new Achievement(AchievementList.achievementList.size() + 1, "industry.batbox", 9, 0, I2Blocks.lvBatbox, GENERATOR);
-    public static final Achievement DRILL1 = new Achievement(AchievementList.achievementList.size() + 1, "industry.drill", 9, -2, I2Items.toolDrill, BATBOX1);
-    public static final Achievement DRILL2 = new Achievement(AchievementList.achievementList.size() + 1, "industry.drill.gold", 9, -3, I2Items.toolDrillGold, DRILL1);
-    public static final Achievement DRILL3 = new Achievement(AchievementList.achievementList.size() + 1, "industry.drill.diamond", 9, -4, I2Items.toolDrillDiamond, DRILL2);
-    public static final Achievement CHAINSAW = new Achievement(AchievementList.achievementList.size() + 1, "industry.chainsaw", 8, -2, I2Items.toolChainsaw, DRILL1);
-    public static final Achievement NANOSWORD = new Achievement(AchievementList.achievementList.size() + 1, "industry.nanosword", 10, -2, I2Items.toolNanoSword, DRILL1);
-    public static final Achievement REACTOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.reactor", 9, 7, I2Blocks.nuclearReactor, BATBOX1);
-    public static final Achievement FABRICATOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.fabricator", 7, 7, I2Blocks.energyFabricator, REACTOR);
-    public static final Achievement IRIDIUM = new Achievement(AchievementList.achievementList.size() + 1, "industry.iridium", 5, 7, I2Items.ingotIridium, FABRICATOR);
-    public static final Achievement IRIDIUMARMOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.iridiumarmor", 4, 7, I2Items.armorHelmetIridium, IRIDIUM);
+    public static final Achievement ROOT1 = new Achievement(AchievementList.achievementList.size() + 1,"industry.resin", -3, -1, I2Items.RESIN, null);
+    public static final Achievement ROOT2 = new Achievement(AchievementList.achievementList.size() + 1,"industry.ores", -3, 1, I2Blocks.STONE_COPPER_ORE, ROOT1);
+    public static final Achievement TOOL1 = new Achievement(AchievementList.achievementList.size() + 1,"industry.hammer", -1, 0, I2Items.TOOL_HAMMER, ROOT2);
+    public static final Achievement TOOL2 = new Achievement(AchievementList.achievementList.size() + 1,"industry.cutters", 0, 0, I2Items.TOOL_CUTTERS, TOOL1);
+    public static final Achievement CABLES = new Achievement(AchievementList.achievementList.size() + 1, "industry.cables", 2, 0, I2Items.INSULATED_STEEL_TIN, TOOL2);
+    public static final Achievement GENERATOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.generator", 5, 0, I2Blocks.LV_GENERATOR, CABLES);
+    public static final Achievement FURNACE = new Achievement(AchievementList.achievementList.size() + 1, "industry.furnace", 4, -1, I2Blocks.LV_ELECTRIC_FURNACE, GENERATOR);
+    public static final Achievement MACERATOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.macerator", 4, -2, I2Blocks.LV_MACERATOR, GENERATOR);
+    public static final Achievement COMPRESSOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.compressor", 4, -3, I2Blocks.LV_COMPRESSOR, GENERATOR);
+    public static final Achievement WIREMILL = new Achievement(AchievementList.achievementList.size() + 1, "industry.wiremill", 4, -4, I2Blocks.LV_WIREMILL, GENERATOR);
+    public static final Achievement EXTRACTOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.extractor", 6, -1, I2Blocks.LV_EXTRACTOR, GENERATOR);
+    public static final Achievement RECYCLER = new Achievement(AchievementList.achievementList.size() + 1, "industry.recycler", 6, -2, I2Blocks.LV_RECYCLER, GENERATOR);
+    public static final Achievement CANNERY = new Achievement(AchievementList.achievementList.size() + 1, "industry.cannery", 6, -3, I2Blocks.LV_CANNERY, GENERATOR);
+    public static final Achievement TROMMEL = new Achievement(AchievementList.achievementList.size() + 1, "industry.trommel", 6, -4, I2Blocks.LV_ELECTRIC_TROMMEL, GENERATOR);
+    public static final Achievement WATERMILL = new Achievement(AchievementList.achievementList.size() + 1, "industry.watermill", 4, 1, I2Blocks.LV_WATERMILL, GENERATOR);
+    public static final Achievement WINDMILL = new Achievement(AchievementList.achievementList.size() + 1, "industry.windmill", 4, 2, I2Blocks.LV_WINDMILL, GENERATOR);
+    public static final Achievement GEOTHERMAL = new Achievement(AchievementList.achievementList.size() + 1, "industry.geothermal", 4, 3, I2Blocks.LV_GEOTHERMAL_GENERATOR, GENERATOR);
+    public static final Achievement SOLAR = new Achievement(AchievementList.achievementList.size() + 1, "industry.solar", 6, 1, I2Blocks.ULV_SOLAR_PANEL, GENERATOR);
+    public static final Achievement ARRAY1 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.lv", 6, 2, I2Blocks.LV_SOLAR_ARRAY, SOLAR);
+    public static final Achievement ARRAY2 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.mv", 6, 3, I2Blocks.MV_SOLAR_ARRAY, ARRAY1);
+    public static final Achievement ARRAY3 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.hv", 6, 4, I2Blocks.HV_SOLAR_ARRAY, ARRAY2);
+    public static final Achievement ARRAY4 = new Achievement(AchievementList.achievementList.size() + 1, "industry.array.ehv", 6, 5, I2Blocks.EHV_SOLAR_ARRAY, ARRAY3);
+    public static final Achievement BATBOX1 = new Achievement(AchievementList.achievementList.size() + 1, "industry.batbox", 9, 0, I2Blocks.LV_BATBOX, GENERATOR);
+    public static final Achievement DRILL1 = new Achievement(AchievementList.achievementList.size() + 1, "industry.drill", 9, -2, I2Items.TOOL_DRILL, BATBOX1);
+    public static final Achievement DRILL2 = new Achievement(AchievementList.achievementList.size() + 1, "industry.drill.gold", 9, -3, I2Items.TOOL_GOLDEN_DRILL, DRILL1);
+    public static final Achievement DRILL3 = new Achievement(AchievementList.achievementList.size() + 1, "industry.drill.diamond", 9, -4, I2Items.TOOL_DIAMOND_DRILL, DRILL2);
+    public static final Achievement CHAINSAW = new Achievement(AchievementList.achievementList.size() + 1, "industry.chainsaw", 8, -2, I2Items.TOOL_CHAINSAW, DRILL1);
+    public static final Achievement NANOSWORD = new Achievement(AchievementList.achievementList.size() + 1, "industry.nanosword", 10, -2, I2Items.TOOL_NANOSWORD, DRILL1);
+    public static final Achievement REACTOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.reactor", 9, 7, I2Blocks.NUCLEAR_REACTOR, BATBOX1);
+    public static final Achievement FABRICATOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.fabricator", 7, 7, I2Blocks.ENERGY_FABRICATOR, REACTOR);
+    public static final Achievement IRIDIUM = new Achievement(AchievementList.achievementList.size() + 1, "industry.iridium", 5, 7, I2Items.IRIDIUM_INGOT, FABRICATOR);
+    public static final Achievement IRIDIUMARMOR = new Achievement(AchievementList.achievementList.size() + 1, "industry.iridiumarmor", 4, 7, I2Items.IRIDIUM_HELMET, IRIDIUM);
 
 
     public I2Achievements() {
@@ -92,7 +92,7 @@ public class I2Achievements extends AchievementPage {
             GL11.glColor4f(f5, f5, f5, 1.0f);
             int i8 = 0;
             while (i8 * 16 - blockX2 < 224) {
-                int k8 = I2Blocks.lvMachineCasing.getBlockTextureFromSideAndMetadata(Side.BOTTOM,0);
+                int k8 = I2Blocks.LV_MACHINE_CASING.getBlockTextureFromSideAndMetadata(Side.BOTTOM,0);
                 guiAchievements.drawTexturedModalRect(iOffset + i8 * 16 - blockX2, jOffset + l7 * 16 - blockY2, k8 % Global.TEXTURE_ATLAS_WIDTH_TILES * TextureFX.tileWidthTerrain, k8 / Global.TEXTURE_ATLAS_WIDTH_TILES * TextureFX.tileWidthTerrain, 16, 16, TextureFX.tileWidthTerrain, 1.0f / (float)(Global.TEXTURE_ATLAS_WIDTH_TILES * TextureFX.tileWidthTerrain));
                 ++i8;
             }

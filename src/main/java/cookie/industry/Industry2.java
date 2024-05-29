@@ -16,7 +16,6 @@ public class Industry2 implements ModInitializer, GameStartEntrypoint, ClientSta
     public static Logger logger = LoggerFactory.getLogger(MOD_ID);
 
     /* IDEAS */
-    // Chargers : Walk on or wear them.
     // Farming stuff
     // Iridium Armor upgrades : such as flight, fire resist, speed, .ect
     // Flight : Chestplate(s) such as jetpacks

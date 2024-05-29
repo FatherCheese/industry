@@ -65,6 +65,6 @@ public class BlockEnergyFabricator extends BlockTileEntityRotatable {
         if (dropCause == EnumDropCause.PICK_BLOCK || dropCause == EnumDropCause.PROPER_TOOL)
             return new ItemStack[]{new ItemStack(this)};
         else
-            return new ItemStack[]{new ItemStack(I2Blocks.nuclearChamber)};
+            return new ItemStack[]{new ItemStack(I2Blocks.NUCLEAR_CHAMBER)};
     }
 }

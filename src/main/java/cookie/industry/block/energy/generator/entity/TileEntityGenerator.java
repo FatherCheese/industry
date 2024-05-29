@@ -11,7 +11,6 @@ import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.player.inventory.IInventory;
 import sunsetsatellite.catalyst.core.util.Connection;
 import sunsetsatellite.catalyst.core.util.Direction;
-import sunsetsatellite.catalyst.energy.api.IEnergyItem;
 import sunsetsatellite.catalyst.energy.impl.ItemEnergyContainer;
 import sunsetsatellite.catalyst.energy.impl.TileEntityEnergyConductor;
 
@@ -136,7 +135,7 @@ public class TileEntityGenerator extends TileEntityEnergyConductor implements II
             }
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.lvGenerator.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.LV_GENERATOR.id);
         }
     }
 

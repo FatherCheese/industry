@@ -10,7 +10,7 @@ public class GeneratorGeothermalFuel {
 
     public GeneratorGeothermalFuel() {
         addFuel(Item.bucketLava.id, 1000);
-        addFuel(I2Items.cellLava.id, 1000);
+        addFuel(I2Items.LAVA_CELL.id, 1000);
         addFuel(Item.nethercoal.id, 250);
     }
 

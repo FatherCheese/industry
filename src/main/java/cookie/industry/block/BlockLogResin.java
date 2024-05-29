@@ -20,14 +20,14 @@ public class BlockLogResin extends BlockLog {
     @Override
     public void updateTick(World world, int x, int y, int z, Random rand) {
         int meta = world.getBlockMetadata(x, y, z);
-        world.setBlockAndMetadataWithNotify(x, y, z, I2Blocks.logRubberWoodResinFull.id, meta);
+        world.setBlockAndMetadataWithNotify(x, y, z, I2Blocks.EMPTY_RUBBERWOOD_RESIN_LOG.id, meta);
     }
 
     @Override
     public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
         ItemStack itemStack = player.getHeldItem();
 
-        if (itemStack != null && itemStack.getItem() == I2Items.toolTreetap) {
+        if (itemStack != null && itemStack.getItem() == I2Items.TOOL_TREETAP) {
             world.playSoundAtEntity(player, null, "industry.tap", 0.4f, 1.0f);
         }
 
@@ -41,8 +41,8 @@ public class BlockLogResin extends BlockLog {
     @Override
     public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
         if (dropCause == EnumDropCause.PICK_BLOCK) {
-            return new ItemStack[]{new ItemStack(I2Blocks.logRubberWoodResinFull)};
+            return new ItemStack[]{new ItemStack(I2Blocks.EMPTY_RUBBERWOOD_RESIN_LOG)};
         }
-        return new ItemStack[]{new ItemStack(I2Blocks.logRubberWood)};
+        return new ItemStack[]{new ItemStack(I2Blocks.RUBBERWOOD_LOG)};
     }
 }

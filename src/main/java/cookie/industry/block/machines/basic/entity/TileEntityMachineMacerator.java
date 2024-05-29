@@ -53,7 +53,7 @@ public class TileEntityMachineMacerator extends TileEntityMachineBase {
         boolean machineUpdated = false;
 
         if (!worldObj.isClientSide) {
-            if (worldObj.getBlockId(x, y, z) == I2Blocks.lvMachineMacerator.id &&
+            if (worldObj.getBlockId(x, y, z) == I2Blocks.LV_MACERATOR.id &&
             currentMachineTime == 0 &&
             contents[2] == null) {
                 BlockMachineMacerator.updateBlockState(true, worldObj, x, y, z);
@@ -83,7 +83,7 @@ public class TileEntityMachineMacerator extends TileEntityMachineBase {
                 onInventoryChanged();
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.lvMachineMacerator.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.LV_MACERATOR.id);
         }
     }
 }

@@ -53,7 +53,7 @@ public class TileEntityMachineExtractor extends TileEntityMachineBase {
         boolean machineUpdated = false;
 
         if (!worldObj.isClientSide) {
-            if (worldObj.getBlockId(x, y, z) == I2Blocks.lvMachineExtractor.id &&
+            if (worldObj.getBlockId(x, y, z) == I2Blocks.LV_EXTRACTOR.id &&
             currentMachineTime == 0 &&
             contents[2] == null) {
                 BlockMachineExtractor.updateBlockState(true, worldObj, x, y, z);
@@ -83,7 +83,7 @@ public class TileEntityMachineExtractor extends TileEntityMachineBase {
                 onInventoryChanged();
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.lvMachineExtractor.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.LV_EXTRACTOR.id);
         }
     }
 }

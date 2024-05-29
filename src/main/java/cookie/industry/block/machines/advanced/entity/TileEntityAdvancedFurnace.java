@@ -98,7 +98,7 @@ public class TileEntityAdvancedFurnace extends TileEntityAdvancedBase {
         blasting = false;
         for (int upgradesSize = 7; upgradesSize < 11; upgradesSize++) {
             if (contents[upgradesSize] != null) {
-                if (contents[upgradesSize].getItem() == I2Items.upgradeBlasting)
+                if (contents[upgradesSize].getItem() == I2Items.BLASTING_UPGRADE)
                     blasting = true;
             }
         }
@@ -155,7 +155,7 @@ public class TileEntityAdvancedFurnace extends TileEntityAdvancedBase {
             }
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.mvMachineFurnace.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.MV_ELECTRIC_FURNACE.id);
         }
     }
 }

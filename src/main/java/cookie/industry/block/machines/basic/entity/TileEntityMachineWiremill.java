@@ -53,7 +53,7 @@ public class TileEntityMachineWiremill extends TileEntityMachineBase {
         boolean machineUpdated = false;
 
         if (!worldObj.isClientSide) {
-            if (worldObj.getBlockId(x, y, z) == I2Blocks.lvMachineWiremill.id &&
+            if (worldObj.getBlockId(x, y, z) == I2Blocks.LV_WIREMILL.id &&
             currentMachineTime == 0 &&
             contents[2] == null) {
                 BlockMachineWiremill.updateBlockState(true, worldObj, x, y, z);
@@ -83,7 +83,7 @@ public class TileEntityMachineWiremill extends TileEntityMachineBase {
                 onInventoryChanged();
 
             if (active) {
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.lvMachineWiremill.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.LV_WIREMILL.id);
             }
         }
     }

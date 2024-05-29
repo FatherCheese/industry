@@ -118,7 +118,7 @@ public class TileEntityAdvancedWiremill extends TileEntityAdvancedBase {
             }
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.mvMachineWiremill.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.MV_WIREMILL.id);
         }
     }
 }

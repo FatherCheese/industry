@@ -29,7 +29,7 @@ public class BlockOreCopper extends Block {
             case PICK_BLOCK:
                 return new ItemStack[]{new ItemStack(this)};
             case PROPER_TOOL:
-                return new ItemStack[]{new ItemStack(I2Items.oreRawCopper)};
+                return new ItemStack[]{new ItemStack(I2Items.RAW_COPPER)};
             default:
                 return null;
         }

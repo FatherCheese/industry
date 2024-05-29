@@ -111,23 +111,23 @@ public class TileEntityMachineBase extends TileEntityEnergyConductorDamageable i
 
         for (int upgradesSize = 4; upgradesSize < contents.length; upgradesSize++) {
             if (contents[upgradesSize] != null) {
-                if (contents[upgradesSize].getItem() == I2Items.upgradeSpeed) {
+                if (contents[upgradesSize].getItem() == I2Items.SPEED_UPGRADE) {
                     currentSpeed += 1;
                     maxMachineTime *= 1 - 0.3;
                 }
 
-                if (contents[upgradesSize].getItem() == I2Items.upgradeEnergy) {
+                if (contents[upgradesSize].getItem() == I2Items.ENERGY_UPGRADE) {
                     currentEnergy += 1;
                     capacity += 10000;
                 }
 
-                if (contents[upgradesSize].getItem() == I2Items.upgradeTransformer)
+                if (contents[upgradesSize].getItem() == I2Items.TRANSFORMER_UPGRADE)
                     currentTransformers += 1;
 
-                if (contents[upgradesSize].getItem() == I2Items.upgradePuller)
+                if (contents[upgradesSize].getItem() == I2Items.PULLER_UPGRADE)
                     currentPuller = 1;
 
-                if (contents[upgradesSize].getItem() == I2Items.upgradePusher)
+                if (contents[upgradesSize].getItem() == I2Items.PUSHER_UPGRADE)
                     currentPusher = 1;
             }
         }

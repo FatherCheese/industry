@@ -118,7 +118,7 @@ public class TileEntityAdvancedCompressor extends TileEntityAdvancedBase {
             }
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.mvMachineCompressor.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.MV_COMPRESSOR.id);
         }
     }
 }

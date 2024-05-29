@@ -32,6 +32,6 @@ public class BlockChargerEHV extends BlockTileEntity {
 
     @Override
     public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
-        return dropCause != EnumDropCause.IMPROPER_TOOL ? new ItemStack[]{new ItemStack(I2Items.EHV_CHARGER)} : null;
+        return dropCause != EnumDropCause.IMPROPER_TOOL ? new ItemStack[]{new ItemStack(I2Items.EHV_CHARGER_BLOCK)} : null;
     }
 }

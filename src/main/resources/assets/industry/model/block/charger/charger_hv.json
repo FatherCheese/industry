@@ -1,6 +1,7 @@
 {
 	"parent": "industry:block/charger",
 	"textures": {
-		"texture": "industry:block/charger_hv"
+		"texture": "industry:block/charger_hv",
+		"texture2": "industry:block/batboxhv_bottom"
 	}
 }

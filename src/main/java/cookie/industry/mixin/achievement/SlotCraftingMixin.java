@@ -21,103 +21,103 @@ public abstract class SlotCraftingMixin {
     @Inject(method = "onPickupFromSlot", at = @At("TAIL"))
     private void industry_pickupFromSlot(ItemStack itemStack, CallbackInfo ci) {
         Item item = itemStack.getItem();
-        if (item.id == I2Items.toolHammer.id)
+        if (item.id == I2Items.TOOL_HAMMER.id)
             thePlayer.addStat(I2Achievements.TOOL1, 1);
 
-        if (item.id == I2Items.toolCutters.id)
+        if (item.id == I2Items.TOOL_CUTTERS.id)
             thePlayer.addStat(I2Achievements.TOOL2, 1);
 
-        if (item.id == I2Items.itemInsulatedCableTin.id ||
-                item.id == I2Items.itemInsulatedCableCopper.id ||
-                item.id == I2Items.itemInsulatedCableGold.id ||
-                item.id == I2Items.itemInsulatedCableSteel.id)
+        if (item.id == I2Items.INSULATED_STEEL_TIN.id ||
+                item.id == I2Items.INSULATED_COPPER_CABLE.id ||
+                item.id == I2Items.INSULATED_GOLD_CABLE.id ||
+                item.id == I2Items.INSULATED_STEEL_CABLE.id)
             thePlayer.addStat(I2Achievements.CABLES, 1);
 
-        if (item.id == I2Blocks.lvGenerator.id)
+        if (item.id == I2Blocks.LV_GENERATOR.id)
             thePlayer.addStat(I2Achievements.GENERATOR, 1);
 
-        if (item.id == I2Blocks.lvMachineFurnace.id)
+        if (item.id == I2Blocks.LV_ELECTRIC_FURNACE.id)
             thePlayer.addStat(I2Achievements.FURNACE, 1);
 
-        if (item.id == I2Blocks.lvMachineMacerator.id)
+        if (item.id == I2Blocks.LV_MACERATOR.id)
             thePlayer.addStat(I2Achievements.MACERATOR, 1);
 
-        if (item.id == I2Blocks.lvMachineCompressor.id)
+        if (item.id == I2Blocks.LV_COMPRESSOR.id)
             thePlayer.addStat(I2Achievements.COMPRESSOR, 1);
 
-        if (item.id == I2Blocks.lvMachineWiremill.id)
+        if (item.id == I2Blocks.LV_WIREMILL.id)
             thePlayer.addStat(I2Achievements.WIREMILL, 1);
 
-        if (item.id == I2Blocks.lvMachineExtractor.id)
+        if (item.id == I2Blocks.LV_EXTRACTOR.id)
             thePlayer.addStat(I2Achievements.EXTRACTOR, 1);
 
-        if (item.id == I2Blocks.lvMachineRecycler.id)
+        if (item.id == I2Blocks.LV_RECYCLER.id)
             thePlayer.addStat(I2Achievements.RECYCLER, 1);
 
-        if (item.id == I2Blocks.machineCannery.id)
+        if (item.id == I2Blocks.LV_CANNERY.id)
             thePlayer.addStat(I2Achievements.CANNERY, 1);
 
-        if (item.id == I2Blocks.lvMachineTrommel.id)
+        if (item.id == I2Blocks.LV_ELECTRIC_TROMMEL.id)
             thePlayer.addStat(I2Achievements.TROMMEL, 1);
 
-        if (item.id == I2Blocks.lvGeneratorWatermill.id)
+        if (item.id == I2Blocks.LV_WATERMILL.id)
             thePlayer.addStat(I2Achievements.WATERMILL, 1);
 
-        if (item.id == I2Blocks.lvGeneratorWindmill.id)
+        if (item.id == I2Blocks.LV_WINDMILL.id)
             thePlayer.addStat(I2Achievements.WINDMILL, 1);
 
-        if (item.id == I2Blocks.lvGeneratorGeothermal.id)
+        if (item.id == I2Blocks.LV_GEOTHERMAL_GENERATOR.id)
             thePlayer.addStat(I2Achievements.GEOTHERMAL, 1);
 
-        if (item.id == I2Blocks.ulvGeneratorSolar.id)
+        if (item.id == I2Blocks.ULV_SOLAR_PANEL.id)
             thePlayer.addStat(I2Achievements.SOLAR, 1);
 
-        if (item.id == I2Blocks.ulvGeneratorSolar.id)
+        if (item.id == I2Blocks.ULV_SOLAR_PANEL.id)
             thePlayer.addStat(I2Achievements.SOLAR, 1);
 
-        if (item.id == I2Blocks.lvGeneratorSolar.id)
+        if (item.id == I2Blocks.LV_SOLAR_ARRAY.id)
             thePlayer.addStat(I2Achievements.ARRAY1, 1);
 
-        if (item.id == I2Blocks.mvGeneratorSolar.id)
+        if (item.id == I2Blocks.MV_SOLAR_ARRAY.id)
             thePlayer.addStat(I2Achievements.ARRAY2, 1);
 
-        if (item.id == I2Blocks.hvGeneratorSolar.id)
+        if (item.id == I2Blocks.HV_SOLAR_ARRAY.id)
             thePlayer.addStat(I2Achievements.ARRAY3, 1);
 
-        if (item.id == I2Blocks.ehvGeneratorSolar.id)
+        if (item.id == I2Blocks.EHV_SOLAR_ARRAY.id)
             thePlayer.addStat(I2Achievements.ARRAY4, 1);
 
-        if (item.id == I2Blocks.lvBatbox.id)
+        if (item.id == I2Blocks.LV_BATBOX.id)
             thePlayer.addStat(I2Achievements.BATBOX1, 1);
 
-        if (item.id == I2Items.toolDrill.id)
+        if (item.id == I2Items.TOOL_DRILL.id)
             thePlayer.addStat(I2Achievements.DRILL1, 1);
 
-        if (item.id == I2Items.toolDrillGold.id)
+        if (item.id == I2Items.TOOL_GOLDEN_DRILL.id)
             thePlayer.addStat(I2Achievements.DRILL2, 1);
 
-        if (item.id == I2Items.toolDrillDiamond.id)
+        if (item.id == I2Items.TOOL_DIAMOND_DRILL.id)
             thePlayer.addStat(I2Achievements.DRILL3, 1);
 
-        if (item.id == I2Items.toolChainsaw.id)
+        if (item.id == I2Items.TOOL_CHAINSAW.id)
             thePlayer.addStat(I2Achievements.CHAINSAW, 1);
 
-        if (item.id == I2Items.toolNanoSword.id)
+        if (item.id == I2Items.TOOL_NANOSWORD.id)
             thePlayer.addStat(I2Achievements.NANOSWORD, 1);
 
-        if (item.id == I2Blocks.nuclearReactor.id)
+        if (item.id == I2Blocks.NUCLEAR_REACTOR.id)
             thePlayer.addStat(I2Achievements.REACTOR, 1);
 
-        if (item.id == I2Blocks.energyFabricator.id)
+        if (item.id == I2Blocks.ENERGY_FABRICATOR.id)
             thePlayer.addStat(I2Achievements.FABRICATOR, 1);
 
-        if (item.id == I2Items.ingotIridium.id)
+        if (item.id == I2Items.IRIDIUM_INGOT.id)
             thePlayer.addStat(I2Achievements.IRIDIUM, 1);
 
-        if (item.id == I2Items.armorHelmetIridium.id ||
-                item.id == I2Items.armorChestplateIridium.id ||
-                item.id == I2Items.armorLeggingsIridium.id ||
-                item.id == I2Items.armorBootsIridium.id)
+        if (item.id == I2Items.IRIDIUM_HELMET.id ||
+                item.id == I2Items.IRIDIUM_CHESTPLATE.id ||
+                item.id == I2Items.IRIDIUM_LEGGINGS.id ||
+                item.id == I2Items.IRIDIUM_BOOTS.id)
             thePlayer.addStat(I2Achievements.IRIDIUMARMOR, 1);
     }
 }

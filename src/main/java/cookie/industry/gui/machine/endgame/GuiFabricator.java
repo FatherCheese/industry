@@ -165,7 +165,7 @@ public class GuiFabricator extends GuiContainer {
 
             if (Item.itemsList[clickedItemId] instanceof ItemEnergyContainer)
                 target = 1;
-            else if (clickedItemId == I2Items.scrap.id)
+            else if (clickedItemId == I2Items.SCRAP.id)
                 target = 2;
         }
 

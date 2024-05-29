@@ -69,7 +69,7 @@ public class TileEntityMachineFurnace extends TileEntityMachineBase {
         blasting = false;
         for (int upgradesSize = 4; upgradesSize < contents.length; upgradesSize++) {
             if (contents[upgradesSize] != null) {
-                if (contents[upgradesSize].getItem() == I2Items.upgradeBlasting)
+                if (contents[upgradesSize].getItem() == I2Items.BLASTING_UPGRADE)
                     blasting = true;
             }
         }
@@ -83,7 +83,7 @@ public class TileEntityMachineFurnace extends TileEntityMachineBase {
         boolean machineUpdated = false;
 
         if (!worldObj.isClientSide) {
-            if (worldObj.getBlockId(x, y, z) == I2Blocks.lvMachineFurnace.id &&
+            if (worldObj.getBlockId(x, y, z) == I2Blocks.LV_ELECTRIC_FURNACE.id &&
             currentMachineTime == 0 &&
             contents[2] == null) {
                 BlockMachineFurnace.updateBlockState(true, worldObj, x, y, z);
@@ -113,7 +113,7 @@ public class TileEntityMachineFurnace extends TileEntityMachineBase {
                 onInventoryChanged();
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.lvMachineFurnace.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.LV_ELECTRIC_FURNACE.id);
         }
     }
 }

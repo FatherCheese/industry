@@ -107,7 +107,7 @@ public class TileEntityEnergyFabricator extends TileEntityEnergyConductor implem
                 onInventoryChanged();
             }
 
-            if (contents[4] != null && contents[4].itemID == I2Items.scrap.id && scrap + 100 <= maxScrap) {
+            if (contents[4] != null && contents[4].itemID == I2Items.SCRAP.id && scrap + 100 <= maxScrap) {
                 --contents[4].stackSize;
                 scrap += 100;
 

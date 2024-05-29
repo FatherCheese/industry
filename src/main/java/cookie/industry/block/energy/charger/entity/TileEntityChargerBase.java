@@ -20,7 +20,7 @@ public class TileEntityChargerBase extends TileEntityEnergyConductorDamageable {
     public void tick() {
         super.tick();
 
-        EntityPlayer player = worldObj.getClosestPlayer(x, y + 1, z, 1.5F);
+        EntityPlayer player = worldObj.getClosestPlayer(x, y + 1, z, 1.0F);
         if (player != null) {
             ItemStack[] plyrInv = player.inventory.mainInventory;
             for (ItemStack stack : plyrInv) {

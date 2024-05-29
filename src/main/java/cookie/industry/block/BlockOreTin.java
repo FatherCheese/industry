@@ -29,7 +29,7 @@ public class BlockOreTin extends Block {
             case PICK_BLOCK:
                 return new ItemStack[]{new ItemStack(this)};
             case PROPER_TOOL:
-                return new ItemStack[]{new ItemStack(I2Items.oreRawTin)};
+                return new ItemStack[]{new ItemStack(I2Items.RAW_TIN)};
             default:
                 return null;
         }

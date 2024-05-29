@@ -178,3 +178,12 @@ item.industry.hv_charger.name=HV Charger
 item.industry.hv_charger.desc=Charges your electric items when stood on.
 item.industry.ehv_charger.name=EHV Charger
 item.industry.ehv_charger.desc=Charges your electric items when stood on.
+
+item.industry.armor_lv_charger.name=Wearable LV Charger
+item.industry.armor_lv_charger.desc=Charges your electric items when worn.
+item.industry.armor_mv_charger.name=Wearable MV Charger
+item.industry.armor_mv_charger.desc=Charges your electric items when worn.
+item.industry.armor_hv_charger.name=Wearable HV Charger
+item.industry.armor_hv_charger.desc=Charges your electric items when worn.
+item.industry.armor_ehv_charger.name=Wearable EHV Charger
+item.industry.armor_ehv_charger.desc=Charges your electric items when worn.

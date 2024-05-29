@@ -1,8 +1,12 @@
 package cookie.industry.block.energy.entity;
 
 import com.mojang.nbt.CompoundTag;
+import net.minecraft.core.block.entity.TileEntity;
 import sunsetsatellite.catalyst.core.util.Connection;
 import sunsetsatellite.catalyst.core.util.Direction;
+import sunsetsatellite.catalyst.core.util.TickTimer;
+import sunsetsatellite.catalyst.energy.api.IEnergy;
+import sunsetsatellite.catalyst.energy.api.IEnergySink;
 import sunsetsatellite.catalyst.energy.impl.TileEntityEnergyConductor;
 
 import java.util.Random;
@@ -20,8 +24,10 @@ public class TileEntityEnergyConductorDamageable extends TileEntityEnergyConduct
     private final int maxMachineHealth = 100;
     public int machineHealth = maxMachineHealth;
     private Boolean lastTickDamage = false;
+
     public TileEntityEnergyConductorDamageable() {
     }
+
     public int receive(Direction dir, int amount, boolean test) {
         if (canConnect(dir, Connection.INPUT)) {
             if (amount > maxReceive && random.nextInt(4) == 0) {

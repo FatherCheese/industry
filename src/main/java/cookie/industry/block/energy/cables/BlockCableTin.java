@@ -20,6 +20,6 @@ public class BlockCableTin extends BlockCable {
 
     @Override
     public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
-        return new ItemStack[]{new ItemStack(I2Items.itemCableTin)};
+        return new ItemStack[]{new ItemStack(I2Items.TIN_CABLE)};
     }
 }

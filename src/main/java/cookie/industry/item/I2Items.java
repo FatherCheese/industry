@@ -8,6 +8,7 @@ import cookie.industry.item.battery.ItemBatteryAdvanced;
 import cookie.industry.item.battery.ItemBatteryCrystal;
 import cookie.industry.item.battery.ItemBatteryLapis;
 import cookie.industry.item.battery.ItemBatteryRedstone;
+import cookie.industry.item.charger.*;
 import cookie.industry.item.radioactive.ItemCellRedstoneT1;
 import cookie.industry.item.radioactive.ItemCellRedstoneT2;
 import cookie.industry.item.radioactive.ItemCellRedstoneT3;
@@ -33,107 +34,116 @@ public class I2Items {
 
     private static ArmorMaterial armorMaterialHazmat;
     private static ArmorMaterial armorMaterialIridium;
+    private static ArmorMaterial MAT_ARMOR_LV_CHARGER;
+    private static ArmorMaterial MAT_ARMOR_MV_CHARGER;
+    private static ArmorMaterial MAT_ARMOR_HV_CHARGER;
+    private static ArmorMaterial MAT_ARMOR_EHV_CHARGER;
 
     // Raw Ore
-    public static Item oreRawTin;
-    public static Item oreRawCopper;
-    public static Item ingotIridium;
+    public static Item RAW_TIN;
+    public static Item RAW_COPPER;
+    public static Item IRIDIUM_INGOT;
 
     // Dust
-    public static Item dustTin;
-    public static Item dustCopper;
-    public static Item dustBronze;
-    public static Item dustIron;
-    public static Item dustGold;
-    public static Item dustCoal;
+    public static Item TIN_DUST;
+    public static Item COPPER_DUST;
+    public static Item BRONZE_DUST;
+    public static Item IRON_DUST;
+    public static Item GOLD_DUST;
+    public static Item COAL_DUST;
 
     // Ingots
-    public static Item ingotTin;
-    public static Item ingotCopper;
-    public static Item ingotBronze;
-    public static Item ingotActivatedRedstone;
+    public static Item TIN_INGOT;
+    public static Item COPPER_INGOT;
+    public static Item BRONZE_INGOT;
+    public static Item ACTIVATED_REDSTONE_INGOT;
 
     // Plates
-    public static Item plateTin;
-    public static Item plateCopper;
-    public static Item plateBronze;
-    public static Item plateIron;
-    public static Item plateGold;
-    public static Item plateSteel;
-    public static Item plateIridium;
+    public static Item TIN_PLATE;
+    public static Item COPPER_PLATE;
+    public static Item BRONZE_PLATE;
+    public static Item IRON_PLATE;
+    public static Item GOLD_PLATE;
+    public static Item STEEL_PLATE;
+    public static Item IRIDIUM_PLATE;
 
     // Cables
-    public static Item itemCableTin;
-    public static Item itemCableCopper;
-    public static Item itemCableGold;
-    public static Item itemCableSteel;
-    public static Item itemInsulatedCableTin;
-    public static Item itemInsulatedCableCopper;
-    public static Item itemInsulatedCableGold;
-    public static Item itemInsulatedCableSteel;
+    public static Item TIN_CABLE;
+    public static Item COPPER_CABLE;
+    public static Item GOLD_CABLE;
+    public static Item STEEL_CABLE;
+    public static Item INSULATED_STEEL_TIN;
+    public static Item INSULATED_COPPER_CABLE;
+    public static Item INSULATED_GOLD_CABLE;
+    public static Item INSULATED_STEEL_CABLE;
 
     // Tools
-    public static Item toolTreetap;
-    public static Item toolHammer;
-    public static Item toolCutters;
-    public static Item toolWrench;
-    public static Item toolChainsaw;
-    public static Item toolDrill;
-    public static Item toolDrillGold;
-    public static Item toolDrillDiamond;
-    public static Item toolNanoSword;
-    public static Item toolNanoHoe;
-    public static Item toolElectricWrench;
+    public static Item TOOL_TREETAP;
+    public static Item TOOL_HAMMER;
+    public static Item TOOL_CUTTERS;
+    public static Item TOOL_WRENCH;
+    public static Item TOOL_CHAINSAW;
+    public static Item TOOL_DRILL;
+    public static Item TOOL_GOLDEN_DRILL;
+    public static Item TOOL_DIAMOND_DRILL;
+    public static Item TOOL_NANOSWORD;
+    public static Item TOOL_NANOHOE;
+    public static Item TOOL_ELECTRIC_WRENCH;
 
     // Armor
-    public static Item armorHelmetHazmat;
-    public static Item armorChestplateHazmat;
-    public static Item armorLeggingsHazmat;
-    public static Item armorBootsHazmat;
-    public static Item armorHelmetIridium;
-    public static Item armorChestplateIridium;
-    public static Item armorLeggingsIridium;
-    public static Item armorBootsIridium;
+    public static Item HAZMAT_HELMET;
+    public static Item HAZMAT_CHESTPLATE;
+    public static Item HAZMAT_LEGGINGS;
+    public static Item HAZMAT_BOOTS;
+    public static Item IRIDIUM_HELMET;
+    public static Item IRIDIUM_CHESTPLATE;
+    public static Item IRIDIUM_LEGGINGS;
+    public static Item IRIDIUM_BOOTS;
 
     // Batteries
-    public static Item lvBattery;
-    public static Item mvBattery;
-    public static Item hvBattery;
-    public static Item ehvBattery;
+    public static Item LV_BATTERY;
+    public static Item MV_BATTERY;
+    public static Item HV_BATTERY;
+    public static Item EHV_BATTERY;
 
     // Cells
-    public static Item cellEmpty;
-    public static Item cellWater;
-    public static Item cellLava;
-    public static Item cellRedstoneT1;
-    public static Item cellRedstoneT2;
-    public static Item cellRedstoneT3;
-    public static Item cellRedstoneT1Empty;
-    public static Item cellRedstoneT2Empty;
-    public static Item cellCoolant;
+    public static Item EMPTY_CELL;
+    public static Item WATER_CELL;
+    public static Item LAVA_CELL;
+    public static Item T1_REDSTONE_CELL;
+    public static Item T2_REDSTONE_CELL;
+    public static Item T3_REDSTONE_CELL;
+    public static Item EMPTY_T1_REDSTONE_CELL;
+    public static Item EMPTY_T2_REDSTONE_CELL;
+    public static Item COOLANT_CELL;
 
     // Miscellaneous
-    public static Item canEmpty;
-    public static Item canFood;
-    public static Item resin;
-    public static Item rubber;
-    public static Item lvCircuit;
-    public static Item mvCircuit;
-    public static Item scrap;
+    public static Item EMPTY_CAN;
+    public static Item FOOD_CAN;
+    public static Item RESIN;
+    public static Item RUBBER;
+    public static Item LV_CIRCUIT;
+    public static Item MV_CIRCUIT;
+    public static Item SCRAP;
 
-    public static Item reactorPlate;
-    public static Item reactorVent;
+    public static Item PLATE_REACTOR;
+    public static Item REACTOR_VENT;
 
-    public static Item ingotIridiumScrap;
-    public static Item upgradePlate;
-    public static Item upgradeSpeed;
-    public static Item upgradeTransformer;
-    public static Item upgradeEnergy;
-    public static Item upgradePusher;
-    public static Item upgradePuller;
-    public static Item upgradeBlasting;
+    public static Item IRIDIUM_SCRAP;
+    public static Item PLATE_UPGRADE;
+    public static Item SPEED_UPGRADE;
+    public static Item TRANSFORMER_UPGRADE;
+    public static Item ENERGY_UPGRADE;
+    public static Item PUSHER_UPGRADE;
+    public static Item PULLER_UPGRADE;
+    public static Item BLASTING_UPGRADE;
 
-    public static Item foodJoffos;
+    public static Item JOFFO_CAKES;
+
+    public static Item LV_CHARGER_BLOCK;
+    public static Item MV_CHARGER_BLOCK;
+    public static Item HV_CHARGER_BLOCK;
+    public static Item EHV_CHARGER_BLOCK;
 
     public static Item LV_CHARGER;
     public static Item MV_CHARGER;
@@ -141,18 +151,18 @@ public class I2Items {
     public static Item EHV_CHARGER;
 
     private void tagItems() {
-        lvBattery.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
-        mvBattery.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
-        hvBattery.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
-        ehvBattery.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
-        scrap.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
-        ingotActivatedRedstone.withTags(ItemTags.renderFullbright);
-        ingotIridium.withTags(IndustryTags.PREVENT_FABRICATING);
-        plateIridium.withTags(IndustryTags.PREVENT_FABRICATING);
-        armorHelmetIridium.withTags(IndustryTags.PREVENT_FABRICATING);
-        armorChestplateIridium.withTags(IndustryTags.PREVENT_FABRICATING);
-        armorLeggingsIridium.withTags(IndustryTags.PREVENT_FABRICATING);
-        armorBootsIridium.withTags(IndustryTags.PREVENT_FABRICATING);
+        LV_BATTERY.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
+        MV_BATTERY.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
+        HV_BATTERY.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
+        EHV_BATTERY.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
+        SCRAP.withTags(IndustryTags.PREVENT_ITEM_RECYCLING, IndustryTags.PREVENT_FABRICATING);
+        ACTIVATED_REDSTONE_INGOT.withTags(ItemTags.renderFullbright);
+        IRIDIUM_INGOT.withTags(IndustryTags.PREVENT_FABRICATING);
+        IRIDIUM_PLATE.withTags(IndustryTags.PREVENT_FABRICATING);
+        IRIDIUM_HELMET.withTags(IndustryTags.PREVENT_FABRICATING);
+        IRIDIUM_CHESTPLATE.withTags(IndustryTags.PREVENT_FABRICATING);
+        IRIDIUM_LEGGINGS.withTags(IndustryTags.PREVENT_FABRICATING);
+        IRIDIUM_BOOTS.withTags(IndustryTags.PREVENT_FABRICATING);
 
         Item.flint.withTags(IndustryTags.PREVENT_ITEM_RECYCLING);
         Item.seedsWheat.withTags(IndustryTags.PREVENT_ITEM_RECYCLING);
@@ -163,322 +173,339 @@ public class I2Items {
     private void initializeArmorMats() {
         armorMaterialHazmat = ArmorHelper.createArmorMaterial(MOD_ID, "hazmat", 500, 0.0f, 0.0f, 150.0f, 0.0f);
         armorMaterialIridium = ArmorHelper.createArmorMaterial(MOD_ID, "iridium", -1, 100.0f, 100.0f, 100.0f, 100.0f);
+        MAT_ARMOR_LV_CHARGER = ArmorHelper.createArmorMaterial(MOD_ID, "charger_lv", -1, 0, 0, 0, 0);
+        MAT_ARMOR_MV_CHARGER = ArmorHelper.createArmorMaterial(MOD_ID, "charger_mv", -1, 0, 0, 0, 0);
+        MAT_ARMOR_HV_CHARGER = ArmorHelper.createArmorMaterial(MOD_ID, "charger_hv", -1, 0, 0, 0, 0);
+        MAT_ARMOR_EHV_CHARGER = ArmorHelper.createArmorMaterial(MOD_ID, "charger_ehv", -1, 0, 0, 0, 0);
     }
 
     public void initializeItems() {
         initializeArmorMats();
 
-        oreRawTin = ItemHelper.createItem(MOD_ID,
+        RAW_TIN = ItemHelper.createItem(MOD_ID,
                 new Item("ore.raw.tin", nextItemID("oreRawTin")),
                 "raw_tin.png");
 
-        oreRawCopper= ItemHelper.createItem(MOD_ID,
+        RAW_COPPER = ItemHelper.createItem(MOD_ID,
                 new Item("ore.raw.copper", nextItemID("oreRawCopper")),
                 "raw_copper.png");
 
-        dustTin = ItemHelper.createItem(MOD_ID,
+        TIN_DUST = ItemHelper.createItem(MOD_ID,
                 new Item("dust.tin", nextItemID("dustTin")),
                 "dust_tin.png");
 
-        dustCopper = ItemHelper.createItem(MOD_ID,
+        COPPER_DUST = ItemHelper.createItem(MOD_ID,
                 new Item("dust.copper", nextItemID("dustCopper")),
                 "dust_copper.png");
 
-        dustBronze = ItemHelper.createItem(MOD_ID,
+        BRONZE_DUST = ItemHelper.createItem(MOD_ID,
                 new Item("dust.bronze", nextItemID("dustBronze")),
                 "dust_bronze.png");
 
-        dustIron = ItemHelper.createItem(MOD_ID,
+        IRON_DUST = ItemHelper.createItem(MOD_ID,
                 new Item("dust.iron", nextItemID("dustIron")),
                 "dust_iron.png");
 
-        dustGold = ItemHelper.createItem(MOD_ID,
+        GOLD_DUST = ItemHelper.createItem(MOD_ID,
                 new Item("dust.gold", nextItemID("dustGold")),
                 "dust_gold.png");
 
-        dustCoal = ItemHelper.createItem(MOD_ID,
+        COAL_DUST = ItemHelper.createItem(MOD_ID,
                 new Item("dust.coal", nextItemID("dustCoal")),
                 "dust_coal.png");
 
-        ingotTin = ItemHelper.createItem(MOD_ID,
+        TIN_INGOT = ItemHelper.createItem(MOD_ID,
                 new Item("ingot.tin", nextItemID("ingotTin")),
                 "ingot_tin.png");
 
-        ingotCopper = ItemHelper.createItem(MOD_ID,
+        COPPER_INGOT = ItemHelper.createItem(MOD_ID,
                 new Item("ingot.copper", nextItemID("ingotCopper")),
                 "ingot_copper.png");
 
-        ingotBronze = ItemHelper.createItem(MOD_ID,
+        BRONZE_INGOT = ItemHelper.createItem(MOD_ID,
                 new Item("ingot.bronze", nextItemID("ingotBronze")),
                 "ingot_bronze.png");
 
-        ingotActivatedRedstone = ItemHelper.createItem(MOD_ID,
+        ACTIVATED_REDSTONE_INGOT = ItemHelper.createItem(MOD_ID,
                 new ItemRadioactive("ingot.redstone", nextItemID("ingotActivatedRedstone")),
                 "ingot_activated_redstone.png");
 
-        ingotIridium = ItemHelper.createItem(MOD_ID,
+        IRIDIUM_INGOT = ItemHelper.createItem(MOD_ID,
                 new Item("ingot.iridium", nextItemID("ingotIridium")),
                 "ingot_iridium.png");
 
-        plateTin = ItemHelper.createItem(MOD_ID,
+        TIN_PLATE = ItemHelper.createItem(MOD_ID,
                 new Item("plate.tin", nextItemID("plateTin")),
                 "plate_tin.png");
 
-        plateCopper = ItemHelper.createItem(MOD_ID,
+        COPPER_PLATE = ItemHelper.createItem(MOD_ID,
                 new Item("plate.copper", nextItemID("plateCopper")),
                 "plate_copper.png");
 
-        plateBronze = ItemHelper.createItem(MOD_ID,
+        BRONZE_PLATE = ItemHelper.createItem(MOD_ID,
                 new Item("plate.bronze", nextItemID("plateBronze")),
                 "plate_bronze.png");
 
-        plateIron = ItemHelper.createItem(MOD_ID,
+        IRON_PLATE = ItemHelper.createItem(MOD_ID,
                 new Item("plate.iron", nextItemID("plateIron")),
                 "plate_iron.png");
 
-        plateGold = ItemHelper.createItem(MOD_ID,
+        GOLD_PLATE = ItemHelper.createItem(MOD_ID,
                 new Item("plate.gold", nextItemID("plateGold")),
                 "plate_gold.png");
 
-        plateSteel = ItemHelper.createItem(MOD_ID,
+        STEEL_PLATE = ItemHelper.createItem(MOD_ID,
                 new Item("plate.steel", nextItemID("plateSteel")),
                 "plate_steel.png");
 
-        plateIridium = ItemHelper.createItem(MOD_ID,
+        IRIDIUM_PLATE = ItemHelper.createItem(MOD_ID,
                 new Item("plate.iridium", nextItemID("plateIridium")),
                 "plate_iridium.png");
 
-        itemCableTin = ItemHelper.createItem(MOD_ID,
-                new ItemCable("cable.tin", nextItemID("itemCableTin"), I2Blocks.blockCableTin),
+        TIN_CABLE = ItemHelper.createItem(MOD_ID,
+                new ItemCable("cable.tin", nextItemID("itemCableTin"), I2Blocks.TIN_CABLE),
                 "cable_tin.png");
 
-        itemCableCopper = ItemHelper.createItem(MOD_ID,
-                new ItemCable("cable.copper", nextItemID("itemCableCopper"), I2Blocks.blockCableCopper),
+        COPPER_CABLE = ItemHelper.createItem(MOD_ID,
+                new ItemCable("cable.copper", nextItemID("itemCableCopper"), I2Blocks.COPPER_CABLE),
                 "cable_copper.png");
 
-        itemCableGold = ItemHelper.createItem(MOD_ID,
-                new ItemCable("cable.gold", nextItemID("itemCableGold"), I2Blocks.blockCableGold),
+        GOLD_CABLE = ItemHelper.createItem(MOD_ID,
+                new ItemCable("cable.gold", nextItemID("itemCableGold"), I2Blocks.GOLD_CABLE),
                 "cable_gold.png");
 
-        itemCableSteel = ItemHelper.createItem(MOD_ID,
-                new ItemCable("cable.steel", nextItemID("itemCableSteel"), I2Blocks.blockCableSteel),
+        STEEL_CABLE = ItemHelper.createItem(MOD_ID,
+                new ItemCable("cable.steel", nextItemID("itemCableSteel"), I2Blocks.STEEL_CABLE),
                 "cable_steel.png");
 
-        itemInsulatedCableTin = ItemHelper.createItem(MOD_ID,
-                new ItemCable("insulated.cable.tin", nextItemID("itemInsulatedCableTin"), I2Blocks.blockInsulatedCableTin),
+        INSULATED_STEEL_TIN = ItemHelper.createItem(MOD_ID,
+                new ItemCable("insulated.cable.tin", nextItemID("itemInsulatedCableTin"), I2Blocks.INSULATED_TIN_CABLE),
                 "cable_insulated_tin.png");
 
-        itemInsulatedCableCopper = ItemHelper.createItem(MOD_ID,
-                new ItemCable("insulated.cable.copper", nextItemID("itemInsulatedCableCopper"), I2Blocks.blockInsulatedCableCopper),
+        INSULATED_COPPER_CABLE = ItemHelper.createItem(MOD_ID,
+                new ItemCable("insulated.cable.copper", nextItemID("itemInsulatedCableCopper"), I2Blocks.INSULATED_COPPER_CABLE),
                 "cable_insulated_copper.png");
 
-        itemInsulatedCableGold = ItemHelper.createItem(MOD_ID,
-                new ItemCable("insulated.cable.gold", nextItemID("itemInsulatedCableGold"), I2Blocks.blockInsulatedCableGold),
+        INSULATED_GOLD_CABLE = ItemHelper.createItem(MOD_ID,
+                new ItemCable("insulated.cable.gold", nextItemID("itemInsulatedCableGold"), I2Blocks.INSULATED_GOLD_CABLE),
                 "cable_insulated_gold.png");
 
-        itemInsulatedCableSteel = ItemHelper.createItem(MOD_ID,
-                new ItemCable("insulated.cable.steel", nextItemID("itemInsulatedCableSteel"), I2Blocks.blockInsulatedCableSteel),
+        INSULATED_STEEL_CABLE = ItemHelper.createItem(MOD_ID,
+                new ItemCable("insulated.cable.steel", nextItemID("itemInsulatedCableSteel"), I2Blocks.INSULATED_STEEL_CABLE),
                 "cable_insulated_steel.png");
 
-        toolTreetap = ItemHelper.createItem(MOD_ID,
+        TOOL_TREETAP = ItemHelper.createItem(MOD_ID,
                 new ItemTreetap("tool.treetap", nextItemID("toolTreetap")),
                 "tool_treetap.png").setMaxStackSize(1);
 
-        toolHammer = ItemHelper.createItem(MOD_ID,
+        TOOL_HAMMER = ItemHelper.createItem(MOD_ID,
                 new ItemTools("tool.hammer", nextItemID("toolHammer")),
                 "tool_hammer.png");
 
-        toolCutters = ItemHelper.createItem(MOD_ID,
+        TOOL_CUTTERS = ItemHelper.createItem(MOD_ID,
                 new ItemTools("tool.cutters", nextItemID("toolCutters")),
                 "tool_cutters.png");
 
-        toolWrench = ItemHelper.createItem(MOD_ID,
+        TOOL_WRENCH = ItemHelper.createItem(MOD_ID,
                 new ItemWrench("tool.wrench", nextItemID("toolWrench")),
                 "tool_wrench.png").setMaxStackSize(1);
 
-        toolChainsaw = ItemHelper.createItem(MOD_ID,
+        TOOL_CHAINSAW = ItemHelper.createItem(MOD_ID,
                 new ItemToolChainsaw("tool.chainsaw", nextItemID("toolChainsaw")),
                 "tool_chainsaw.png");
 
-        toolDrill = ItemHelper.createItem(MOD_ID,
+        TOOL_DRILL = ItemHelper.createItem(MOD_ID,
                 new ItemToolDrill("tool.drill", nextItemID("toolDrill"), ToolMaterial.iron),
                 "tool_drill.png");
 
-        toolDrillGold = ItemHelper.createItem(MOD_ID,
+        TOOL_GOLDEN_DRILL = ItemHelper.createItem(MOD_ID,
                 new ItemToolDrill("tool.drill.gold", nextItemID("toolDrillGold"), ToolMaterial.gold),
                 "tool_drill_gold.png");
 
-        toolDrillDiamond = ItemHelper.createItem(MOD_ID,
+        TOOL_DIAMOND_DRILL = ItemHelper.createItem(MOD_ID,
                 new ItemToolDrill("tool.drill.diamond", nextItemID("toolDrillDiamond"), ToolMaterial.diamond),
                 "tool_drill_diamond.png");
 
-        toolNanoSword = ItemHelper.createItem(MOD_ID,
+        TOOL_NANOSWORD = ItemHelper.createItem(MOD_ID,
                 new ItemToolNanoSword("tool.nanosword", nextItemID("toolNanoSword")));
 
-        toolNanoHoe = ItemHelper.createItem(MOD_ID,
+        TOOL_NANOHOE = ItemHelper.createItem(MOD_ID,
                 new ItemToolNanoHoe("tool.nanohoe", nextItemID("")));
 
-        toolElectricWrench = ItemHelper.createItem(MOD_ID,
+        TOOL_ELECTRIC_WRENCH = ItemHelper.createItem(MOD_ID,
                 new ItemToolElectricWrench("tool.wrench.electric", nextItemID("")),
                 "tool_electric_wrench.png");
 
-        armorHelmetHazmat = ItemHelper.createItem(MOD_ID,
+        HAZMAT_HELMET = ItemHelper.createItem(MOD_ID,
                 new ItemArmor("armor.helmet.hazmat", nextItemID("armorHelmetHazmat"), armorMaterialHazmat, 0),
                 "armor_hazmat_helmet.png");
 
-        armorChestplateHazmat = ItemHelper.createItem(MOD_ID,
+        HAZMAT_CHESTPLATE = ItemHelper.createItem(MOD_ID,
                 new ItemArmor("armor.chestplate.hazmat", nextItemID("armorChestplateHazmat"), armorMaterialHazmat, 1),
                 "armor_hazmat_chestplate.png");
 
-        armorLeggingsHazmat = ItemHelper.createItem(MOD_ID,
+        HAZMAT_LEGGINGS = ItemHelper.createItem(MOD_ID,
                 new ItemArmor("armor.leggings.hazmat", nextItemID("armorLeggingsHazmat"), armorMaterialHazmat, 2),
                 "armor_hazmat_leggings.png");
 
-        armorBootsHazmat = ItemHelper.createItem(MOD_ID,
+        HAZMAT_BOOTS = ItemHelper.createItem(MOD_ID,
                 new ItemArmor("armor.boots.hazmat", nextItemID("armorBootsHazmat"), armorMaterialHazmat, 3),
                 "armor_hazmat_boots.png");
 
-        armorHelmetIridium = ItemHelper.createItem(MOD_ID,
+        IRIDIUM_HELMET = ItemHelper.createItem(MOD_ID,
                 new ItemArmorIridium("armor.helmet.iridium", nextItemID("armorHelmetIridium"), armorMaterialIridium, 0),
                 "armor_iridium_helmet.png");
 
-        armorChestplateIridium = ItemHelper.createItem(MOD_ID,
+        IRIDIUM_CHESTPLATE = ItemHelper.createItem(MOD_ID,
                 new ItemArmorIridium("armor.chestplate.iridium", nextItemID("armorChestplateIridium"), armorMaterialIridium, 1),
                 "armor_iridium_chestplate.png");
 
-        armorLeggingsIridium = ItemHelper.createItem(MOD_ID,
+        IRIDIUM_LEGGINGS = ItemHelper.createItem(MOD_ID,
                 new ItemArmorIridium("armor.leggings.iridium", nextItemID("armorLeggingsIridium"), armorMaterialIridium, 2),
                 "armor_iridium_leggings.png");
 
-        armorBootsIridium = ItemHelper.createItem(MOD_ID,
+        IRIDIUM_BOOTS = ItemHelper.createItem(MOD_ID,
                 new ItemArmorIridium("armor.boots.iridium", nextItemID("armorBootsIridium"), armorMaterialIridium, 3),
                 "armor_iridium_boots.png");
 
-        lvBattery = ItemHelper.createItem(MOD_ID,
+        LV_BATTERY = ItemHelper.createItem(MOD_ID,
                 new ItemBatteryRedstone("battery.redstone", nextItemID("batteryRedstone")));
 
-        mvBattery = ItemHelper.createItem(MOD_ID,
+        MV_BATTERY = ItemHelper.createItem(MOD_ID,
                 new ItemBatteryAdvanced("battery.advanced", nextItemID("batteryAdvanced")));
 
-        hvBattery = ItemHelper.createItem(MOD_ID,
+        HV_BATTERY = ItemHelper.createItem(MOD_ID,
                 new ItemBatteryCrystal("battery.crystal", nextItemID("batteryCrystal")));
 
-        ehvBattery = ItemHelper.createItem(MOD_ID,
+        EHV_BATTERY = ItemHelper.createItem(MOD_ID,
                 new ItemBatteryLapis("battery.lapis", nextItemID("batteryLapis")));
 
-        cellEmpty = ItemHelper.createItem(MOD_ID,
+        EMPTY_CELL = ItemHelper.createItem(MOD_ID,
                 new ItemCell("cell.empty", nextItemID("cellEmpty")),
                 "cell_empty.png");
 
-        cellWater = ItemHelper.createItem(MOD_ID,
+        WATER_CELL = ItemHelper.createItem(MOD_ID,
                 new Item("cell.water", nextItemID("cellWater")),
                 "cell_water.png");
 
-        cellLava = ItemHelper.createItem(MOD_ID,
+        LAVA_CELL = ItemHelper.createItem(MOD_ID,
                 new Item("cell.lava", nextItemID("cellLava")),
                 "cell_lava.png");
 
-        cellRedstoneT1 = ItemHelper.createItem(MOD_ID,
+        T1_REDSTONE_CELL = ItemHelper.createItem(MOD_ID,
                 new ItemCellRedstoneT1("cell.redstone.t1", nextItemID("cellRedstoneT1")),
                 "cell_redstone_t1.png").setMaxStackSize(1);
 
-        cellRedstoneT2 = ItemHelper.createItem(MOD_ID,
+        T2_REDSTONE_CELL = ItemHelper.createItem(MOD_ID,
                 new ItemCellRedstoneT2("cell.redstone.t2", nextItemID("cellRedstoneT2")),
                 "cell_redstone_t2.png").setMaxStackSize(1);
 
-        cellRedstoneT3 = ItemHelper.createItem(MOD_ID,
+        T3_REDSTONE_CELL = ItemHelper.createItem(MOD_ID,
                 new ItemCellRedstoneT3("cell.redstone.t3", nextItemID("cellRedstoneT3")),
                 "cell_redstone_t3.png").setMaxStackSize(1);
 
-        cellRedstoneT1Empty = ItemHelper.createItem(MOD_ID,
+        EMPTY_T1_REDSTONE_CELL = ItemHelper.createItem(MOD_ID,
                 new ItemRadioactive("cell.redstone.empty.t1", nextItemID("cellRedstoneT1Empty")),
                 "cell_redstone_empty_t1.png").setMaxStackSize(1);
 
-        cellRedstoneT2Empty = ItemHelper.createItem(MOD_ID,
+        EMPTY_T2_REDSTONE_CELL = ItemHelper.createItem(MOD_ID,
                 new ItemRadioactive("cell.redstone.empty.t2", nextItemID("cellRedstoneT2Empty")),
                 "cell_redstone_empty_t2.png").setMaxStackSize(1);
 
-        cellCoolant = ItemHelper.createItem(MOD_ID,
+        COOLANT_CELL = ItemHelper.createItem(MOD_ID,
                 new ItemCellCoolant("cell.coolant", nextItemID("cellCoolant")),
                 "cell_coolant.png").setMaxStackSize(1);
 
-        canEmpty = ItemHelper.createItem(MOD_ID,
+        EMPTY_CAN = ItemHelper.createItem(MOD_ID,
                 new Item("can.empty", nextItemID("canEmpty")),
                 "can_empty.png");
 
-        canFood = ItemHelper.createItem(MOD_ID,
+        FOOD_CAN = ItemHelper.createItem(MOD_ID,
                 new ItemFoodStackable("can.food", nextItemID("canFood"), 2, false, 20),
                 "can_food.png").setMaxStackSize(10);
 
-        resin = ItemHelper.createItem(MOD_ID,
+        RESIN = ItemHelper.createItem(MOD_ID,
                 new Item("resin", nextItemID("resin")),
                 "resin.png");
 
-        rubber = ItemHelper.createItem(MOD_ID,
+        RUBBER = ItemHelper.createItem(MOD_ID,
                 new Item("rubber", nextItemID("rubber")),
                 "rubber.png");
 
-        lvCircuit = ItemHelper.createItem(MOD_ID,
+        LV_CIRCUIT = ItemHelper.createItem(MOD_ID,
                 new Item("circuit", nextItemID("circuitBasic")),
                 "circuit.png");
 
-        mvCircuit = ItemHelper.createItem(MOD_ID,
+        MV_CIRCUIT = ItemHelper.createItem(MOD_ID,
                 new Item("circuitadvanced", nextItemID("circuitAdvanced")),
                 "circuit_advanced.png");
 
-        scrap = ItemHelper.createItem(MOD_ID,
+        SCRAP = ItemHelper.createItem(MOD_ID,
                 new Item("scrap", nextItemID("scrap")),
                 "scrap.png");
 
-        reactorPlate = ItemHelper.createItem(MOD_ID,
+        PLATE_REACTOR = ItemHelper.createItem(MOD_ID,
                 new Item("reactorplate", nextItemID("reactorPlate")),
                 "plate_reactor.png");
-        reactorVent = ItemHelper.createItem(MOD_ID,
+        REACTOR_VENT = ItemHelper.createItem(MOD_ID,
                 new Item("reactorvent", nextItemID("reactorVent")),
                 "upgrade_vent.png");
 
-        ingotIridiumScrap = ItemHelper.createItem(MOD_ID,
+        IRIDIUM_SCRAP = ItemHelper.createItem(MOD_ID,
                 new Item("ingot.iridium.scrap", nextItemID("ingotIridiumScrap")),
                 "ingot_iridium_scrap.png");
 
-        upgradePlate = ItemHelper.createItem(MOD_ID,
+        PLATE_UPGRADE = ItemHelper.createItem(MOD_ID,
                 new Item("upgrade.plate", nextItemID("upgradePlate")),
                 "plate_upgrade.png");
-        upgradeSpeed = ItemHelper.createItem(MOD_ID,
+        SPEED_UPGRADE = ItemHelper.createItem(MOD_ID,
                 new Item("upgrade.speed", nextItemID("upgradeSpeed")).setMaxStackSize(4),
                 "upgrade_speed.png");
-        upgradeTransformer = ItemHelper.createItem(MOD_ID,
+        TRANSFORMER_UPGRADE = ItemHelper.createItem(MOD_ID,
                 new Item("upgrade.transformer", nextItemID("upgradeTransformer")).setMaxStackSize(4),
                 "upgrade_transformer.png");
-        upgradeEnergy = ItemHelper.createItem(MOD_ID,
+        ENERGY_UPGRADE = ItemHelper.createItem(MOD_ID,
                 new Item("upgrade.energy", nextItemID("upgradeEnergy")).setMaxStackSize(4),
                 "upgrade_energy.png");
-        upgradePusher = ItemHelper.createItem(MOD_ID,
+        PUSHER_UPGRADE = ItemHelper.createItem(MOD_ID,
                 new Item("upgrade.pusher", nextItemID("upgradePusher")).setMaxStackSize(4),
                 "upgrade_pusher.png");
-        upgradePuller = ItemHelper.createItem(MOD_ID,
+        PULLER_UPGRADE = ItemHelper.createItem(MOD_ID,
                 new Item("upgrade.puller", nextItemID("upgradePuller")).setMaxStackSize(4),
                 "upgrade_puller.png");
-        upgradeBlasting = ItemHelper.createItem(MOD_ID,
+        BLASTING_UPGRADE = ItemHelper.createItem(MOD_ID,
                 new Item("upgrade.blasting", nextItemID("upgradeBlasting")).setMaxStackSize(4),
                 "upgrade_blasting.png");
 
-        foodJoffos = ItemHelper.createItem(MOD_ID,
+        JOFFO_CAKES = ItemHelper.createItem(MOD_ID,
                 new ItemFoodStackable("food.joffos", nextItemID("foodJoffos"), 1, false, 10),
                 "food_joffos.png");
 
-        LV_CHARGER = ItemHelper.createItem(MOD_ID,
+        LV_CHARGER_BLOCK = ItemHelper.createItem(MOD_ID,
                 new ItemPlaceable("lv_charger", nextItemID(""), I2Blocks.LV_CHARGER),
                 "charger_lv.png");
-        MV_CHARGER = ItemHelper.createItem(MOD_ID,
+        MV_CHARGER_BLOCK = ItemHelper.createItem(MOD_ID,
                 new ItemPlaceable("mv_charger", nextItemID(""), I2Blocks.MV_CHARGER),
                 "charger_mv.png");
-        HV_CHARGER = ItemHelper.createItem(MOD_ID,
+        HV_CHARGER_BLOCK = ItemHelper.createItem(MOD_ID,
                 new ItemPlaceable("hv_charger", nextItemID(""), I2Blocks.HV_CHARGER),
                 "charger_hv.png");
-        EHV_CHARGER = ItemHelper.createItem(MOD_ID,
+        EHV_CHARGER_BLOCK = ItemHelper.createItem(MOD_ID,
                 new ItemPlaceable("ehv_charger", nextItemID(""), I2Blocks.EHV_CHARGER),
                 "charger_ehv.png");
+
+        LV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemArmorChargerLV("armor_lv_charger", nextItemID(""), MAT_ARMOR_LV_CHARGER, 1),
+                "armor_charger_lv.png");
+        MV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemArmorChargerMV("armor_mv_charger", nextItemID(""), MAT_ARMOR_MV_CHARGER, 1),
+                "armor_charger_mv.png");
+        HV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemArmorChargerHV("armor_hv_charger", nextItemID(""), MAT_ARMOR_HV_CHARGER, 1),
+                "armor_charger_hv.png");
+        EHV_CHARGER = ItemHelper.createItem(MOD_ID,
+                new ItemArmorChargerEHV("armor_ehv_charger", nextItemID(""), MAT_ARMOR_EHV_CHARGER, 1),
+                "armor_charger_ehv.png");
 
         tagItems();
     }

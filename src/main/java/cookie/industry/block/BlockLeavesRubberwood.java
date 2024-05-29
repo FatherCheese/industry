@@ -12,6 +12,6 @@ public class BlockLeavesRubberwood extends BlockLeavesBase {
 
     @Override
     protected Block getSapling() {
-        return I2Blocks.saplingRubberWood;
+        return I2Blocks.RUBBERWOOD_SAPLING;
     }
 }

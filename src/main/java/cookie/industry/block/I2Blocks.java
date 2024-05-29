@@ -60,123 +60,123 @@ public class I2Blocks {
     }
 
     // Ore
-    public static Block oreTinStone;
-    public static Block oreTinBasalt;
-    public static Block oreTinLimestone;
-    public static Block oreTinGranite;
-    public static Block oreCopperStone;
-    public static Block oreCopperBasalt;
-    public static Block oreCopperLimestone;
-    public static Block oreCopperGranite;
+    public static Block STONE_TIN_ORE;
+    public static Block BASALT_TIN_ORE;
+    public static Block LIMESTONE_TIN_ORE;
+    public static Block GRANITE_TIN_ORE;
+    public static Block STONE_COPPER_ORE;
+    public static Block BASALT_COPPER_ORE;
+    public static Block LIMESTONE_COPPER_ORE;
+    public static Block GRANITE_COPPER_ORE;
 
     // Material Blocks
-    public static Block blockTin;
-    public static Block blockCopper;
-    public static Block blockBronze;
+    public static Block BLOCK_OF_TIN;
+    public static Block BLOCK_OF_COPPER;
+    public static Block BLOCK_OF_BRONZE;
 
     // Cables
-    public static Block blockCableTin;
-    public static Block blockCableCopper;
-    public static Block blockCableGold;
-    public static Block blockCableSteel;
-    public static Block blockInsulatedCableTin;
-    public static Block blockInsulatedCableCopper;
-    public static Block blockInsulatedCableGold;
-    public static Block blockInsulatedCableSteel;
+    public static Block TIN_CABLE;
+    public static Block COPPER_CABLE;
+    public static Block GOLD_CABLE;
+    public static Block STEEL_CABLE;
+    public static Block INSULATED_TIN_CABLE;
+    public static Block INSULATED_COPPER_CABLE;
+    public static Block INSULATED_GOLD_CABLE;
+    public static Block INSULATED_STEEL_CABLE;
 
     // Machines
-    public static Block lvMachineCasing;
-    public static Block mvMachineCasing;
-    public static Block hvMachineCasing;
-    public static Block ehvMachineCasing;
-    public static Block lvGenerator;
-    public static Block lvGeneratorWatermill;
-    public static Block lvGeneratorWindmill;
-    public static Block lvGeneratorGeothermal;
-    public static Block ulvGeneratorSolar;
-    public static Block lvGeneratorSolar;
-    public static Block mvGeneratorSolar;
-    public static Block hvGeneratorSolar;
-    public static Block ehvGeneratorSolar;
-    public static Block lvBatbox;
-    public static Block mvBatbox;
-    public static Block hvBatbox;
-    public static Block ehvBatbox;
-    public static Block transformerMVtoLV;
-    public static Block transformerHVtoMV;
-    public static Block transformerEHVtoHV;
-    public static Block lvMachineFurnace;
-    public static Block lvMachineMacerator;
-    public static Block lvMachineCompressor;
-    public static Block lvMachineWiremill;
-    public static Block lvMachineExtractor;
-    public static Block lvMachineRecycler;
-    public static Block machineCannery;
-    public static Block lvMachineTrommel;
-    public static Block mvMachineFurnace;
-    public static Block mvMachineMacerator;
-    public static Block mvMachineCompressor;
-    public static Block mvMachineWiremill;
-    public static Block mvMachineExtractor;
+    public static Block LV_MACHINE_CASING;
+    public static Block MV_MACHINE_CASING;
+    public static Block HV_MACHINE_CASING; // Coming 7.2
+    public static Block EHV_MACHINE_CASING;
+    public static Block LV_GENERATOR;
+    public static Block LV_WATERMILL;
+    public static Block LV_WINDMILL;
+    public static Block LV_GEOTHERMAL_GENERATOR;
+    public static Block ULV_SOLAR_PANEL;
+    public static Block LV_SOLAR_ARRAY;
+    public static Block MV_SOLAR_ARRAY;
+    public static Block HV_SOLAR_ARRAY;
+    public static Block EHV_SOLAR_ARRAY;
+    public static Block LV_BATBOX;
+    public static Block MV_BATBOX;
+    public static Block HV_BATBOX;
+    public static Block EHV_BATBOX;
+    public static Block MV_TO_LV_TRANSFORMER;
+    public static Block HV_TO_MV_TRANSFORMER;
+    public static Block EHV_TO_HV_TRANSFORMER;
+    public static Block LV_ELECTRIC_FURNACE;
+    public static Block LV_MACERATOR;
+    public static Block LV_COMPRESSOR;
+    public static Block LV_WIREMILL;
+    public static Block LV_EXTRACTOR;
+    public static Block LV_RECYCLER;
+    public static Block LV_CANNERY;
+    public static Block LV_ELECTRIC_TROMMEL;
+    public static Block MV_ELECTRIC_FURNACE;
+    public static Block MV_MACERATOR;
+    public static Block MV_COMPRESSOR;
+    public static Block MV_WIREMILL;
+    public static Block MV_EXTRACTOR;
 
     // Miscellaneous
-    public static Block hardenedCoal;
-    public static Block leavesRubberWood;
-    public static Block logRubberWood;
-    public static Block logRubberWoodResin;
-    public static Block logRubberWoodResinFull;
-    public static Block saplingRubberWood;
+    public static Block HARDENED_CARBON;
+    public static Block RUBBERWOOD_LEAVES;
+    public static Block RUBBERWOOD_LOG;
+    public static Block RUBBERWOOD_RESIN_LOG;
+    public static Block EMPTY_RUBBERWOOD_RESIN_LOG;
+    public static Block RUBBERWOOD_SAPLING;
 
     // Nuclear
-    public static Block nuclearReactor;
-    public static Block nuclearChamber;
-    public static Block nuclearIO;
-    public static Block ulvGeneratorRTG;
+    public static Block NUCLEAR_REACTOR;
+    public static Block NUCLEAR_CHAMBER;
+    public static Block NUCLEAR_CHAMBER_IO;
+    public static Block ULV_NUCLEAR_RTG;
 
     // End Game
-    public static Block energyFabricator;
+    public static Block ENERGY_FABRICATOR;
 
-    public static Block alarm;
+    public static Block ALARM;
     public static Block LV_CHARGER;
     public static Block MV_CHARGER;
     public static Block HV_CHARGER;
     public static Block EHV_CHARGER;
 
     private void initializePickaxeLevels() {
-        ItemToolPickaxe.miningLevels.put(oreTinStone, 1);
-        ItemToolPickaxe.miningLevels.put(oreTinBasalt, 1);
-        ItemToolPickaxe.miningLevels.put(oreTinLimestone, 1);
-        ItemToolPickaxe.miningLevels.put(oreTinGranite, 1);
-        ItemToolPickaxe.miningLevels.put(oreCopperStone, 1);
-        ItemToolPickaxe.miningLevels.put(oreCopperBasalt, 1);
-        ItemToolPickaxe.miningLevels.put(oreCopperLimestone, 1);
-        ItemToolPickaxe.miningLevels.put(oreCopperGranite, 1);
+        ItemToolPickaxe.miningLevels.put(STONE_TIN_ORE, 1);
+        ItemToolPickaxe.miningLevels.put(BASALT_TIN_ORE, 1);
+        ItemToolPickaxe.miningLevels.put(LIMESTONE_TIN_ORE, 1);
+        ItemToolPickaxe.miningLevels.put(GRANITE_TIN_ORE, 1);
+        ItemToolPickaxe.miningLevels.put(STONE_COPPER_ORE, 1);
+        ItemToolPickaxe.miningLevels.put(BASALT_COPPER_ORE, 1);
+        ItemToolPickaxe.miningLevels.put(LIMESTONE_COPPER_ORE, 1);
+        ItemToolPickaxe.miningLevels.put(GRANITE_COPPER_ORE, 1);
         ItemToolPickaxe.miningLevels.put(LV_CHARGER, 1);
-        ItemToolPickaxe.miningLevels.put(blockTin, 2);
-        ItemToolPickaxe.miningLevels.put(blockCopper, 2);
-        ItemToolPickaxe.miningLevels.put(blockBronze, 2);
-        ItemToolPickaxe.miningLevels.put(lvGenerator, 2);
-        ItemToolPickaxe.miningLevels.put(lvMachineCasing, 2);
-        ItemToolPickaxe.miningLevels.put(mvMachineCasing, 2);
-        ItemToolPickaxe.miningLevels.put(lvGeneratorWatermill, 2);
-        ItemToolPickaxe.miningLevels.put(lvGeneratorWindmill, 2);
-        ItemToolPickaxe.miningLevels.put(lvGeneratorGeothermal, 2);
-        ItemToolPickaxe.miningLevels.put(lvGeneratorSolar, 2);
-        ItemToolPickaxe.miningLevels.put(mvGeneratorSolar, 2);
-        ItemToolPickaxe.miningLevels.put(hvGeneratorSolar, 2);
-        ItemToolPickaxe.miningLevels.put(ehvGeneratorSolar, 2);
-        ItemToolPickaxe.miningLevels.put(mvBatbox, 2);
-        ItemToolPickaxe.miningLevels.put(hvBatbox, 2);
-        ItemToolPickaxe.miningLevels.put(ehvBatbox, 2);
-        ItemToolPickaxe.miningLevels.put(transformerMVtoLV, 2);
-        ItemToolPickaxe.miningLevels.put(transformerHVtoMV, 2);
-        ItemToolPickaxe.miningLevels.put(transformerEHVtoHV, 2);
-        ItemToolPickaxe.miningLevels.put(alarm, 2);
-        ItemToolPickaxe.miningLevels.put(ulvGeneratorRTG, 2);
+        ItemToolPickaxe.miningLevels.put(BLOCK_OF_TIN, 2);
+        ItemToolPickaxe.miningLevels.put(BLOCK_OF_COPPER, 2);
+        ItemToolPickaxe.miningLevels.put(BLOCK_OF_BRONZE, 2);
+        ItemToolPickaxe.miningLevels.put(LV_GENERATOR, 2);
+        ItemToolPickaxe.miningLevels.put(LV_MACHINE_CASING, 2);
+        ItemToolPickaxe.miningLevels.put(MV_MACHINE_CASING, 2);
+        ItemToolPickaxe.miningLevels.put(LV_WATERMILL, 2);
+        ItemToolPickaxe.miningLevels.put(LV_WINDMILL, 2);
+        ItemToolPickaxe.miningLevels.put(LV_GEOTHERMAL_GENERATOR, 2);
+        ItemToolPickaxe.miningLevels.put(LV_SOLAR_ARRAY, 2);
+        ItemToolPickaxe.miningLevels.put(MV_SOLAR_ARRAY, 2);
+        ItemToolPickaxe.miningLevels.put(HV_SOLAR_ARRAY, 2);
+        ItemToolPickaxe.miningLevels.put(EHV_SOLAR_ARRAY, 2);
+        ItemToolPickaxe.miningLevels.put(MV_BATBOX, 2);
+        ItemToolPickaxe.miningLevels.put(HV_BATBOX, 2);
+        ItemToolPickaxe.miningLevels.put(EHV_BATBOX, 2);
+        ItemToolPickaxe.miningLevels.put(MV_TO_LV_TRANSFORMER, 2);
+        ItemToolPickaxe.miningLevels.put(HV_TO_MV_TRANSFORMER, 2);
+        ItemToolPickaxe.miningLevels.put(EHV_TO_HV_TRANSFORMER, 2);
+        ItemToolPickaxe.miningLevels.put(ALARM, 2);
+        ItemToolPickaxe.miningLevels.put(ULV_NUCLEAR_RTG, 2);
         ItemToolPickaxe.miningLevels.put(MV_CHARGER, 2);
         ItemToolPickaxe.miningLevels.put(HV_CHARGER, 2);
         ItemToolPickaxe.miningLevels.put(EHV_CHARGER, 2);
-        ItemToolPickaxe.miningLevels.put(hardenedCoal, 3);
+        ItemToolPickaxe.miningLevels.put(HARDENED_CARBON, 3);
     }
 
     private void registerGUIs() {
@@ -211,7 +211,7 @@ public class I2Blocks {
     }
 
     private void createTileEntities() {
-        EntityHelper.Core.createTileEntity(TileEntityCable.class, "Cable");
+        EntityHelper.Core.createTileEntity(TileEntityCable.class, "IndustryCable");
         EntityHelper.Core.createTileEntity(TileEntityGenerator.class, "IndustryGenerator");
         EntityHelper.Core.createTileEntity(TileEntityGeneratorWatermill.class, "IndustryWatermill");
         EntityHelper.Core.createTileEntity(TileEntityGeneratorWindmill.class, "IndustryWindmill");
@@ -294,158 +294,158 @@ public class I2Blocks {
                 .setSouthTexture("machine_casing_advanced.png")
                 .setWestTexture("machine_casing_advanced.png");
 
-        oreTinStone = oreBuilder
+        STONE_TIN_ORE = oreBuilder
                 .setTextures("ore_tin_stone.png")
                 .build(new BlockOreTin("ore.tin.stone", nextBlockID(), Material.stone));
 
-        oreTinBasalt = oreBuilder
+        BASALT_TIN_ORE = oreBuilder
                 .setTextures("ore_tin_basalt.png")
                 .build(new BlockOreTin("ore.tin.basalt", nextBlockID(), Material.stone));
 
-        oreTinLimestone = oreBuilder
+        LIMESTONE_TIN_ORE = oreBuilder
                 .setTextures("ore_tin_limestone.png")
                 .build(new BlockOreTin("ore.tin.limestone", nextBlockID(), Material.stone));
 
-        oreTinGranite = oreBuilder
+        GRANITE_TIN_ORE = oreBuilder
                 .setTextures("ore_tin_granite.png")
                 .build(new BlockOreTin("ore.tin.granite", nextBlockID(), Material.stone));
 
-        oreCopperStone = oreBuilder
+        STONE_COPPER_ORE = oreBuilder
                 .setTextures("ore_copper_stone.png")
                 .build(new BlockOreCopper("ore.copper.stone", nextBlockID(), Material.stone));
 
-        oreCopperBasalt = oreBuilder
+        BASALT_COPPER_ORE = oreBuilder
                 .setTextures("ore_copper_basalt.png")
                 .build(new BlockOreCopper("ore.copper.basalt", nextBlockID(), Material.stone));
 
-        oreCopperLimestone = oreBuilder
+        LIMESTONE_COPPER_ORE = oreBuilder
                 .setTextures("ore_copper_limestone.png")
                 .build(new BlockOreCopper("ore.copper.limestone", nextBlockID(), Material.stone));
 
-        oreCopperGranite = oreBuilder
+        GRANITE_COPPER_ORE = oreBuilder
                 .setTextures("ore_copper_granite.png")
                 .build(new BlockOreCopper("ore.copper.granite", nextBlockID(), Material.stone));
 
-        blockTin = MaterialBlockBuilder
+        BLOCK_OF_TIN = MaterialBlockBuilder
                 .setTopTexture("block_tin_top.png")
                 .setSideTextures("block_tin_sides.png")
                 .setBottomTexture("block_tin_bottom.png")
                 .build(new Block("block.tin", nextBlockID(), Material.metal));
 
-        blockCopper = MaterialBlockBuilder
+        BLOCK_OF_COPPER = MaterialBlockBuilder
                 .setTopTexture("block_copper_top.png")
                 .setSideTextures("block_copper_sides.png")
                 .setBottomTexture("block_copper_bottom.png")
                 .build(new Block("block.copper", nextBlockID(), Material.metal));
 
-        blockBronze = MaterialBlockBuilder
+        BLOCK_OF_BRONZE = MaterialBlockBuilder
                 .setTopTexture("block_bronze_top.png")
                 .setSideTextures("block_bronze_sides.png")
                 .setBottomTexture("block_bronze_bottom.png")
                 .build(new Block("block.bronze", nextBlockID(), Material.metal));
 
-        blockCableTin = cableBuilder
+        TIN_CABLE = cableBuilder
                 .setTextures("block_tin_top.png")
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "cable_tin.json"), new CableMetaStates(), true))
                 .build(new BlockCableTin("cable.tin", nextBlockID(), Material.metal));
 
-        blockCableCopper = cableBuilder
+        COPPER_CABLE = cableBuilder
                 .setTextures("block_copper_top.png")
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "cable_copper.json"), new CableMetaStates(), true))
                 .build(new BlockCableCopper("cable.copper", nextBlockID(), Material.metal));
 
-        blockCableGold = cableBuilder
+        GOLD_CABLE = cableBuilder
                 .setTextures(17, 4)
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "cable_gold.json"), new CableMetaStates(), true))
                 .build(new BlockCableGold("cable.gold", nextBlockID(), Material.metal));
 
-        blockCableSteel = cableBuilder
+        STEEL_CABLE = cableBuilder
                 .setTextures(19, 4)
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "cable_steel.json"), new CableMetaStates(), true))
                 .build(new BlockCableSteel("cable.steel", nextBlockID(), Material.metal));
 
-        blockInsulatedCableTin = insulatedCableBuilder
+        INSULATED_TIN_CABLE = insulatedCableBuilder
                 .setTextures("insulated_cable_tin.png")
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_tin.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableTin("cable.tin", nextBlockID(), Material.cloth));
 
-        blockInsulatedCableCopper = insulatedCableBuilder
+        INSULATED_COPPER_CABLE = insulatedCableBuilder
                 .setTextures("insulated_cable_copper.png")
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_copper.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableCopper("cable.copper", nextBlockID(), Material.cloth));
 
-        blockInsulatedCableGold = insulatedCableBuilder
+        INSULATED_GOLD_CABLE = insulatedCableBuilder
                 .setTextures("insulated_cable_gold.png")
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_gold.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableGold("cable.gold", nextBlockID(), Material.cloth));
 
-        blockInsulatedCableSteel = insulatedCableBuilder
+        INSULATED_STEEL_CABLE = insulatedCableBuilder
                 .setTextures("insulated_cable_steel.png")
                 .setBlockModel(new BlockModelDragonFly(
                         ModelHelper.getOrCreateBlockModel(MOD_ID, "block/cable_base.json"),
                         ModelHelper.getOrCreateBlockState(MOD_ID, "insulated_cable_steel.json"), new CableMetaStates(), true))
                 .build(new BlockInsulatedCableSteel("cable.steel", nextBlockID(), Material.cloth));
 
-        lvMachineCasing = machineBuilderBlank
+        LV_MACHINE_CASING = machineBuilderBlank
                 .setTextures("machine_casing_basic.png")
                 .build(new Block("machine.casing", nextBlockID(), Material.metal));
 
-        mvMachineCasing = machineBuilderBlank
+        MV_MACHINE_CASING = machineBuilderBlank
                 .setTextures("machine_casing_advanced.png")
                 .build(new Block("machine.casing.advanced", nextBlockID(), Material.metal));
 
-        ehvMachineCasing = machineBuilder
+        EHV_MACHINE_CASING = machineBuilder
                 .setTextures("reactor_casing_sides.png")
                 .build(new Block("machine.casing.ehv", nextBlockID(), Material.metal));
 
-        lvGenerator = machineBuilder
+        LV_GENERATOR = machineBuilder
                 .setNorthTexture("generator.png")
                 .build(new BlockGenerator("generator", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        lvGeneratorWatermill = machineBuilderBlank
+        LV_WATERMILL = machineBuilderBlank
                 .setTopBottomTexture("machine_casing_basic.png")
                 .setSideTextures("generator_watermill.png")
                 .build(new BlockGeneratorWatermill("generator.watermill", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        lvGeneratorWindmill = machineBuilder
+        LV_WINDMILL = machineBuilder
                 .setNorthTexture("generator_windmill.png")
                 .build(new BlockGeneratorWindmill("generator.windmill", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        lvGeneratorGeothermal = machineBuilder
+        LV_GEOTHERMAL_GENERATOR = machineBuilder
                 .setNorthTexture("generator_geothermal.png")
                 .build(new BlockGeneratorGeothermal("generator.geothermal", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        ulvGeneratorSolar = machineBuilderBlank
+        ULV_SOLAR_PANEL = machineBuilderBlank
                 .setTopTexture("generator_solar.png")
                 .setSideTextures("machine_casing_basic.png")
                 .setBottomTexture("machine_casing_basic.png")
                 .build(new BlockGeneratorSolar("generator.solar", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        lvGeneratorSolar = new BlockBuilder(MOD_ID)
+        LV_SOLAR_ARRAY = new BlockBuilder(MOD_ID)
                 .setBlockSound(BlockSounds.WOOD)
                 .setHardness(5.0f)
                 .setResistance(0.0f)
                 .setTopTexture("arrayLV.png")
-                .setBottomTexture("batboxLV_bottom.png")
+                .setBottomTexture("batboxlv_bottom.png")
                 .setNorthTexture("batboxLV_front.png")
                 .setSouthTexture("batboxLV_front.png")
                 .setEastTexture("batboxLV_sides.png")
@@ -453,9 +453,9 @@ public class I2Blocks {
                 .build(new BlockArrayLV("array.lv", nextBlockID(), Material.wood))
                 .withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_PICKAXE);
 
-        mvGeneratorSolar = machineBuilderBlank
+        MV_SOLAR_ARRAY = machineBuilderBlank
                 .setTopTexture("arrayMV.png")
-                .setBottomTexture("batboxMV_bottom.png")
+                .setBottomTexture("batboxmv_bottom.png")
                 .setNorthTexture("batboxMV_front.png")
                 .setSouthTexture("batboxMV_front.png")
                 .setEastTexture("batboxMV_sides.png")
@@ -463,9 +463,9 @@ public class I2Blocks {
                 .build(new BlockArrayMV("array.mv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        hvGeneratorSolar = machineBuilderBlank
+        HV_SOLAR_ARRAY = machineBuilderBlank
                 .setTopTexture("generator_solar.png")
-                .setBottomTexture("batboxHV_bottom.png")
+                .setBottomTexture("batboxhv_bottom.png")
                 .setNorthTexture("batboxHV_front.png")
                 .setSouthTexture("batboxHV_front.png")
                 .setEastTexture("batboxHV_sides.png")
@@ -473,9 +473,9 @@ public class I2Blocks {
                 .build(new BlockArrayHV("array.hv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        ehvGeneratorSolar = machineBuilderBlank
+        EHV_SOLAR_ARRAY = machineBuilderBlank
                 .setTopTexture("arrayEHV.png")
-                .setBottomTexture("batboxEHV_bottom.png")
+                .setBottomTexture("batboxehv_bottom.png")
                 .setNorthTexture("batboxEHV_front.png")
                 .setSouthTexture("batboxEHV_front.png")
                 .setEastTexture("batboxEHV_sides.png")
@@ -483,12 +483,12 @@ public class I2Blocks {
                 .build(new BlockArrayEHV("array.ehv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        lvBatbox = new BlockBuilder(MOD_ID)
+        LV_BATBOX = new BlockBuilder(MOD_ID)
                 .setBlockSound(BlockSounds.WOOD)
                 .setHardness(5.0f)
                 .setResistance(0.0f)
                 .setTopTexture("batboxLV_top.png")
-                .setBottomTexture("batboxLV_bottom.png")
+                .setBottomTexture("batboxlv_bottom.png")
                 .setNorthTexture("batboxLV_front.png")
                 .setSouthTexture("batboxLV_front.png")
                 .setEastTexture("batboxLV_sides.png")
@@ -496,9 +496,9 @@ public class I2Blocks {
                 .build(new BlockBatboxLV("batbox.lv", nextBlockID(), Material.wood))
                 .withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_PICKAXE);
 
-        mvBatbox = machineBuilderBlank
+        MV_BATBOX = machineBuilderBlank
                 .setTopTexture("batboxMV_top.png")
-                .setBottomTexture("batboxMV_bottom.png")
+                .setBottomTexture("batboxmv_bottom.png")
                 .setNorthTexture("batboxMV_front.png")
                 .setSouthTexture("batboxMV_front.png")
                 .setEastTexture("batboxMV_sides.png")
@@ -506,9 +506,9 @@ public class I2Blocks {
                 .build(new BlockBatboxMV("batbox.mv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        hvBatbox = machineBuilderBlank
+        HV_BATBOX = machineBuilderBlank
                 .setTopTexture("batboxHV_top.png")
-                .setBottomTexture("batboxHV_bottom.png")
+                .setBottomTexture("batboxhv_bottom.png")
                 .setNorthTexture("batboxHV_front.png")
                 .setSouthTexture("batboxHV_front.png")
                 .setEastTexture("batboxHV_sides.png")
@@ -516,9 +516,9 @@ public class I2Blocks {
                 .build(new BlockBatboxHV("batbox.hv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        ehvBatbox = machineBuilderBlank
+        EHV_BATBOX = machineBuilderBlank
                 .setTopTexture("batboxEHV_top.png")
-                .setBottomTexture("batboxEHV_bottom.png")
+                .setBottomTexture("batboxehv_bottom.png")
                 .setNorthTexture("batboxEHV_front.png")
                 .setSouthTexture("batboxEHV_front.png")
                 .setEastTexture("batboxEHV_sides.png")
@@ -526,9 +526,9 @@ public class I2Blocks {
                 .build(new BlockBatboxEHV("batbox.ehv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        transformerMVtoLV = machineBuilderBlank
+        MV_TO_LV_TRANSFORMER = machineBuilderBlank
                 .setTopTexture("batboxMV_top.png")
-                .setBottomTexture("batboxLV_bottom.png")
+                .setBottomTexture("batboxlv_bottom.png")
                 .setNorthTexture("transformerMV_LV_front.png")
                 .setSouthTexture("transformerMV_LV_front.png")
                 .setEastTexture("transformerMV_LV_sides.png")
@@ -536,9 +536,9 @@ public class I2Blocks {
                 .build(new BlockTransformerMVtoLV("transformer.mvtolv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        transformerHVtoMV = machineBuilderBlank
+        HV_TO_MV_TRANSFORMER = machineBuilderBlank
                 .setTopTexture("batboxHV_top.png")
-                .setBottomTexture("batboxMV_bottom.png")
+                .setBottomTexture("batboxmv_bottom.png")
                 .setNorthTexture("transformerHV_MV_front.png")
                 .setSouthTexture("transformerHV_MV_front.png")
                 .setEastTexture("transformerHV_MV_sides.png")
@@ -546,9 +546,9 @@ public class I2Blocks {
                 .build(new BlockTransformerHVtoMV("transformer.hvtomv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        transformerEHVtoHV = machineBuilderBlank
+        EHV_TO_HV_TRANSFORMER = machineBuilderBlank
                 .setTopTexture("batboxEHV_top.png")
-                .setBottomTexture("batboxHV_bottom.png")
+                .setBottomTexture("batboxhv_bottom.png")
                 .setNorthTexture("transformerEHV_HV_front.png")
                 .setSouthTexture("transformerEHV_HV_front.png")
                 .setEastTexture("transformerEHV_HV_sides.png")
@@ -556,72 +556,72 @@ public class I2Blocks {
                 .build(new BlockTransformerEHVtoHV("transformer.ehvtohv", nextBlockID(), Material.metal))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        lvMachineFurnace = machineBuilder
+        LV_ELECTRIC_FURNACE = machineBuilder
                 .setNorthTexture("machine_furnace.png")
                 .build(new BlockMachineFurnace("machine.furnace", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        lvMachineMacerator = machineBuilder
+        LV_MACERATOR = machineBuilder
                 .setNorthTexture("machine_macerator.png")
                 .build(new BlockMachineMacerator("machine.macerator", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        lvMachineCompressor = machineBuilder
+        LV_COMPRESSOR = machineBuilder
                 .setNorthTexture("machine_compressor.png")
                 .build(new BlockMachineCompressor("machine.compressor", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        lvMachineWiremill = machineBuilder
+        LV_WIREMILL = machineBuilder
                 .setNorthTexture("machine_wiremill.png")
                 .build(new BlockMachineWiremill("machine.wiremill", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        lvMachineExtractor = machineBuilder
+        LV_EXTRACTOR = machineBuilder
                 .setNorthTexture("machine_extractor.png")
                 .build(new BlockMachineExtractor("machine.extractor", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        lvMachineRecycler = machineBuilder
+        LV_RECYCLER = machineBuilder
                 .setNorthTexture("machine_recycler.png")
                 .build(new BlockMachineRecycler("machine.recycler", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        machineCannery = machineBuilder
+        LV_CANNERY = machineBuilder
                 .setNorthTexture("machine_cannery.png")
                 .build(new BlockMachineCannery("machine.cannery", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        lvMachineTrommel = machineBuilder
+        LV_ELECTRIC_TROMMEL = machineBuilder
                 .setNorthTexture("machine_trommel.png")
                 .build(new BlockMachineTrommel("machine.trommel", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        mvMachineFurnace = advancedMachineBuilder
+        MV_ELECTRIC_FURNACE = advancedMachineBuilder
                 .setNorthTexture("advanced_furnace.png")
                 .build(new BlockAdvancedFurnace("advanced.furnace", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        mvMachineMacerator = advancedMachineBuilder
+        MV_MACERATOR = advancedMachineBuilder
                 .setNorthTexture("advanced_macerator.png")
                 .build(new BlockAdvancedMacerator("advanced.macerator", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        mvMachineCompressor = advancedMachineBuilder
+        MV_COMPRESSOR = advancedMachineBuilder
                 .setNorthTexture("advanced_compressor.png")
                 .build(new BlockAdvancedCompressor("advanced.compressor", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        mvMachineWiremill = advancedMachineBuilder
+        MV_WIREMILL = advancedMachineBuilder
                 .setNorthTexture("advanced_wiremill.png")
                 .build(new BlockAdvancedWiremill("advanced.wiremill", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        mvMachineExtractor = advancedMachineBuilder
+        MV_EXTRACTOR = advancedMachineBuilder
                 .setNorthTexture("advanced_extractor.png")
                 .build(new BlockAdvancedExtractor("advanced.extractor", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        hardenedCoal = new BlockBuilder(MOD_ID)
+        HARDENED_CARBON = new BlockBuilder(MOD_ID)
                 .setTextures("hardened_coal.png")
                 .setBlockSound(BlockSounds.STONE)
                 .setHardness(10.0f)
@@ -629,7 +629,7 @@ public class I2Blocks {
                 .build(new Block("block.coal.hardened", nextBlockID(), Material.stone))
                 .withTags(BlockTags.MINEABLE_BY_PICKAXE);
 
-        leavesRubberWood = new BlockBuilder(MOD_ID)
+        RUBBERWOOD_LEAVES = new BlockBuilder(MOD_ID)
                 .setTextures(2, 20)
                 .setBlockSound(BlockSounds.GRASS)
                 .setBlockColor(new BlockColorLeaves("pine"))
@@ -641,7 +641,7 @@ public class I2Blocks {
                 .withDisabledNeighborNotifyOnMetadataChange()
                 .withDisabledStats();
 
-        logRubberWood = new BlockBuilder(MOD_ID)
+        RUBBERWOOD_LOG = new BlockBuilder(MOD_ID)
                 .setTopBottomTexture("log_rubber_top.png")
                 .setSideTextures("log_rubber.png")
                 .setBlockSound(BlockSounds.WOOD)
@@ -650,7 +650,7 @@ public class I2Blocks {
                 .withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.FENCES_CONNECT)
                 .withDisabledNeighborNotifyOnMetadataChange();
 
-        logRubberWoodResin = new BlockBuilder(MOD_ID)
+        RUBBERWOOD_RESIN_LOG = new BlockBuilder(MOD_ID)
                 .setTopBottomTexture("log_rubber_top.png")
                 .setSideTextures("log_rubber.png")
                 .setBlockSound(BlockSounds.WOOD)
@@ -660,7 +660,7 @@ public class I2Blocks {
                 .withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.FENCES_CONNECT, BlockTags.NOT_IN_CREATIVE_MENU)
                 .withDisabledNeighborNotifyOnMetadataChange();
 
-        logRubberWoodResinFull = new BlockBuilder(MOD_ID)
+        EMPTY_RUBBERWOOD_RESIN_LOG = new BlockBuilder(MOD_ID)
                 .setTopBottomTexture("log_rubber_top.png")
                 .setSideTextures("log_rubber.png")
                 .setBlockSound(BlockSounds.WOOD)
@@ -670,7 +670,7 @@ public class I2Blocks {
                 .withTags(BlockTags.MINEABLE_BY_AXE, BlockTags.FENCES_CONNECT)
                 .withDisabledNeighborNotifyOnMetadataChange();
 
-        saplingRubberWood = new BlockBuilder(MOD_ID)
+        RUBBERWOOD_SAPLING = new BlockBuilder(MOD_ID)
                 .setTextures("sapling_rubber.png")
                 .setBlockSound(BlockSounds.GRASS)
                 .setBlockModel(new BlockModelRenderBlocks(1))
@@ -679,7 +679,7 @@ public class I2Blocks {
                 .setTicking(true)
                 .withDisabledNeighborNotifyOnMetadataChange();
 
-        nuclearReactor = new BlockBuilder(MOD_ID)
+        NUCLEAR_REACTOR = new BlockBuilder(MOD_ID)
                 .setTopBottomTexture("reactorIO_bottom.png")
                 .setSideTextures("reactor.png")
                 .setBlockSound(BlockSounds.METAL)
@@ -687,7 +687,7 @@ public class I2Blocks {
                 .setResistance(0.0f)
                 .build(new BlockReactor("reactor", nextBlockID(), false));
 
-        nuclearChamber = new BlockBuilder(MOD_ID)
+        NUCLEAR_CHAMBER = new BlockBuilder(MOD_ID)
                 .setTopBottomTexture("reactor_casing_top.png")
                 .setSideTextures("reactor_casing_sides.png")
                 .setBlockSound(BlockSounds.METAL)
@@ -695,7 +695,7 @@ public class I2Blocks {
                 .setResistance(0.0f)
                 .build(new BlockReactorChamber("reactor.chamber", nextBlockID(), Material.metal));
 
-        nuclearIO = new BlockBuilder(MOD_ID)
+        NUCLEAR_CHAMBER_IO = new BlockBuilder(MOD_ID)
                 .setTopTexture("reactorIO_top.png")
                 .setBottomTexture("reactorIO_bottom.png")
                 .setNorthTexture("reactorIO_front.png")
@@ -707,14 +707,14 @@ public class I2Blocks {
                 .setResistance(0.0F)
                 .build(new BlockReactorIO("reactor.io", nextBlockID(), Material.metal));
 
-        ulvGeneratorRTG = new BlockBuilder(MOD_ID)
+        ULV_NUCLEAR_RTG = new BlockBuilder(MOD_ID)
                 .setTextures("reactor_casing_top.png")
                 .setBlockSound(BlockSounds.METAL)
                 .setHardness(10.0F)
                 .setResistance(0.0F)
                 .build(new BlockReactorRTG("reactor.rtg", nextBlockID()));
 
-        energyFabricator = new BlockBuilder(MOD_ID)
+        ENERGY_FABRICATOR = new BlockBuilder(MOD_ID)
                 .setTopBottomTexture("machine_casing_advanced.png")
                 .setNorthTexture("endgame_fabricator.png")
                 .setEastTexture("machine_casing_advanced.png")
@@ -726,7 +726,7 @@ public class I2Blocks {
                 .build(new BlockEnergyFabricator("fabricator", nextBlockID(), Material.metal))
                 .withTags(IndustryTags.REQUIRES_WRENCH);
 
-        alarm = new BlockBuilder(MOD_ID)
+        ALARM = new BlockBuilder(MOD_ID)
                 .setTopBottomTexture("block_bronze_sides.png")
                 .setSideTextures("alarm_front.png")
                 .setBlockSound(BlockSounds.METAL)

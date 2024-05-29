@@ -22,11 +22,11 @@ public class RecipesCannery {
         addRecipe(Item.foodCake.id, 6);
         addRecipe(Item.foodAppleGold.id, 21);
 
-        addSpecialRecipe(I2Items.ingotActivatedRedstone.id, new ItemStack(I2Items.cellRedstoneT1, 1));
+        addSpecialRecipe(I2Items.ACTIVATED_REDSTONE_INGOT.id, new ItemStack(I2Items.T1_REDSTONE_CELL, 1));
     }
 
     public static void addRecipe(int input, int outputCount) {
-        recipeList.put(input, new ItemStack(I2Items.canFood, outputCount));
+        recipeList.put(input, new ItemStack(I2Items.FOOD_CAN, outputCount));
     }
 
     public static void addSpecialRecipe(int input, ItemStack output) {

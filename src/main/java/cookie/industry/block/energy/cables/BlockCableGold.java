@@ -20,6 +20,6 @@ public class BlockCableGold extends BlockCable {
 
     @Override
     public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
-        return new ItemStack[]{new ItemStack(I2Items.itemCableGold)};
+        return new ItemStack[]{new ItemStack(I2Items.GOLD_CABLE)};
     }
 }

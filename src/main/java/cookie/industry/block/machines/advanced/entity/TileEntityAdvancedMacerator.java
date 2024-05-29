@@ -118,7 +118,7 @@ public class TileEntityAdvancedMacerator extends TileEntityAdvancedBase {
             }
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.mvMachineMacerator.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.MV_MACERATOR.id);
         }
     }
 }

@@ -158,7 +158,7 @@ public class GuiMachineCannery extends GuiContainer {
                 target = 1;
             else if (recipes)
                 target = 2;
-            else if (clickedItemId == I2Items.canEmpty.id || clickedItemId == I2Items.cellEmpty.id)
+            else if (clickedItemId == I2Items.EMPTY_CAN.id || clickedItemId == I2Items.EMPTY_CELL.id)
                 target = 3;
         }
 

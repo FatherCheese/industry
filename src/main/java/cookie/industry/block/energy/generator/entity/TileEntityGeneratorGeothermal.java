@@ -12,7 +12,6 @@ import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.player.inventory.IInventory;
 import sunsetsatellite.catalyst.core.util.Connection;
 import sunsetsatellite.catalyst.core.util.Direction;
-import sunsetsatellite.catalyst.energy.api.IEnergyItem;
 import sunsetsatellite.catalyst.energy.impl.ItemEnergyContainer;
 import sunsetsatellite.catalyst.energy.impl.TileEntityEnergyConductor;
 
@@ -134,7 +133,7 @@ public class TileEntityGeneratorGeothermal extends TileEntityEnergyConductor imp
             }
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.lvGeneratorGeothermal.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.LV_GEOTHERMAL_GENERATOR.id);
         }
     }
 

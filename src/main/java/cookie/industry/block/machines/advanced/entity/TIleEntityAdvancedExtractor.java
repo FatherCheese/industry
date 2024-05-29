@@ -118,7 +118,7 @@ public class TIleEntityAdvancedExtractor extends TileEntityAdvancedBase {
             }
 
             if (active)
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.mvMachineExtractor.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.MV_EXTRACTOR.id);
         }
     }
 }

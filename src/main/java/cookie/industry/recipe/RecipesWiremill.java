@@ -12,17 +12,17 @@ public class RecipesWiremill {
     private static final HashMap<Integer, ItemStack> recipeList = new HashMap<>();
 
     public RecipesWiremill() {
-        addRecipe(I2Items.ingotTin.id, new ItemStack(I2Items.itemCableTin, 4));
-        addRecipe(I2Blocks.blockTin.id, new ItemStack(I2Items.itemCableTin, 36));
+        addRecipe(I2Items.TIN_INGOT.id, new ItemStack(I2Items.TIN_CABLE, 4));
+        addRecipe(I2Blocks.BLOCK_OF_TIN.id, new ItemStack(I2Items.TIN_CABLE, 36));
 
-        addRecipe(I2Items.ingotCopper.id, new ItemStack(I2Items.itemCableCopper, 4));
-        addRecipe(I2Blocks.blockCopper.id, new ItemStack(I2Items.itemCableCopper, 36));
+        addRecipe(I2Items.COPPER_INGOT.id, new ItemStack(I2Items.COPPER_CABLE, 4));
+        addRecipe(I2Blocks.BLOCK_OF_COPPER.id, new ItemStack(I2Items.COPPER_CABLE, 36));
 
-        addRecipe(Item.ingotGold.id, new ItemStack(I2Items.itemCableGold, 4));
-        addRecipe(Block.blockGold.id, new ItemStack(I2Items.itemCableGold, 36));
+        addRecipe(Item.ingotGold.id, new ItemStack(I2Items.GOLD_CABLE, 4));
+        addRecipe(Block.blockGold.id, new ItemStack(I2Items.GOLD_CABLE, 36));
 
-        addRecipe(Item.ingotSteel.id, new ItemStack(I2Items.itemCableSteel, 4));
-        addRecipe(Block.blockSteel.id, new ItemStack(I2Items.itemCableSteel, 36));
+        addRecipe(Item.ingotSteel.id, new ItemStack(I2Items.STEEL_CABLE, 4));
+        addRecipe(Block.blockSteel.id, new ItemStack(I2Items.STEEL_CABLE, 36));
 
         addRecipe(Block.wool.id, new ItemStack(Item.string, 4));
     }

@@ -11,7 +11,7 @@ import java.util.Random;
 public class WorldFeatureRubberTree extends WorldFeatureTree {
 
     public WorldFeatureRubberTree(int leavesID, int heightMod) {
-        super(leavesID, I2Blocks.logRubberWood.id, heightMod);
+        super(leavesID, I2Blocks.RUBBERWOOD_LOG.id, heightMod);
     }
 
     public boolean generate(World world, Random random, int x, int y, int z) {
@@ -64,7 +64,7 @@ public class WorldFeatureRubberTree extends WorldFeatureTree {
                         int id = world.getBlockId(x, y + l1, z);
                         if (id == 0 || this.isLeaf(id)) {
                             if (random.nextInt(5) == 0) {
-                                world.setBlockWithNotify(x, y + l1, z, I2Blocks.logRubberWoodResinFull.id);
+                                world.setBlockWithNotify(x, y + l1, z, I2Blocks.EMPTY_RUBBERWOOD_RESIN_LOG.id);
                             }
                             else
                                 world.setBlockWithNotify(x, y + l1, z, this.logID);

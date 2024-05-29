@@ -20,6 +20,6 @@ public class BlockCableCopper extends BlockCable {
 
     @Override
     public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
-        return new ItemStack[]{new ItemStack(I2Items.itemCableCopper)};
+        return new ItemStack[]{new ItemStack(I2Items.COPPER_CABLE)};
     }
 }

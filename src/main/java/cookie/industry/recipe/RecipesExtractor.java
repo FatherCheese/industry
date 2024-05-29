@@ -10,13 +10,16 @@ public class RecipesExtractor {
     private static final HashMap<Integer, ItemStack> recipeList = new HashMap<>();
 
     public RecipesExtractor() {
-        addRecipe(I2Blocks.logRubberWood.id, new ItemStack(I2Items.rubber, 1));
-        addRecipe(I2Blocks.logRubberWoodResin.id, new ItemStack(I2Items.rubber, 1));
-        addRecipe(I2Blocks.logRubberWoodResinFull.id, new ItemStack(I2Items.rubber, 1));
-        addRecipe(I2Blocks.saplingRubberWood.id, new ItemStack(I2Items.rubber, 1));
-        addRecipe(I2Items.resin.id, new ItemStack(I2Items.rubber, 3));
+        addRecipe(I2Blocks.RUBBERWOOD_LOG.id, new ItemStack(I2Items.RUBBER, 1));
+        addRecipe(I2Blocks.RUBBERWOOD_RESIN_LOG.id, new ItemStack(I2Items.RUBBER, 1));
+        addRecipe(I2Blocks.EMPTY_RUBBERWOOD_RESIN_LOG.id, new ItemStack(I2Items.RUBBER, 1));
+        addRecipe(I2Blocks.RUBBERWOOD_SAPLING.id, new ItemStack(I2Items.RUBBER, 1));
+        addRecipe(I2Items.RESIN.id, new ItemStack(I2Items.RUBBER, 3));
 
-        addRecipe(I2Items.cellWater.id, new ItemStack(I2Items.cellCoolant, 1));
+        addRecipe(I2Items.WATER_CELL.id, new ItemStack(I2Items.COOLANT_CELL, 1));
+
+        addRecipe(I2Items.EMPTY_T1_REDSTONE_CELL.id, new ItemStack(I2Items.T2_REDSTONE_CELL));
+        addRecipe(I2Items.EMPTY_T2_REDSTONE_CELL.id, new ItemStack(I2Items.T3_REDSTONE_CELL));
     }
 
     public static void addRecipe(int input, ItemStack output) {

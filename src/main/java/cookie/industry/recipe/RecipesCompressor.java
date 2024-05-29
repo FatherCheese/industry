@@ -12,27 +12,27 @@ public class RecipesCompressor {
     private static final HashMap<Integer, ItemStack> recipeList = new HashMap<>();
 
     public RecipesCompressor() {
-        addRecipe(I2Items.ingotTin.id, new ItemStack(I2Items.plateTin, 2));
-        addRecipe(I2Blocks.blockTin.id, new ItemStack(I2Items.plateTin, 18));
+        addRecipe(I2Items.TIN_INGOT.id, new ItemStack(I2Items.TIN_PLATE, 2));
+        addRecipe(I2Blocks.BLOCK_OF_TIN.id, new ItemStack(I2Items.TIN_PLATE, 18));
 
-        addRecipe(I2Items.ingotCopper.id, new ItemStack(I2Items.plateCopper, 2));
-        addRecipe(I2Blocks.blockCopper.id, new ItemStack(I2Items.plateCopper, 18));
+        addRecipe(I2Items.COPPER_INGOT.id, new ItemStack(I2Items.COPPER_PLATE, 2));
+        addRecipe(I2Blocks.BLOCK_OF_COPPER.id, new ItemStack(I2Items.COPPER_PLATE, 18));
 
-        addRecipe(I2Items.ingotBronze.id, new ItemStack(I2Items.plateBronze, 2));
-        addRecipe(I2Blocks.blockBronze.id, new ItemStack(I2Items.plateBronze, 18));
+        addRecipe(I2Items.BRONZE_INGOT.id, new ItemStack(I2Items.BRONZE_PLATE, 2));
+        addRecipe(I2Blocks.BLOCK_OF_BRONZE.id, new ItemStack(I2Items.BRONZE_PLATE, 18));
 
-        addRecipe(I2Items.ingotIridium.id, new ItemStack(I2Items.plateIridium, 1));
+        addRecipe(I2Items.IRIDIUM_INGOT.id, new ItemStack(I2Items.IRIDIUM_PLATE, 1));
 
-        addRecipe(Item.ingotIron.id, new ItemStack(I2Items.plateIron, 2));
-        addRecipe(Block.blockIron.id, new ItemStack(I2Items.plateIron, 18));
+        addRecipe(Item.ingotIron.id, new ItemStack(I2Items.IRON_PLATE, 2));
+        addRecipe(Block.blockIron.id, new ItemStack(I2Items.IRON_PLATE, 18));
 
-        addRecipe(Item.ingotGold.id, new ItemStack(I2Items.plateGold, 2));
-        addRecipe(Block.blockGold.id, new ItemStack(I2Items.plateGold, 18));
+        addRecipe(Item.ingotGold.id, new ItemStack(I2Items.GOLD_PLATE, 2));
+        addRecipe(Block.blockGold.id, new ItemStack(I2Items.GOLD_PLATE, 18));
 
-        addRecipe(Item.ingotSteel.id, new ItemStack(I2Items.plateSteel, 2));
-        addRecipe(Block.blockSteel.id, new ItemStack(I2Items.plateSteel, 18));
+        addRecipe(Item.ingotSteel.id, new ItemStack(I2Items.STEEL_PLATE, 2));
+        addRecipe(Block.blockSteel.id, new ItemStack(I2Items.STEEL_PLATE, 18));
 
-        addRecipe(I2Blocks.hardenedCoal.id, new ItemStack(Item.diamond, 1));
+        addRecipe(I2Blocks.HARDENED_CARBON.id, new ItemStack(Item.diamond, 1));
     }
 
     public static void addRecipe(int input, ItemStack output) {

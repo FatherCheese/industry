@@ -105,7 +105,7 @@ public class BlockAdvancedWiremill extends BlockTileEntityRotatable {
         if (dropCause == EnumDropCause.PICK_BLOCK || dropCause == EnumDropCause.PROPER_TOOL)
             return new ItemStack[]{new ItemStack(this)};
         else
-            return new ItemStack[]{new ItemStack(I2Blocks.mvMachineCasing)};
+            return new ItemStack[]{new ItemStack(I2Blocks.MV_MACHINE_CASING)};
     }
 
     // Static Methods

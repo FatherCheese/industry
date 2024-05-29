@@ -1,5 +1,6 @@
 package cookie.industry.block.energy.cables.entity;
 
+import com.mojang.nbt.CompoundTag;
 import cookie.industry.block.energy.entity.TileEntityEnergyConductorDamageable;
 import sunsetsatellite.catalyst.core.util.Connection;
 import sunsetsatellite.catalyst.core.util.Direction;

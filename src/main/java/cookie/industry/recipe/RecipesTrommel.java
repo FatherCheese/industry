@@ -9,14 +9,14 @@ import turniplabs.halplibe.util.RecipeEntrypoint;
 public class RecipesTrommel implements RecipeEntrypoint {
     @Override
     public void onRecipesReady() {
-        Registries.RECIPES.TROMMEL.getItem("dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawTin), 1), 0.5f);
-        Registries.RECIPES.TROMMEL.getItem("dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawCopper), 1), 0.5f);
-        Registries.RECIPES.TROMMEL.getItem("gravel").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawTin), 1, 2), 10.0f);
-        Registries.RECIPES.TROMMEL.getItem("gravel").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawCopper), 1, 2), 10.0f);
-        Registries.RECIPES.TROMMEL.getItem("rich_dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawTin), 1, 2), 15.0f);
-        Registries.RECIPES.TROMMEL.getItem("rich_dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawCopper), 1, 2), 15.0f);
-        Registries.RECIPES.TROMMEL.getItem("soul_sand").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawTin), 1), 1.0f);
-        Registries.RECIPES.TROMMEL.getItem("soul_sand").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.oreRawCopper), 1), 1.0f);
+        Registries.RECIPES.TROMMEL.getItem("dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_TIN), 1), 0.5f);
+        Registries.RECIPES.TROMMEL.getItem("dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_COPPER), 1), 0.5f);
+        Registries.RECIPES.TROMMEL.getItem("gravel").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_TIN), 1, 2), 10.0f);
+        Registries.RECIPES.TROMMEL.getItem("gravel").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_COPPER), 1, 2), 10.0f);
+        Registries.RECIPES.TROMMEL.getItem("rich_dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_TIN), 1, 2), 15.0f);
+        Registries.RECIPES.TROMMEL.getItem("rich_dirt").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_COPPER), 1, 2), 15.0f);
+        Registries.RECIPES.TROMMEL.getItem("soul_sand").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_TIN), 1), 1.0f);
+        Registries.RECIPES.TROMMEL.getItem("soul_sand").getOutput().addEntry(new WeightedRandomLootObject(new ItemStack(I2Items.RAW_COPPER), 1), 1.0f);
     }
 
     @Override

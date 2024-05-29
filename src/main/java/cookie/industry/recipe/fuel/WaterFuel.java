@@ -10,8 +10,8 @@ public class WaterFuel {
 
     public WaterFuel() {
         addFuel(Item.bucketWater.id, 1000);
-        addFuel(I2Items.cellWater.id, 1000);
-        addFuel(I2Items.cellCoolant.id, 4000);
+        addFuel(I2Items.WATER_CELL.id, 1000);
+        addFuel(I2Items.COOLANT_CELL.id, 4000);
     }
 
     public static void addFuel(int inputItem, int outputYield) {

@@ -119,23 +119,23 @@ public class TileEntityReactorNewer extends TileEntityEnergyConductor implements
 
         for (int i = 3; i < 51; i++) {
             if (contents[i] != null) {
-                if (contents[i].getItem() == I2Items.cellRedstoneT1) {
+                if (contents[i].getItem() == I2Items.T1_REDSTONE_CELL) {
                     redstoneCellsT1 += 1;
                 }
 
-                if (contents[i].getItem() == I2Items.cellRedstoneT2) {
+                if (contents[i].getItem() == I2Items.T2_REDSTONE_CELL) {
                     redstoneCellsT2 += 1;
                 }
 
-                if (contents[i].getItem() == I2Items.cellRedstoneT3) {
+                if (contents[i].getItem() == I2Items.T3_REDSTONE_CELL) {
                     redstoneCellsT3 += 1;
                 }
 
-                if (contents[i].getItem() == I2Items.reactorVent) {
+                if (contents[i].getItem() == I2Items.REACTOR_VENT) {
                     reactorVents += 1;
                 }
 
-                if (contents[i].getItem() == I2Items.reactorPlate) {
+                if (contents[i].getItem() == I2Items.PLATE_REACTOR) {
                     maxHeat += 500;
                 }
             }
@@ -152,7 +152,7 @@ public class TileEntityReactorNewer extends TileEntityEnergyConductor implements
             int _x = x + side.getOffsetX();
             int _y = y + side.getOffsetY();
             int _z = z + side.getOffsetZ();
-            if (worldObj.getBlockId(_x, y, _z) != I2Blocks.nuclearChamber.id && worldObj.getBlockId(x, _y, z) != I2Blocks.nuclearIO.id) {
+            if (worldObj.getBlockId(_x, y, _z) != I2Blocks.NUCLEAR_CHAMBER.id && worldObj.getBlockId(x, _y, z) != I2Blocks.NUCLEAR_CHAMBER_IO.id) {
                 return false;
             }
         }
@@ -285,19 +285,19 @@ public class TileEntityReactorNewer extends TileEntityEnergyConductor implements
                 if (shouldDamageRedstone) {
                     stacks.damageItem(1, null);
 
-                    if (stacks.getItem() == I2Items.cellRedstoneT1) {
+                    if (stacks.getItem() == I2Items.T1_REDSTONE_CELL) {
                         heat += 5 * redstoneCellsT1;
 
-                        if (stacks.stackSize <= 0) contents[i] = new ItemStack(I2Items.cellRedstoneT1Empty);
+                        if (stacks.stackSize <= 0) contents[i] = new ItemStack(I2Items.EMPTY_T1_REDSTONE_CELL);
                     }
 
-                    if (stacks.getItem() == I2Items.cellRedstoneT2) {
+                    if (stacks.getItem() == I2Items.T2_REDSTONE_CELL) {
                         heat += 25 * redstoneCellsT2;
 
-                        if (stacks.stackSize <= 0) contents[i] = new ItemStack(I2Items.cellRedstoneT2Empty);
+                        if (stacks.stackSize <= 0) contents[i] = new ItemStack(I2Items.EMPTY_T2_REDSTONE_CELL);
                     }
 
-                    if (stacks.getItem() == I2Items.cellRedstoneT3) {
+                    if (stacks.getItem() == I2Items.T3_REDSTONE_CELL) {
                         heat += 50 * redstoneCellsT3;
 
                         if (stacks.stackSize < 0) contents[i] = null;

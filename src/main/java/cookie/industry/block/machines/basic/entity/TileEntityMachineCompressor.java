@@ -54,7 +54,7 @@ public class TileEntityMachineCompressor extends TileEntityMachineBase {
 
         if (!worldObj.isClientSide) {
 
-            if (worldObj.getBlockId(x, y, z) == I2Blocks.lvMachineCompressor.id &&
+            if (worldObj.getBlockId(x, y, z) == I2Blocks.LV_COMPRESSOR.id &&
             currentMachineTime == 0 &&
             contents[2] == null) {
                 BlockMachineCompressor.updateBlockState(true, worldObj, x, y, z);
@@ -84,7 +84,7 @@ public class TileEntityMachineCompressor extends TileEntityMachineBase {
                 onInventoryChanged();
 
             if (active) {
-                worldObj.notifyBlockChange(x, y, z, I2Blocks.lvMachineCompressor.id);
+                worldObj.notifyBlockChange(x, y, z, I2Blocks.LV_COMPRESSOR.id);
             }
         }
     }

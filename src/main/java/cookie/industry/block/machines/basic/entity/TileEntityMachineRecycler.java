@@ -25,7 +25,7 @@ public class TileEntityMachineRecycler extends TileEntityMachineBase {
     private void produceItem() {
         if (canProduce()) {
             Random random = new Random();
-            ItemStack produceStack = new ItemStack(I2Items.scrap, 1);
+            ItemStack produceStack = new ItemStack(I2Items.SCRAP, 1);
 
             if (contents[3] == null) {
                 if (random.nextInt(4) == 0)
@@ -49,7 +49,7 @@ public class TileEntityMachineRecycler extends TileEntityMachineBase {
         boolean machineUpdated = false;
 
         if (!worldObj.isClientSide) {
-            if (worldObj.getBlockId(x, y, z) == I2Blocks.lvMachineRecycler.id &&
+            if (worldObj.getBlockId(x, y, z) == I2Blocks.LV_RECYCLER.id &&
                     currentMachineTime == 0 &&
                     contents[2] == null) {
                 machineUpdated = true;
