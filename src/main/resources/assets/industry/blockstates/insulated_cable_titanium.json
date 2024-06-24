@@ -1,0 +1,110 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_side"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_side",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_side",
+        "y": 180
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_side",
+        "y": 270
+      },
+      "when": {
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_side",
+        "x": 270
+      },
+      "when": {
+        "up": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_side",
+        "x": 90
+      },
+      "when": {
+        "down": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_connected"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_connected",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_connected",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_connected",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_connected",
+        "x": 270
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "industry:block/insulated_cable/cable_titanium_connected",
+        "x": 90
+      },
+      "when": {
+        "down": "true"
+      }
+    }
+  ]
+}

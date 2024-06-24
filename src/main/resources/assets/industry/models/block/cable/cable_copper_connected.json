@@ -1,0 +1,8 @@
+{
+	"parent": "industry:block/cable_base_connected",
+	"ambientocclusion": false,
+	"textures": {
+		"texture": "industry:block/block_copper_top",
+		"particle": "industry:block/block_copper_top"
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "industry:block/newcable/newcable_ew",
+  "ambientocclusion": false,
+  "textures": {
+    "0": "industry:block/newcable_tin"
+  }
+}

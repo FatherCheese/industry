@@ -1,6 +1,0 @@
-{
-	"parent": "industry:block/cable_base_connected",
-	"textures": {
-		"texture": "industry:block/insulated_cable_steel"
-	}
-}

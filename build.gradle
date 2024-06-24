@@ -1,5 +1,5 @@
 plugins {
-	id 'babric-loom' version '1.1.+'
+	id 'babric-loom' version '1.4.+'
 	id 'java'
 }
 
@@ -15,9 +15,7 @@ loom {
 
 repositories {
 	mavenCentral()
-	maven {
-		url = "https://jitpack.io"
-	}
+	maven { url = "https://jitpack.io" }
 	maven {
 		name = 'Babric'
 		url = 'https://maven.glass-launcher.net/babric'
@@ -74,30 +72,6 @@ repositories {
 		}
 		metadataSources { artifact() }
 	}
-	ivy {
-		url = "https://github.com/ToufouMaster"
-		patternLayout {
-			artifact "[organisation]/releases/download/[revision]/[module]-[revision].jar"
-			m2compatible = true
-		}
-		metadataSources { artifact() }
-	}
-	ivy {
-		url = "https://github.com/UselessSolutions"
-		patternLayout {
-			artifact "[organisation]/releases/download/v[revision]/[module]-[revision].jar"
-			m2compatible = true
-		}
-		metadataSources { artifact() }
-	}
-	ivy {
-		url = "https://github.com/SamuelDeboni"
-		patternLayout {
-			artifact "[organisation]/releases/download/[revision]/[module]-[revision].jar"
-			m2compatible = true
-		}
-		metadataSources { artifact() }
-	}
 }
 
 dependencies {
@@ -108,20 +82,20 @@ dependencies {
 	modImplementation "fabric-loader:fabric-loader:${project.loader_version}"
 
 	// Helper library
+	// If you do not need Halplibe you can comment this line out or delete this line
 	modImplementation "com.github.Turnip-Labs:bta-halplibe:${project.halplibe_version}"
+	modImplementation "ModMenu:ModMenu:${project.mod_menu_version}"
 
-	// Energy API
-	modImplementation files('dependencies/catalyst-core-1.2.0.jar')
-	modImplementation files('dependencies/catalyst-energy-1.0.9.jar')
+	// Catalyst
+	modImplementation files('dependencies/catalyst-core-1.3.0.jar')
+	modImplementation files('dependencies/catalyst-energy-1.0.11.jar')
 
-	// Terrain API
-	modImplementation "TerrainAPI:terrainapi:${project.terrain_api_version}"
-	modImplementation "DragonFly:dragonfly:${project.dragonfly_version}"
+	// UselessSolutions
+	modImplementation "com.github.UselessSolutions:TerrainAPI:v${project.terrain_api_version}"
+	modImplementation "com.github.UselessSolutions:dragonfly:v${project.dragonfly_version}"
 
-	// Mod Compatability
-	modImplementation "btwaila:btwaila:1.0.9-7.1"
-
-	modImplementation "ModMenu:ModMenu:2.0.5"
+	// Miscellaneous
+	modImplementation files('dependencies/btwaila-1.1.1-7.2-pre1.jar')
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"
 	implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"
@@ -142,7 +116,7 @@ java {
 	withSourcesJar()
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
 	options.release.set 8
 }
 

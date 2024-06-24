@@ -36,8 +36,8 @@
       "cookie.industry.Industry2"
     ],
     "recipesReady": [
-      "cookie.industry.recipe.RecipesTrommel",
-      "cookie.industry.recipe.I2Recipes"
+      "cookie.industry.core.recipe.RecipesTrommel",
+      "cookie.industry.core.recipe.I2Recipes"
     ],
     "btwaila": [
       "cookie.industry.compat.btwaila.WailaPlugin"
@@ -51,11 +51,9 @@
   ],
 
   "depends": {
-    "minecraft": "~7.1",
+    "minecraft": "^7.2-beta",
     "fabricloader": ">=0.15.5",
-    "halplibe":">=3.5.0",
-    "terrain-api": ">=1.4.0-7.1",
-    "dragonfly": ">=1.4.0-7.1"
+    "halplibe":">=4.0.0"
   },
   "suggests": {
   }

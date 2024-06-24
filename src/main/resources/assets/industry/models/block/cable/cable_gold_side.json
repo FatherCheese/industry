@@ -1,0 +1,8 @@
+{
+	"parent": "industry:block/cable_base_side",
+	"ambientocclusion": false,
+	"textures": {
+		"texture": "minecraft:block/block_gold_top",
+		"particle": "minecraft:block/block_gold_top"
+	}
+}

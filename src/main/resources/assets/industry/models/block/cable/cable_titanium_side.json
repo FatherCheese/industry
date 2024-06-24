@@ -1,0 +1,8 @@
+{
+	"parent": "industry:block/cable_base_side",
+	"ambientocclusion": false,
+	"textures": {
+		"texture": "industry:block/block_titanium_top",
+		"particle": "industry:block/block_titanium_top"
+	}
+}

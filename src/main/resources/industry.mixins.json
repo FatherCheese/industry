@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "EntityMixin",
-    "WorldFeatureDungeonMixin",
-    "achievement.SlotCraftingMixin"
+    "WorldFeatureDungeonMixin"
   ],
   "client": [
   ],
