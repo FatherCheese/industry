@@ -21,7 +21,7 @@ public class ItemToolChainsaw extends ItemToolElectric {
     }
 
     @Override
-    public boolean canHarvestBlock(Block block) {
+    public boolean canHarvestBlock(EntityLiving entityLiving, ItemStack itemStack, Block block) {
         return block.hasTag(BlockTags.MINEABLE_BY_AXE) || block.hasTag(BlockTags.MINEABLE_BY_SHEARS);
     }
 

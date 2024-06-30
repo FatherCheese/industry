@@ -11,6 +11,7 @@ import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
+import net.minecraft.core.util.helper.Side;
 import sunsetsatellite.catalyst.Catalyst;
 
 public class BlockLVWatermill extends BlockTileEntity {
@@ -24,7 +25,7 @@ public class BlockLVWatermill extends BlockTileEntity {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xPlaced, double yPlaced) {
         TileEntityLVWatermill tileEntity = (TileEntityLVWatermill) world.getBlockTileEntity(x, y, z);
 
         if (tileEntity == null) return false;

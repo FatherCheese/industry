@@ -27,7 +27,7 @@ public class ItemWrench extends Item {
         return false;
     }
     @Override
-    public boolean canHarvestBlock(Block block) {
+    public boolean canHarvestBlock(EntityLiving entityLiving, ItemStack itemStack, Block block) {
         return block.hasTag(I2Tags.MINEABLE_BY_WRENCH);
     }
 

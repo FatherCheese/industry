@@ -41,7 +41,7 @@ public class ItemToolNanoHoe extends ItemToolElectric {
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+    public ItemStack onUseItem(ItemStack stack, World world, EntityPlayer player) {
         world.playSoundAtEntity(null, player, "industry.laser", 1.0f, 1.0f);
         if (!world.isClientSide) {
             active = !active;
@@ -56,7 +56,7 @@ public class ItemToolNanoHoe extends ItemToolElectric {
     }
 
     @Override
-    public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
+    public boolean onUseItemOnBlock(ItemStack stack, EntityPlayer player, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
         Block block = world.getBlock(blockX, blockY, blockZ);
         Block blockAbove = world.getBlock(blockX, blockY + 1, blockZ);
 
@@ -92,7 +92,7 @@ public class ItemToolNanoHoe extends ItemToolElectric {
     }
 
     @Override
-    public boolean canHarvestBlock(Block block) {
+    public boolean canHarvestBlock(EntityLiving entityLiving, ItemStack itemStack, Block block) {
         return block.hasTag(BlockTags.MINEABLE_BY_HOE);
     }
 

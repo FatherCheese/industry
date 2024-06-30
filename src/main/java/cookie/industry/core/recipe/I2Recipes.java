@@ -225,7 +225,7 @@ public class I2Recipes implements RecipeEntrypoint {
                 .setCan(new ItemStack(I2ItemsNew.EMPTY_CAN), 1)
                 .create("cookie_to_one_can", I2ItemsNew.FILLED_CAN.getDefaultStack());
         new RecipeBuilderCanningMachine(MOD_ID)
-                .setInput(Item.cherry)
+                .setInput(Item.foodCherry)
                 .setCan(new ItemStack(I2ItemsNew.EMPTY_CAN), 1)
                 .create("cherry_to_one_can", I2ItemsNew.FILLED_CAN.getDefaultStack());
 

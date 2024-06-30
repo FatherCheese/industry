@@ -12,7 +12,7 @@ public class RecipesCannery {
     public RecipesCannery() {
         addRecipe(Item.foodFishRaw.id, 1);
         addRecipe(Item.foodCookie.id, 1);
-        addRecipe(Item.cherry.id, 1);
+        addRecipe(Item.foodCherry.id, 1);
         addRecipe(Item.foodApple.id, 2);
         addRecipe(Item.foodPorkchopRaw.id, 2);
         addRecipe(Item.foodBread.id, 3);

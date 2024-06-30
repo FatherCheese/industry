@@ -11,6 +11,7 @@ import net.minecraft.core.util.helper.DamageType;
 import net.minecraft.core.util.phys.AABB;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.WorldSource;
+import net.minecraft.core.util.helper.Side;
 import sunsetsatellite.catalyst.energy.api.IEnergy;
 
 import java.util.Random;
@@ -41,7 +42,7 @@ public class BlockCable extends BlockTileEntity {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xPlaced, double yPlaced) {
         return false;
     }
 

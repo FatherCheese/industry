@@ -24,7 +24,7 @@ public class ItemToolDrill extends ItemToolElectric {
 
 
     @Override
-    public boolean canHarvestBlock(Block block) {
+    public boolean canHarvestBlock(EntityLiving entityLiving, ItemStack itemStack, Block block) {
         Integer miningLevel = ItemToolPickaxe.miningLevels.get(block);
 
         if (miningLevel != null) {

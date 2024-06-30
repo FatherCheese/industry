@@ -8,6 +8,8 @@ import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.world.World;
+import net.minecraft.core.util.helper.Side;
+import net.minecraft.core.entity.EntityLiving;
 
 public class ItemToolNanoSword extends ItemToolElectric {
     private int damageTimer = 0;
@@ -39,7 +41,7 @@ public class ItemToolNanoSword extends ItemToolElectric {
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+    public ItemStack onUseItem(ItemStack stack, World world, EntityPlayer player) {
         world.playSoundAtEntity(null, player, "industry.laser", 1.0f, 1.0f);
         if (!world.isClientSide) {
             active = !active;
@@ -59,7 +61,7 @@ public class ItemToolNanoSword extends ItemToolElectric {
     }
 
     @Override
-    public boolean canHarvestBlock(Block block) {
+    public boolean canHarvestBlock(EntityLiving entityLiving, ItemStack itemStack, Block block) {
         return block.hasTag(BlockTags.MINEABLE_BY_SWORD);
     }
 

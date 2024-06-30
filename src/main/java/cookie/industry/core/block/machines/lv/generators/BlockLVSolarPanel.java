@@ -11,6 +11,7 @@ import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
+import net.minecraft.core.util.helper.Side;
 import sunsetsatellite.catalyst.Catalyst;
 
 public class BlockLVSolarPanel extends BlockTileEntity {
@@ -24,7 +25,7 @@ public class BlockLVSolarPanel extends BlockTileEntity {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xPlaced, double yPlaced) {
         TileEntityLVSolarPanel tile = (TileEntityLVSolarPanel) world.getBlockTileEntity(x, y, z);
 
         if (tile == null) return false;
