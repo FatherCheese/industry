@@ -19,8 +19,8 @@ public class ItemToolElectricWrench extends ItemWrench implements IEnergyItem, I
     public ItemToolElectricWrench(String name, int id) {
         super(name, id);
 
-        baseCapacity = I2Config.cfg.getInt("Energy Values.lvBatteryStorage");
-        baseReceive = I2Config.cfg.getInt("Energy Values.lvIO");
+        baseCapacity = I2Config.cfg.getInt("Energy Values.lowVoltage") * 4;
+        baseReceive = I2Config.cfg.getInt("Energy Values.lowVoltage");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class ItemToolElectricWrench extends ItemWrench implements IEnergyItem, I
     public boolean onBlockDestroyed(World world, ItemStack stack, int id, int x, int y, int z, EntityLiving living) {
         Block block = Block.blocksList[id];
         if (block != null && block.getHardness() > 0.0f && block.hasTag(I2Tags.MINEABLE_BY_WRENCH)) {
-            modifyEnergy(stack, -25);
+            modifyEnergy(stack, -10);
             return true;
         }
         return false;
@@ -40,7 +40,7 @@ public class ItemToolElectricWrench extends ItemWrench implements IEnergyItem, I
 
     @Override
     public boolean hitEntity(ItemStack stack, EntityLiving living, EntityLiving living2) {
-        modifyEnergy(stack, -100);
+        modifyEnergy(stack, -40);
         return true;
     }
 

@@ -1,21 +1,21 @@
 package cookie.industry.core.block.machines.lv.generators;
 
 import cookie.industry.Industry2;
-import cookie.industry.core.block.I2BlocksNew;
+import cookie.industry.core.I2BlocksNew;
+import cookie.industry.core.block.machines.lv.BlockLVMachineBase;
 import cookie.industry.core.block.machines.lv.generators.entities.TileEntityLVCombustionGenerator;
-import net.minecraft.core.block.BlockTileEntityRotatable;
 import net.minecraft.core.block.entity.TileEntity;
-import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.EntityItem;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 import sunsetsatellite.catalyst.Catalyst;
 
-public class BlockLVCombustionGenerator extends BlockTileEntityRotatable {
+public class BlockLVCombustionGenerator extends BlockLVMachineBase {
     public BlockLVCombustionGenerator(String key, int id) {
-        super(key, id, Material.metal);
+        super(key, id);
     }
 
     @Override
@@ -24,7 +24,8 @@ public class BlockLVCombustionGenerator extends BlockTileEntityRotatable {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xHit, double yHit) {
+        super.onBlockRightClicked(world, x, y, z, player, side, xHit, yHit);
         TileEntityLVCombustionGenerator tileEntity = (TileEntityLVCombustionGenerator) world.getBlockTileEntity(x, y, z);
 
         if (tileEntity == null) return false;
@@ -33,7 +34,7 @@ public class BlockLVCombustionGenerator extends BlockTileEntityRotatable {
         return true;
     }
 
-    private void dropContents(World world, int x, int y, int z) {
+    protected void dropContents(World world, int x, int y, int z) {
         TileEntityLVCombustionGenerator tileEntity = (TileEntityLVCombustionGenerator) world.getBlockTileEntity(x, y, z);
         if (!(tileEntity instanceof TileEntityLVCombustionGenerator))
             Industry2.logger.error("Couldn't drop inventory at {}, {}, {}!", x, y, z);
@@ -49,12 +50,6 @@ public class BlockLVCombustionGenerator extends BlockTileEntityRotatable {
                 }
             }
         }
-    }
-
-    @Override
-    public void onBlockRemoved(World world, int x, int y, int z, int data) {
-        dropContents(world, x, y, z);
-        super.onBlockRemoved(world, x, y, z, data);
     }
 
     @Override

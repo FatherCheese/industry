@@ -6,9 +6,9 @@ public class ItemBatteryEHV extends ItemBatteryBase {
 
     public ItemBatteryEHV(String name, int i) {
         super(name, i,
-                I2Config.cfg.getInt("Energy Values.ehvBatteryStorage"),
-                I2Config.cfg.getInt("Energy Values.ehvIO"),
-                I2Config.cfg.getInt("Energy Values.ehvIO"),
+                I2Config.cfg.getInt("Energy Values.extraHighVoltage") * 4,
+                I2Config.cfg.getInt("Energy Values.extraHighVoltage"),
+                I2Config.cfg.getInt("Energy Values.extraHighVoltage"),
                 "battery_lapis_4.png",
                 "battery_lapis_3.png",
                 "battery_lapis_2.png",

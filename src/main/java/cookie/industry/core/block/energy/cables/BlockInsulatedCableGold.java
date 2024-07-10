@@ -1,7 +1,7 @@
 package cookie.industry.core.block.energy.cables;
 
 import cookie.industry.core.I2Config;
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.enums.EnumDropCause;
@@ -13,8 +13,8 @@ public class BlockInsulatedCableGold extends BlockCable {
         super(key,
                 id,
                 Material.cloth,
-                I2Config.cfg.getInt("Energy Values.mvIO"),
-                I2Config.cfg.getInt("Energy Values.mvIO"),
+                I2Config.cfg.getInt("Energy Values.mediumVoltage"),
+                I2Config.cfg.getInt("Energy Values.mediumVoltage"),
                 0);
     }
 

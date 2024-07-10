@@ -1,11 +1,10 @@
-package cookie.industry.core.block;
+package cookie.industry.core;
 
 import cookie.industry.client.gui.batteryboxes.ContainerLVBatterybox;
 import cookie.industry.client.gui.batteryboxes.GuiLVBatterybox;
 import cookie.industry.client.gui.machines.lv.generators.*;
 import cookie.industry.client.gui.machines.lv.production.*;
-import cookie.industry.core.I2Config;
-import cookie.industry.core.I2Tags;
+import cookie.industry.core.block.*;
 import cookie.industry.core.block.energy.batteryboxes.BlockLVBatterybox;
 import cookie.industry.core.block.energy.batteryboxes.entities.TileEntityLVBatterybox;
 import cookie.industry.core.block.energy.cables.*;
@@ -17,13 +16,15 @@ import cookie.industry.core.block.machines.lv.generators.BlockLVWatermill;
 import cookie.industry.core.block.machines.lv.generators.entities.TileEntityLVCombustionGenerator;
 import cookie.industry.core.block.machines.lv.generators.entities.TileEntityLVSolarPanel;
 import cookie.industry.core.block.machines.lv.generators.entities.TileEntityLVWatermill;
-import cookie.industry.core.block.machines.lv.models.BlockModelMachineBase;
+import cookie.industry.client.model.BlockModelMachineBase;
 import cookie.industry.core.block.machines.lv.production.*;
 import cookie.industry.core.block.machines.lv.production.entities.*;
+import net.minecraft.client.render.block.color.BlockColorLeavesOak;
 import net.minecraft.client.render.block.model.BlockModelAxisAligned;
 import net.minecraft.client.render.block.model.BlockModelCrossedSquares;
 import net.minecraft.client.render.block.model.BlockModelHorizontalRotation;
 import net.minecraft.client.render.block.model.BlockModelLeaves;
+import net.minecraft.client.render.colorizer.Colorizers;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLog;
 import net.minecraft.core.block.material.Material;
@@ -237,7 +238,8 @@ public class I2BlocksNew {
                 .setHardness(0.2F)
                 .setTextures("industry:block/rubberwood_leaves")
                 .setBlockSound(BlockSounds.GRASS)
-                .setBlockModel(block -> new BlockModelLeaves<>(block, "industry:block/rubberwood_leaves"))
+                .setBlockModel(block -> new BlockModelLeaves<>(block, "minecraft:block/leaves_oak"))
+                .setBlockColor(block -> new BlockColorLeavesOak(Colorizers.pine))
                 .setTags(BlockTags.SHEARS_DO_SILK_TOUCH, BlockTags.MINEABLE_BY_AXE, BlockTags.MINEABLE_BY_HOE, BlockTags.MINEABLE_BY_SWORD, BlockTags.MINEABLE_BY_SHEARS)
                 .build(new BlockLeavesRubberwood("rubberwood_leaves", nextID()))
                 .withLightBlock(1)

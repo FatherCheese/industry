@@ -1,10 +1,9 @@
-package cookie.industry.core.block.machines.lv.models;
+package cookie.industry.client.model;
 
 import cookie.industry.core.block.machines.entities.TileEntityMachineBase;
 import net.minecraft.client.render.block.model.BlockModelStandard;
 import net.minecraft.client.render.stitcher.IconCoordinate;
 import net.minecraft.client.render.stitcher.TextureRegistry;
-import net.minecraft.client.render.tessellator.Tessellator;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.util.helper.Side;
@@ -22,11 +21,6 @@ public class BlockModelMachineBase extends BlockModelStandard<Block> {
         this.frontTexture = TextureRegistry.getTexture("industry:block/" + frontTexture);
         this.frontActiveTexture = TextureRegistry.getTexture("industry:block/" + frontActiveTexture);
         this.sideTexture = TextureRegistry.getTexture("industry:block/" + sideTexture);
-    }
-
-    @Override
-    public boolean render(Tessellator tessellator, int x, int y, int z) {
-        return super.render(tessellator, x, y, z);
     }
 
     @Override

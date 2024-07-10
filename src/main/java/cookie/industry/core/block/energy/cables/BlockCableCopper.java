@@ -1,7 +1,7 @@
 package cookie.industry.core.block.energy.cables;
 
 import cookie.industry.core.I2Config;
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.enums.EnumDropCause;
@@ -13,8 +13,8 @@ public class BlockCableCopper extends BlockCable {
         super(key,
                 id,
                 Material.metal,
-                I2Config.cfg.getInt("Energy Values.lvIO"),
-                I2Config.cfg.getInt("Energy Values.lvIO"),
+                I2Config.cfg.getInt("Energy Values.lowVoltage"),
+                I2Config.cfg.getInt("Energy Values.lowVoltage"),
                 1);
     }
 

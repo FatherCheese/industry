@@ -13,8 +13,8 @@ public class ItemToolDrill extends ItemToolElectric {
         super(name, id, toolMaterial);
 
         this.material = toolMaterial;
-        baseCapacity = I2Config.cfg.getInt("Energy Values.lvBatteryStorage");
-        baseReceive = I2Config.cfg.getInt("Energy Values.lvIO");
+        baseCapacity = I2Config.cfg.getInt("Energy Values.lowVoltage") * 4;
+        baseReceive = I2Config.cfg.getInt("Energy Values.lowVoltage");
     }
 
     @Override
@@ -24,7 +24,7 @@ public class ItemToolDrill extends ItemToolElectric {
 
 
     @Override
-    public boolean canHarvestBlock(Block block) {
+    public boolean canHarvestBlock(EntityLiving living, ItemStack stack, Block block) {
         Integer miningLevel = ItemToolPickaxe.miningLevels.get(block);
 
         if (miningLevel != null) {
@@ -35,7 +35,7 @@ public class ItemToolDrill extends ItemToolElectric {
 
     @Override
     public boolean hitEntity(ItemStack itemstack, EntityLiving entityliving, EntityLiving entityliving1) {
-        modifyEnergy(itemstack, -100);
+        modifyEnergy(itemstack, -40);
         return true;
     }
 }

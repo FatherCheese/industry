@@ -1,6 +1,6 @@
 package cookie.industry.core.recipe;
 
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import cookie.industry.core.recipe.registries.I2RecipeRegistries;
 import net.minecraft.core.WeightedRandomLootObject;
 import net.minecraft.core.data.registry.Registries;

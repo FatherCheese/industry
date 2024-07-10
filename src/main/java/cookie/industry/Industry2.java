@@ -1,8 +1,7 @@
 package cookie.industry;
 
-import cookie.industry.core.I2Tags;
-import cookie.industry.core.block.I2BlocksNew;
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2BlocksNew;
+import cookie.industry.core.I2ItemsNew;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

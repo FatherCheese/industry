@@ -1,6 +1,6 @@
 package cookie.industry.core.recipe.registries.builders;
 
-import cookie.industry.core.block.I2BlocksNew;
+import cookie.industry.core.I2BlocksNew;
 import cookie.industry.core.recipe.registries.entries.RecipeEntryCanningMachine;
 import net.minecraft.core.data.registry.recipe.RecipeGroup;
 import net.minecraft.core.data.registry.recipe.RecipeSymbol;

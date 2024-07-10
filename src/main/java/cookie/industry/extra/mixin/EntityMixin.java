@@ -1,7 +1,6 @@
-package cookie.industry.mixin;
+package cookie.industry.extra.mixin;
 
-import cookie.industry.core.item.I2ItemsNew;
-import cookie.industry.core.item.charger.ItemArmorChargerBase;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.entity.Entity;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;
@@ -11,7 +10,6 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import sunsetsatellite.catalyst.energy.api.IEnergyItem;
 
 @Mixin(value = Entity.class, remap = false)
 public abstract class EntityMixin {

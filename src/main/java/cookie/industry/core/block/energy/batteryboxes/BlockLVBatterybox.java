@@ -1,7 +1,7 @@
 package cookie.industry.core.block.energy.batteryboxes;
 
 import cookie.industry.Industry2;
-import cookie.industry.core.block.I2BlocksNew;
+import cookie.industry.core.I2BlocksNew;
 import cookie.industry.core.block.energy.batteryboxes.entities.TileEntityLVBatterybox;
 import net.minecraft.core.block.BlockTileEntity;
 import net.minecraft.core.block.entity.TileEntity;
@@ -10,6 +10,7 @@ import net.minecraft.core.entity.EntityItem;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 import sunsetsatellite.catalyst.Catalyst;
 
@@ -24,7 +25,7 @@ public class BlockLVBatterybox extends BlockTileEntity {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xHit, double yHit) {
         TileEntityLVBatterybox tileEntity = (TileEntityLVBatterybox) world.getBlockTileEntity(x, y, z);
 
         if (tileEntity == null) return false;

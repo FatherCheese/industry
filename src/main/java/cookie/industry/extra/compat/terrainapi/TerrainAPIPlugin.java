@@ -1,4 +1,4 @@
-package cookie.industry.compat.terrainapi;
+package cookie.industry.extra.compat.terrainapi;
 
 import cookie.industry.Industry2;
 import useless.terrainapi.api.TerrainAPI;

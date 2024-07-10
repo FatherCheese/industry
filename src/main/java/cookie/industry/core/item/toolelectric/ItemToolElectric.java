@@ -25,9 +25,7 @@ public class ItemToolElectric extends Item implements IEnergyItem, ICustomDescri
     @Override
     public boolean onBlockDestroyed(World world, ItemStack itemstack, int id, int x, int y, int z, EntityLiving entityliving) {
         Block block = Block.blocksList[id];
-        if (block != null && block.getHardness() > 0.0f) {
-            modifyEnergy(itemstack, -50);
-        }
+        if (block != null && block.getHardness() > 0.0f) modifyEnergy(itemstack, -10);
 
         return true;
     }
@@ -44,18 +42,14 @@ public class ItemToolElectric extends Item implements IEnergyItem, ICustomDescri
 
     public int provide(ItemStack stack, int amount, boolean test) {
         int provided = Math.min(this.getEnergy(stack), Math.min(this.getMaxProvide(stack), amount));
-        if (!test) {
-            this.modifyEnergy(stack, -provided);
-        }
+        if (!test) modifyEnergy(stack, -provided);
 
         return provided;
     }
 
     public int receive(ItemStack stack, int amount, boolean test) {
         int received = Math.min(this.getCapacity(stack) - this.getEnergy(stack), Math.min(this.getMaxReceive(stack), amount));
-        if (!test) {
-            this.modifyEnergy(stack, received);
-        }
+        if (!test) this.modifyEnergy(stack, received);
 
         return received;
     }

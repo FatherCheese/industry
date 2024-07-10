@@ -13,9 +13,9 @@ import sunsetsatellite.catalyst.core.util.Direction;
 public class TileEntityLVSolarPanel extends TileEntitySolarBase implements IInventory {
 
     public TileEntityLVSolarPanel() {
-        maxProvide = I2Config.cfg.getInt("Energy Values.lvIO");
-        maxReceive = I2Config.cfg.getInt("Energy Values.lvIO");
-        setCapacity(I2Config.cfg.getInt("Energy Values.lvMachineStorage"));
+        maxProvide = I2Config.cfg.getInt("Energy Values.lowVoltage");
+        maxReceive = I2Config.cfg.getInt("Energy Values.lowVoltage");
+        setCapacity(I2Config.cfg.getInt("Energy Values.lowVoltage") * 10);
 
         canSeeTheSky = false;
         active = false;

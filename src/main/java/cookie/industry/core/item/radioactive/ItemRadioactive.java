@@ -1,6 +1,6 @@
 package cookie.industry.core.item.radioactive;
 
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.entity.Entity;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;

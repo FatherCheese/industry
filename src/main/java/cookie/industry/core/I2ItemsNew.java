@@ -1,12 +1,13 @@
-package cookie.industry.core.item;
+package cookie.industry.core;
 
-import cookie.industry.core.I2Config;
-import cookie.industry.core.block.I2BlocksNew;
+import cookie.industry.core.block.machines.upgrades.MachineUpgradePulling;
+import cookie.industry.core.block.machines.upgrades.MachineUpgradePushing;
+import cookie.industry.core.item.*;
 import cookie.industry.core.item.battery.ItemBatteryEHV;
 import cookie.industry.core.item.battery.ItemBatteryHV;
 import cookie.industry.core.item.battery.ItemBatteryLV;
 import cookie.industry.core.item.battery.ItemBatteryMV;
-import cookie.industry.core.item.battery.model.ItemModelBattery;
+import cookie.industry.client.model.ItemModelBattery;
 import cookie.industry.core.item.radioactive.ItemCellRedstoneT1;
 import cookie.industry.core.item.radioactive.ItemCellRedstoneT2;
 import cookie.industry.core.item.radioactive.ItemCellRedstoneT3;
@@ -14,7 +15,6 @@ import cookie.industry.core.item.radioactive.ItemRadioactive;
 import cookie.industry.core.item.toolelectric.*;
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemBed;
 import net.minecraft.core.item.ItemFood;
 import net.minecraft.core.item.material.ToolMaterial;
 import turniplabs.halplibe.helper.ItemBuilder;
@@ -245,31 +245,31 @@ public class I2ItemsNew {
                 .setStackSize(1)
                 .build(new ItemToolChainsaw("chainsaw", nextID()));
         IRON_DRILL = new ItemBuilder(MOD_ID)
-                .setItemModel(item -> new ItemModelStandard(item, null).setRotateWhenRendering().setFull3D())
+                .setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
                 .setStackSize(1)
                 .build(new ItemToolDrill("iron_drill", nextID(), ToolMaterial.iron));
         GOLDEN_DRILL = new ItemBuilder(MOD_ID)
-                .setItemModel(item -> new ItemModelStandard(item, null).setRotateWhenRendering().setFull3D())
+                .setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
                 .setStackSize(1)
-                .build(new ItemToolDrill("gold_drill", nextID(), ToolMaterial.gold));
+                .build(new ItemToolDrill("golden_drill", nextID(), ToolMaterial.gold));
         DIAMOND_DRILL = new ItemBuilder(MOD_ID)
-                .setItemModel(item -> new ItemModelStandard(item, null).setRotateWhenRendering().setFull3D())
+                .setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
                 .setStackSize(1)
                 .build(new ItemToolDrill("diamond_drill", nextID(), ToolMaterial.diamond));
         NANOSWORD = new ItemBuilder(MOD_ID)
-                .setItemModel(item -> new ItemModelStandard(item, null).setRotateWhenRendering().setFull3D())
+                .setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
                 .setStackSize(1)
                 .build(new ItemToolNanoSword("nanosword", nextID()));
         NANOHOE = new ItemBuilder(MOD_ID)
-                .setItemModel(item -> new ItemModelStandard(item, null).setRotateWhenRendering().setFull3D())
+                .setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
                 .setStackSize(1)
                 .build(new ItemToolNanoHoe("nanohoe", nextID()));
         ELECTRIC_TREETAP = new ItemBuilder(MOD_ID)
-                .setItemModel(item -> new ItemModelStandard(item, null).setRotateWhenRendering().setFull3D())
+                .setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
                 .setStackSize(1)
                 .build(new Item("electric_treetap", nextID()));
         ELECTRIC_CUTTERS = new ItemBuilder(MOD_ID)
-                .setItemModel(item -> new ItemModelStandard(item, null).setRotateWhenRendering().setFull3D())
+                .setItemModel(item -> new ItemModelStandard(item, null).setFull3D())
                 .setStackSize(1)
                 .build(new Item("electric_cutters", nextID()));
         ELECTRIC_WRENCH = new ItemBuilder(MOD_ID)
@@ -386,9 +386,9 @@ public class I2ItemsNew {
         MACHINE_BREAKER_UPGRADE = new ItemBuilder(MOD_ID)
                 .build(new Item("machine_breaker_upgrade", nextID()));
         MACHINE_PUSHING_UPGRADE = new ItemBuilder(MOD_ID)
-                .build(new Item("machine_pushing_upgrade", nextID()));
+                .build(new ItemUpgrade("machine_pushing_upgrade", nextID(), MachineUpgradePushing::new));
         MACHINE_PULLING_UPGRADE = new ItemBuilder(MOD_ID)
-                .build(new Item("machine_pulling_upgrade", nextID()));
+                .build(new ItemUpgrade("machine_pulling_upgrade", nextID(), MachineUpgradePulling::new));
         MACHINE_TRANSFORMER_UPGRADE = new ItemBuilder(MOD_ID)
                 .build(new Item("machine_transformer_upgrade", nextID()));
         MACHINE_BLASTING_UPGRADE = new ItemBuilder(MOD_ID)

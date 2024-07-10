@@ -1,11 +1,11 @@
 package cookie.industry.core.block.energy.reactor.entity;
 
 import cookie.industry.core.I2Config;
-import cookie.industry.core.block.I2BlocksNew;
+import cookie.industry.core.I2BlocksNew;
 import cookie.industry.core.block.energy.reactor.BlockReactor;
 import com.mojang.nbt.CompoundTag;
 import com.mojang.nbt.ListTag;
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;

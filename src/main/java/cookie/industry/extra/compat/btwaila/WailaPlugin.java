@@ -1,4 +1,4 @@
-package cookie.industry.compat.btwaila;
+package cookie.industry.extra.compat.btwaila;
 
 import org.slf4j.Logger;
 import toufoumaster.btwaila.entryplugins.waila.BTWailaCustomTooltipPlugin;

@@ -1,5 +1,6 @@
 package cookie.industry.core.item;
 
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.HitResult;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.player.EntityPlayer;

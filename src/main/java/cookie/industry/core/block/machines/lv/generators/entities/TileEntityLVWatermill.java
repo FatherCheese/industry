@@ -14,9 +14,9 @@ import sunsetsatellite.catalyst.core.util.Direction;
 public class TileEntityLVWatermill extends TileEntityMachineBase implements IInventory {
 
     public TileEntityLVWatermill() {
-        maxProvide = I2Config.cfg.getInt("Energy Values.lvIO");
-        maxReceive = I2Config.cfg.getInt("Energy Values.lvIO");
-        setCapacity(I2Config.cfg.getInt("Energy Values.lvMachineStorage"));
+        maxProvide = I2Config.cfg.getInt("Energy Values.lowVoltage");
+        maxReceive = I2Config.cfg.getInt("Energy Values.lowVoltage");
+        setCapacity(I2Config.cfg.getInt("Energy Values.lowVoltage") * 10);
 
         active = false;
 

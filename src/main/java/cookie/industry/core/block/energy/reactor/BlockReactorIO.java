@@ -22,11 +22,11 @@ public class BlockReactorIO extends BlockTileEntity {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xHit, double yHit) {
         if (!world.isClientSide) {
             Side[] sides = new Side[]{Side.NORTH, Side.SOUTH, Side.EAST, Side.WEST, Side.BOTTOM, Side.TOP};
-            for (Side side : sides) {
-                int reactorY = y + side.getOffsetY();
+            for (Side theSide : sides) {
+                int reactorY = y + theSide.getOffsetY();
                 TileEntity tileEntity = world.getBlockTileEntity(x, reactorY, z);
 
                 if (!(tileEntity instanceof TileEntityReactorNew) || !((TileEntityReactorNew) tileEntity).isAssembled())

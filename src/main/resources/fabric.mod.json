@@ -10,6 +10,7 @@
   ],
   "contributors": [
     "AzureLMAO (original helper)",
+    "Martin (upgrade code)",
     "Useless (coding help)",
     "Apollo (coding help)",
     "Lyzantra (coding help)",
@@ -40,10 +41,10 @@
       "cookie.industry.core.recipe.I2Recipes"
     ],
     "btwaila": [
-      "cookie.industry.compat.btwaila.WailaPlugin"
+      "cookie.industry.extra.compat.btwaila.WailaPlugin"
     ],
     "terrain-api": [
-      "cookie.industry.compat.terrainapi.TerrainAPIPlugin"
+      "cookie.industry.extra.compat.terrainapi.TerrainAPIPlugin"
     ]
   },
   "mixins": [

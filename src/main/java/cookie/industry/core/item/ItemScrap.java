@@ -1,6 +1,6 @@
 package cookie.industry.core.item;
 
-import net.minecraft.core.block.Block;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
@@ -15,7 +15,7 @@ public class ItemScrap extends Item {
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+    public ItemStack onUseItem(ItemStack stack, World world, EntityPlayer player) {
         // This will choose a random item to give the player, based on everything in the randomItem hashmap.
         // Only exception is if a random timer set to 200 is equal to 0, then the player will receive a golden apple.
         if (!world.isClientSide) {

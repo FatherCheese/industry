@@ -25,7 +25,7 @@ public class TileEntityLVCombustionGenerator extends TileEntityMachineBase imple
         slots = new ItemStack[3];
 
         for (Direction dir : Direction.values()) {
-            setConnection(dir, Connection.OUTPUT);
+            setItemIOForSide(dir, Connection.OUTPUT);
         }
     }
 
@@ -42,6 +42,11 @@ public class TileEntityLVCombustionGenerator extends TileEntityMachineBase imple
     @Override
     public Connection getItemIOForSide(Direction dir) {
         return dir == Direction.Y_POS ? Connection.INPUT : Connection.NONE;
+
+    }
+
+    @Override
+    public void setItemIOForSide(Direction dir, Connection con) {
 
     }
 

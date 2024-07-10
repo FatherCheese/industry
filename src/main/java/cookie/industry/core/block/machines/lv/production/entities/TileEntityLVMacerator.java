@@ -1,6 +1,6 @@
 package cookie.industry.core.block.machines.lv.production.entities;
 
-import cookie.industry.core.I2Config;
+import cookie.industry.Industry2;
 import cookie.industry.core.block.machines.lv.entities.TileEntityLVMachineBase;
 import cookie.industry.core.recipe.registries.I2RecipeRegistries;
 import cookie.industry.core.recipe.registries.entries.RecipeEntryMacerator;
@@ -11,35 +11,15 @@ import sunsetsatellite.catalyst.core.util.IItemIO;
 
 import java.util.List;
 
-public class TileEntityLVMacerator extends TileEntityLVMachineBase implements IItemIO {
+public class TileEntityLVMacerator extends TileEntityLVMachineBase {
     private final List<RecipeEntryMacerator> recipeList = I2RecipeRegistries.MACERATOR.getAllRecipes();
     
     public TileEntityLVMacerator() {
-        maxProvide = I2Config.cfg.getInt("Energy Values.lvIO");
-        maxReceive = I2Config.cfg.getInt("Energy Values.lvIO");
-        setCapacity(I2Config.cfg.getInt("Energy Values.lvMachineStorage"));
-
         slots = new ItemStack[4];
 
         for (Direction dir : Direction.values()) {
             setConnection(dir, Connection.INPUT);
         }
-    }
-
-    @Override
-    public int getActiveItemSlotForSide(Direction dir) {
-        return dir == Direction.Y_POS ? 2 : 3;
-    }
-
-    @Override
-    public int getActiveItemSlotForSide(Direction dir, ItemStack stack) {
-        return dir == Direction.Y_POS ? 2 : 3;
-    }
-
-    @Override
-    public Connection getItemIOForSide(Direction dir) {
-        return dir == Direction.Y_POS ? Connection.INPUT : Connection.OUTPUT;
-
     }
 
     @Override
@@ -54,7 +34,8 @@ public class TileEntityLVMacerator extends TileEntityLVMachineBase implements II
      If it's true then set the temporary output to the recipe's output.
      Finally, at the bottom is bunch of boolean checks.
     */
-    private boolean canProduce() {
+    @Override
+    public boolean canProduce() {
         boolean hasEnergy = energy > 0;
         if (slots[2] == null || !hasEnergy) return false;
 
@@ -81,7 +62,8 @@ public class TileEntityLVMacerator extends TileEntityLVMachineBase implements II
      If it's null then it copies the recipe output stack, otherwise it adds onto the output stack.
      Finally, it decreases the input stacksize.
     */
-    private void produceItem() {
+    @Override
+    public void produceItem() {
         if (canProduce()) {
             ItemStack output = null;
 
@@ -121,7 +103,7 @@ public class TileEntityLVMacerator extends TileEntityLVMachineBase implements II
                     worldObj.markBlockNeedsUpdate(x, y, z);
                 }
 
-                if ((slots[2] == null || energy < 0) && active) {
+                if (active && !canProduce()) {
                     machineTick = 0;
                     active = false;
                     worldObj.markBlockNeedsUpdate(x, y, z);

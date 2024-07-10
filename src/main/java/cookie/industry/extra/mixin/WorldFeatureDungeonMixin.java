@@ -1,6 +1,6 @@
-package cookie.industry.mixin;
+package cookie.industry.extra.mixin;
 
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.generate.feature.WorldFeatureDungeon;
 import org.spongepowered.asm.mixin.Mixin;

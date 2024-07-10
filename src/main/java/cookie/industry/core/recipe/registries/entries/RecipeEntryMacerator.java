@@ -1,5 +1,6 @@
 package cookie.industry.core.recipe.registries.entries;
 
+import cookie.industry.Industry2;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.data.registry.recipe.*;
 import net.minecraft.core.item.ItemStack;
@@ -74,7 +75,7 @@ public class RecipeEntryMacerator extends RecipeEntryBase<RecipeSymbol, ItemStac
                 try {
                     group = Registries.RECIPES.getGroupFromKey(query.scope.getRight());
                 } catch (IllegalArgumentException e) {
-                    e.printStackTrace();
+                    Industry2.logger.error(e.getMessage(), e);
                     group = null;
                 }
 
@@ -110,7 +111,7 @@ public class RecipeEntryMacerator extends RecipeEntryBase<RecipeSymbol, ItemStac
         try {
             return matchesQuery(query);
         } catch (IllegalArgumentException | NullPointerException e) {
-            e.printStackTrace();
+            Industry2.logger.error(e.getMessage(), e);
             return false;
         }
     }

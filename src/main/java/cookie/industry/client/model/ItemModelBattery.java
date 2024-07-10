@@ -1,4 +1,4 @@
-package cookie.industry.core.item.battery.model;
+package cookie.industry.client.model;
 
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.client.render.stitcher.TextureRegistry;

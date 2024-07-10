@@ -3,13 +3,23 @@ package cookie.industry.core.block.machines.lv.entities;
 import com.mojang.nbt.CompoundTag;
 import com.mojang.nbt.ListTag;
 import cookie.industry.core.block.machines.entities.TileEntityMachineBase;
+import cookie.industry.extra.IMachine;
+import cookie.industry.extra.api.MachineTier;
+import cookie.industry.extra.api.MachineTiers;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.player.inventory.IInventory;
 
-public class TileEntityLVMachineBase extends TileEntityMachineBase implements IInventory {
+public class TileEntityLVMachineBase extends TileEntityMachineBase implements IMachine, IInventory {
+    private final MachineTier machineTier = MachineTiers.LOW_VOLTAGE;
     public int machineTick = 0;
     public final int finalMachineTick = 200;
+
+    public TileEntityLVMachineBase() {
+        setMaxReceive(machineTier.getVoltageInt());
+        setMaxProvide(machineTier.getVoltageInt());
+        setCapacity(machineTier.getVoltageInt() * 10);
+    }
 
     @Override
     public int getSizeInventory() {
@@ -102,5 +112,20 @@ public class TileEntityLVMachineBase extends TileEntityMachineBase implements II
             if (slot >= 0 && slot < slots.length)
                 slots[slot] = ItemStack.readItemStackFromNbt(tag2);
         }
+    }
+
+    @Override
+    public MachineTier getMachineTier() {
+        return machineTier;
+    }
+
+    @Override
+    public boolean canProduce() {
+        return false;
+    }
+
+    @Override
+    public void produceItem() {
+
     }
 }

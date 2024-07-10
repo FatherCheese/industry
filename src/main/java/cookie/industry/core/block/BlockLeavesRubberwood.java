@@ -1,5 +1,6 @@
 package cookie.industry.core.block;
 
+import cookie.industry.core.I2BlocksNew;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLeavesBase;
 import net.minecraft.core.block.material.Material;

@@ -1,6 +1,6 @@
 package cookie.industry.core.recipe.fuel;
 
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.item.Item;
 
 import java.util.HashMap;

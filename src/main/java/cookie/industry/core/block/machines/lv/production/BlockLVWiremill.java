@@ -1,21 +1,22 @@
 package cookie.industry.core.block.machines.lv.production;
 
 import cookie.industry.Industry2;
-import cookie.industry.core.block.I2BlocksNew;
+import cookie.industry.core.I2BlocksNew;
+import cookie.industry.core.block.machines.lv.BlockLVMachineBase;
 import cookie.industry.core.block.machines.lv.production.entities.TileEntityLVWiremill;
-import net.minecraft.core.block.BlockTileEntityRotatable;
+import cookie.industry.core.item.ItemUpgrade;
 import net.minecraft.core.block.entity.TileEntity;
-import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.EntityItem;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 import sunsetsatellite.catalyst.Catalyst;
 
-public class BlockLVWiremill extends BlockTileEntityRotatable {
+public class BlockLVWiremill extends BlockLVMachineBase {
     public BlockLVWiremill(String key, int id) {
-        super(key, id, Material.metal);
+        super(key, id);
     }
 
 
@@ -25,16 +26,18 @@ public class BlockLVWiremill extends BlockTileEntityRotatable {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xHit, double yHit) {
+        super.onBlockRightClicked(world, x, y, z, player, side, xHit, yHit);
         TileEntityLVWiremill tileEntity = (TileEntityLVWiremill) world.getBlockTileEntity(x, y, z);
 
         if (tileEntity == null) return false;
 
-        Catalyst.displayGui(player, tileEntity, tileEntity.getInvName());
+        if (player.getHeldItem() == null || !(player.getHeldItem().getItem() instanceof ItemUpgrade))
+            Catalyst.displayGui(player, tileEntity, tileEntity.getInvName());
         return true;
     }
 
-    private void dropContents(World world, int x, int y, int z) {
+    protected void dropContents(World world, int x, int y, int z) {
         TileEntityLVWiremill tileEntity = (TileEntityLVWiremill) world.getBlockTileEntity(x, y, z);
         if (!(tileEntity instanceof TileEntityLVWiremill))
             Industry2.logger.error("Couldn't drop inventory at {}, {}, {}!", x, y, z);
@@ -50,12 +53,6 @@ public class BlockLVWiremill extends BlockTileEntityRotatable {
                 }
             }
         }
-    }
-
-    @Override
-    public void onBlockRemoved(World world, int x, int y, int z, int data) {
-        dropContents(world, x, y, z);
-        super.onBlockRemoved(world, x, y, z, data);
     }
 
     @Override

@@ -1,71 +1,52 @@
 package cookie.industry.core.block.machines.lv.production.entities;
 
-import cookie.industry.core.I2Config;
 import cookie.industry.core.block.machines.lv.entities.TileEntityLVMachineBase;
+import cookie.industry.core.block.machines.upgrades.MachineUpgradePulling;
+import cookie.industry.core.block.machines.upgrades.MachineUpgradePushing;
 import cookie.industry.core.recipe.registries.I2RecipeRegistries;
 import cookie.industry.core.recipe.registries.entries.RecipeEntryCanningMachine;
 import net.minecraft.core.item.ItemStack;
 import sunsetsatellite.catalyst.core.util.Connection;
 import sunsetsatellite.catalyst.core.util.Direction;
-import sunsetsatellite.catalyst.core.util.IItemIO;
 
 import java.util.List;
 
-public class TileEntityLVCanningMachine extends TileEntityLVMachineBase implements IItemIO {
+public class TileEntityLVCanningMachine extends TileEntityLVMachineBase {
     private final List<RecipeEntryCanningMachine> recipeList = I2RecipeRegistries.CANNING_MACHINE.getAllRecipes();
 
     public TileEntityLVCanningMachine() {
-        maxProvide = I2Config.cfg.getInt("Energy Values.lvIO");
-        maxReceive = I2Config.cfg.getInt("Energy Values.lvIO");
-        setCapacity(I2Config.cfg.getInt("Energy Values.lvMachineStorage"));
-
         slots = new ItemStack[5];
 
         for (Direction dir : Direction.values()) {
             setConnection(dir, Connection.INPUT);
+
+            if (dir == Direction.Y_POS) {
+                itemConnections.put(dir, Connection.INPUT);
+                activeItemSlots.put(dir, 0);
+            }
         }
-    }
-
-    @Override
-    public int getActiveItemSlotForSide(Direction dir) {
-        if (dir == Direction.Y_POS) return 2;
-        if (dir == Direction.Y_NEG) return 3;
-        return 4;
-    }
-
-    @Override
-    public int getActiveItemSlotForSide(Direction dir, ItemStack stack) {
-        if (dir == Direction.Y_POS) return 2;
-        if (dir == Direction.Y_NEG) return 3;
-        return 4;
-    }
-
-    @Override
-    public Connection getItemIOForSide(Direction dir) {
-        return (dir == Direction.Y_POS || dir == Direction.Y_NEG) ? Connection.INPUT : Connection.OUTPUT;
-
     }
 
     @Override
     public String getInvName() {
         return "IndustryLVCanningMachine";
     }
-
     /*
          This function checks if the machine can in-fact produce an item.
          First it checks if slot 2 (input) is empty, or if energy is 0. If either is true then return false.
          Then it sets a temporary null output item and checks if slot 2 is equal to a recipe.
          If it's true then set the temporary output to the recipe's output.
          Finally, at the bottom is bunch of boolean checks.
-        */
-    private boolean canProduce() {
+    */
+    @Override
+    public boolean canProduce() {
         boolean hasEnergy = energy > 0;
         if (slots[2] == null || !hasEnergy) return false;
 
         ItemStack output = null;
 
         for (RecipeEntryCanningMachine recipe : recipeList) {
-            if (recipe.inputMatches(slots[2]) && recipe.canMatches(slots[3]) && slots[3].stackSize == recipe.getCanStack()) {
+            if (recipe.inputMatches(slots[2]) && recipe.canMatches(slots[3]) && slots[3].stackSize >= recipe.getCanStack(slots[3])) {
                 output = recipe.getOutput();
             }
         }
@@ -84,7 +65,8 @@ public class TileEntityLVCanningMachine extends TileEntityLVMachineBase implemen
      If it's null then it copies the recipe output stack, otherwise it adds onto the output stack.
      Finally, it decreases the input stacksize.
     */
-    private void produceItem() {
+    @Override
+    public void produceItem() {
         if (canProduce()) {
             ItemStack output = null;
 
@@ -97,19 +79,44 @@ public class TileEntityLVCanningMachine extends TileEntityLVMachineBase implemen
             else if (slots[4] != null && output != null && slots[4].itemID == output.itemID)
                 slots[4].stackSize += output.stackSize;
 
-            --slots[2].stackSize;
-            if (slots[2].stackSize <= 0) slots[2] = null;
-
             if (slots[3] != null) {
-                slots[3].stackSize -= recipeList.get(1).getCanStack();
+                for (RecipeEntryCanningMachine recipe : recipeList) {
+                    if (recipe.inputMatches(slots[2])) slots[3].stackSize -= recipe.getCanStack(slots[3]);
+                }
                 if (slots[3].stackSize <= 0) slots[3] = null;
             }
+
+            // Had to move this down because of can stack weirdness
+            --slots[2].stackSize;
+            if (slots[2].stackSize <= 0) slots[2] = null;
         }
+    }
+
+    @Override
+    public int getActiveItemSlotForSide(Direction dir) {
+        return super.getActiveItemSlotForSide(dir);
+    }
+
+    @Override
+    public int getActiveItemSlotForSide(Direction dir, ItemStack stack) {
+        return super.getActiveItemSlotForSide(dir, stack);
     }
 
     @Override
     public void tick() {
         super.tick();
+
+        for (Direction dir : Direction.values()) {
+            if (upgrades.get(dir) instanceof MachineUpgradePushing) {
+                itemConnections.put(dir, Connection.OUTPUT);
+                activeItemSlots.put(dir, 4);
+            }
+
+            if (upgrades.get(dir) instanceof MachineUpgradePulling) {
+                itemConnections.put(dir, Connection.INPUT);
+                activeItemSlots.put(dir, dir != Direction.Y_NEG ? 2 : 3);
+            }
+        }
 
         if (!worldObj.isClientSide) {
             if (canProduce()) machineTick++;
@@ -129,7 +136,7 @@ public class TileEntityLVCanningMachine extends TileEntityLVMachineBase implemen
                     worldObj.markBlockNeedsUpdate(x, y, z);
                 }
 
-                if ((slots[2] == null || energy < 0) && active) {
+                if (active && !canProduce()) {
                     machineTick = 0;
                     active = false;
                     worldObj.markBlockNeedsUpdate(x, y, z);

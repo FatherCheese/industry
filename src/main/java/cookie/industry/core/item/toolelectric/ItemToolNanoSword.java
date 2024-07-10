@@ -4,6 +4,7 @@ import cookie.industry.core.I2Config;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.entity.Entity;
+import net.minecraft.core.entity.EntityLiving;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.material.ToolMaterial;
@@ -19,8 +20,8 @@ public class ItemToolNanoSword extends ItemToolElectric {
         setHasSubtypes(true);
         setMaxDamage(0);
 
-        baseCapacity = I2Config.cfg.getInt("Energy Values.hvBatteryStorage");
-        baseReceive = I2Config.cfg.getInt("Energy Values.hvIO");
+        baseCapacity = I2Config.cfg.getInt("Energy Values.highVoltage") * 4;
+        baseReceive = I2Config.cfg.getInt("Energy Values.highVoltage");
     }
 
 
@@ -39,7 +40,7 @@ public class ItemToolNanoSword extends ItemToolElectric {
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+    public ItemStack onUseItem(ItemStack stack, World world, EntityPlayer player) {
         world.playSoundAtEntity(null, player, "industry.laser", 1.0f, 1.0f);
         if (!world.isClientSide) {
             active = !active;
@@ -55,12 +56,12 @@ public class ItemToolNanoSword extends ItemToolElectric {
 
     @Override
     public float getStrVsBlock(ItemStack stack, Block block) {
-        return getEnergy(stack) > 0 && active && block.hasTag(BlockTags.MINEABLE_BY_SWORD) ? 1.0F : 0.0F;
+        return getEnergy(stack) > 0 && active && (block.hasTag(BlockTags.MINEABLE_BY_SWORD) || block.hasTag(BlockTags.MINEABLE_BY_HOE)) ? 1.0F : 0.0F;
     }
 
     @Override
-    public boolean canHarvestBlock(Block block) {
-        return block.hasTag(BlockTags.MINEABLE_BY_SWORD);
+    public boolean canHarvestBlock(EntityLiving living, ItemStack stack, Block block) {
+        return block.hasTag(BlockTags.MINEABLE_BY_SWORD) || block.hasTag(BlockTags.MINEABLE_BY_HOE);
     }
 
     @Override

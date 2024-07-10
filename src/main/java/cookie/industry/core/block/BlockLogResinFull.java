@@ -1,11 +1,13 @@
 package cookie.industry.core.block;
 
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2BlocksNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.block.BlockLog;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 
 import java.util.Random;
@@ -26,24 +28,24 @@ public class BlockLogResinFull extends BlockLog {
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
+    public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer player, Side side, double xHit, double yHit) {
         if (!world.isClientSide) {
             ItemStack itemStack = player.getHeldItem();
             if (itemStack != null && itemStack.getItem() == I2ItemsNew.TREETAP) {
                 world.playSoundAtEntity(player, player, "mob.slime", 1.0f, 1.0f);
 
-                    int meta = world.getBlockMetadata(x, y, z);
-                    world.setBlockAndMetadataWithNotify(x, y, z, I2BlocksNew.RUBBERWOOD_RESIN_LOG.id, meta);
-                    world.scheduleBlockUpdate(x, y, z, this.id, tickRate());
+                int meta = world.getBlockMetadata(x, y, z);
+                world.setBlockAndMetadataWithNotify(x, y, z, I2BlocksNew.RUBBERWOOD_RESIN_LOG.id, meta);
+                world.scheduleBlockUpdate(x, y, z, this.id, tickRate());
 
-                    int randAmount = new Random().nextInt(4 - 1) + 1;
-                    player.inventory.insertItem(new ItemStack(I2ItemsNew.RESIN, randAmount), false);
-                    itemStack.damageItem(1, player);
+                int randAmount = new Random().nextInt(4 - 1) + 1;
+                player.inventory.insertItem(new ItemStack(I2ItemsNew.RESIN, randAmount), false);
+                itemStack.damageItem(1, player);
 
-                    return true;
+                return true;
             }
         }
-        return super.blockActivated(world, x, y, z, player);
+        return true;
     }
 
     @Override

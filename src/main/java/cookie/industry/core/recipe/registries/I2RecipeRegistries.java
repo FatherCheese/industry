@@ -1,6 +1,6 @@
 package cookie.industry.core.recipe.registries;
 
-import cookie.industry.core.block.I2BlocksNew;
+import cookie.industry.core.I2BlocksNew;
 import cookie.industry.core.recipe.registries.entries.*;
 import net.minecraft.core.data.registry.recipe.*;
 

@@ -1,6 +1,7 @@
 package cookie.industry.core.item.toolelectric;
 
 import cookie.industry.core.I2Config;
+import cookie.industry.core.I2Tags;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.entity.EntityLiving;
@@ -11,8 +12,8 @@ public class ItemToolChainsaw extends ItemToolElectric {
 
     public ItemToolChainsaw(String name, int id) {
         super(name, id, ToolMaterial.iron);
-        this.baseCapacity = I2Config.cfg.getInt("Energy Values.lvBatteryStorage");
-        this.baseReceive = I2Config.cfg.getInt("Energy Values.lvIO");
+        this.baseCapacity = I2Config.cfg.getInt("Energy Values.lowVoltage") * 4;
+        this.baseReceive = I2Config.cfg.getInt("Energy Values.lowVoltage");
     }
 
     @Override
@@ -21,13 +22,13 @@ public class ItemToolChainsaw extends ItemToolElectric {
     }
 
     @Override
-    public boolean canHarvestBlock(Block block) {
+    public boolean canHarvestBlock(EntityLiving living, ItemStack stack, Block block) {
         return block.hasTag(BlockTags.MINEABLE_BY_AXE) || block.hasTag(BlockTags.MINEABLE_BY_SHEARS);
     }
 
     @Override
     public boolean hitEntity(ItemStack itemstack, EntityLiving entityliving, EntityLiving entityliving1) {
-        modifyEnergy(itemstack, -100);
+        modifyEnergy(itemstack, -40);
         return true;
     }
 }

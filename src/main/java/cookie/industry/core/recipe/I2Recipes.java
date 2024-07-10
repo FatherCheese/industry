@@ -1,7 +1,7 @@
 package cookie.industry.core.recipe;
 
-import cookie.industry.core.block.I2BlocksNew;
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2BlocksNew;
+import cookie.industry.core.I2ItemsNew;
 import cookie.industry.core.recipe.registries.I2RecipeRegistries;
 import cookie.industry.core.recipe.registries.builders.*;
 import net.minecraft.core.block.Block;
@@ -225,7 +225,7 @@ public class I2Recipes implements RecipeEntrypoint {
                 .setCan(new ItemStack(I2ItemsNew.EMPTY_CAN), 1)
                 .create("cookie_to_one_can", I2ItemsNew.FILLED_CAN.getDefaultStack());
         new RecipeBuilderCanningMachine(MOD_ID)
-                .setInput(Item.cherry)
+                .setInput(Item.foodCherry)
                 .setCan(new ItemStack(I2ItemsNew.EMPTY_CAN), 1)
                 .create("cherry_to_one_can", I2ItemsNew.FILLED_CAN.getDefaultStack());
 
@@ -249,7 +249,7 @@ public class I2Recipes implements RecipeEntrypoint {
 
         new RecipeBuilderCanningMachine(MOD_ID)
                 .setInput(Item.foodPorkchopCooked)
-                .setCan(new ItemStack(I2ItemsNew.EMPTY_CAN), 4)
+                .setCan(I2ItemsNew.EMPTY_CAN.getDefaultStack(), 4)
                 .create("cooked_pork_to_four_cans", new ItemStack(I2ItemsNew.FILLED_CAN, 4));
         new RecipeBuilderCanningMachine(MOD_ID)
                 .setInput(Item.foodPumpkinPie)

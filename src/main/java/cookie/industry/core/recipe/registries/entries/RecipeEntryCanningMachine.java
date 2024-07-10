@@ -1,5 +1,6 @@
 package cookie.industry.core.recipe.registries.entries;
 
+import cookie.industry.Industry2;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.data.registry.recipe.*;
 import net.minecraft.core.item.ItemStack;
@@ -36,8 +37,12 @@ public class RecipeEntryCanningMachine extends RecipeEntryBase<RecipeSymbol[], I
         return inputs[1].matches(stack);
     }
 
-    public int getCanStack() {
-        return inputs[1].getAmount();
+    public int getCanStack(ItemStack stack) {
+        for (RecipeSymbol symbol : inputs) {
+            if (symbol.matches(stack)) return symbol.getAmount();
+        }
+
+        return 0;
     }
 
     private boolean matchesRecipe(SearchQuery query) {
@@ -87,7 +92,7 @@ public class RecipeEntryCanningMachine extends RecipeEntryBase<RecipeSymbol[], I
                 try {
                     group = Registries.RECIPES.getGroupFromKey(query.scope.getRight());
                 } catch (IllegalArgumentException e) {
-                    e.printStackTrace();
+                    Industry2.logger.error(e.getMessage(), e);
                     group = null;
                 }
 
@@ -123,7 +128,7 @@ public class RecipeEntryCanningMachine extends RecipeEntryBase<RecipeSymbol[], I
         try {
             return matchesQuery(query);
         } catch (IllegalArgumentException | NullPointerException e) {
-            e.printStackTrace();
+            Industry2.logger.error(e.getMessage(), e);
             return false;
         }
     }

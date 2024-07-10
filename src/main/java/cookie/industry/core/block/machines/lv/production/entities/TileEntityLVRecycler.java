@@ -1,43 +1,21 @@
 package cookie.industry.core.block.machines.lv.production.entities;
 
-import cookie.industry.core.I2Config;
 import cookie.industry.core.I2Tags;
 import cookie.industry.core.block.machines.lv.entities.TileEntityLVMachineBase;
-import cookie.industry.core.item.I2ItemsNew;
+import cookie.industry.core.I2ItemsNew;
 import net.minecraft.core.item.ItemStack;
 import sunsetsatellite.catalyst.core.util.Connection;
 import sunsetsatellite.catalyst.core.util.Direction;
-import sunsetsatellite.catalyst.core.util.IItemIO;
 
 import java.util.Random;
 
-public class TileEntityLVRecycler extends TileEntityLVMachineBase implements IItemIO {
+public class TileEntityLVRecycler extends TileEntityLVMachineBase {
     public TileEntityLVRecycler() {
-        maxProvide = I2Config.cfg.getInt("Energy Values.lvIO");
-        maxReceive = I2Config.cfg.getInt("Energy Values.lvIO");
-        setCapacity(I2Config.cfg.getInt("Energy Values.lvMachineStorage"));
-
         slots = new ItemStack[4];
 
         for (Direction dir : Direction.values()) {
             setConnection(dir, Connection.INPUT);
         }
-    }
-
-    @Override
-    public int getActiveItemSlotForSide(Direction dir) {
-        return dir == Direction.Y_POS ? 2 : 3;
-    }
-
-    @Override
-    public int getActiveItemSlotForSide(Direction dir, ItemStack stack) {
-        return dir == Direction.Y_POS ? 2 : 3;
-    }
-
-    @Override
-    public Connection getItemIOForSide(Direction dir) {
-        return dir == Direction.Y_POS ? Connection.INPUT : Connection.OUTPUT;
-
     }
 
     @Override
@@ -50,7 +28,8 @@ public class TileEntityLVRecycler extends TileEntityLVMachineBase implements IIt
          First it checks if slot 2 (input) is empty, or if energy is 0. If either is true then return false.
          Finally, at the bottom is bunch of boolean checks.
     */
-    private boolean canProduce() {
+    @Override
+    public boolean canProduce() {
         boolean hasEnergy = energy > 0;
         if (slots[2] == null || !hasEnergy) return false;
 
@@ -71,7 +50,8 @@ public class TileEntityLVRecycler extends TileEntityLVMachineBase implements IIt
      If it's null then it copies the recipe output stack, otherwise it adds onto the output stack.
      Finally, it decreases the input stacksize.
     */
-    private void produceItem() {
+    @Override
+    public void produceItem() {
         if (canProduce()) {
             Random rand = new Random();
             ItemStack output = null;
@@ -110,7 +90,7 @@ public class TileEntityLVRecycler extends TileEntityLVMachineBase implements IIt
                     worldObj.markBlockNeedsUpdate(x, y, z);
                 }
 
-                if ((slots[2] == null || energy < 0) && active) {
+                if (active && !canProduce()) {
                     machineTick = 0;
                     active = false;
                     worldObj.markBlockNeedsUpdate(x, y, z);
