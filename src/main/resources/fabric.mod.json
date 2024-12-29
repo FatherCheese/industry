@@ -3,22 +3,13 @@
   "id": "industry",
   "version": "${version}",
 
-  "name": "Industry2",
-  "description": "This mod adds industrial machines to your BTA world.",
+  "name": "Industry",
+  "description": "A retake of IC2 and Buildcraft for BTA!",
   "authors": [
     "Cookie Cakes"
   ],
   "contributors": [
-    "AzureLMAO (original helper)",
-    "Martin (upgrade code)",
-    "Useless (coding help)",
-    "Apollo (coding help)",
-    "Lyzantra (coding help)",
-    "Nuke (coding help)",
-    "Killi (coding help)",
-    "SamuelDeboni (pull requests)",
-    "The MidFord (textures)",
-    "Mzov (textures)"
+    "TeamPort"
   ],
   "contact": {
     "homepage": "",
@@ -31,20 +22,10 @@
   "environment": "*",
   "entrypoints": {
     "beforeGameStart": [
-      "cookie.industry.Industry2"
-    ],
-    "beforeClientStart": [
-      "cookie.industry.Industry2"
+      "teamport.industry.Industry"
     ],
     "recipesReady": [
-      "cookie.industry.core.recipe.RecipesTrommel",
-      "cookie.industry.core.recipe.I2Recipes"
-    ],
-    "btwaila": [
-      "cookie.industry.extra.compat.btwaila.WailaPlugin"
-    ],
-    "terrain-api": [
-      "cookie.industry.extra.compat.terrainapi.TerrainAPIPlugin"
+      "teamport.industry.core.recipe.IndRecipes"
     ]
   },
   "mixins": [

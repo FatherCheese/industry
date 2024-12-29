@@ -82,20 +82,15 @@ dependencies {
 	modImplementation "fabric-loader:fabric-loader:${project.loader_version}"
 
 	// Helper library
+	// If you do not need Halplibe you can comment this line out or delete this line
 	modImplementation "com.github.Turnip-Labs:bta-halplibe:${project.halplibe_version}"
 
-	modImplementation "ModMenu:ModMenu:${project.mod_menu_version}"
-
-	modImplementation files('dependencies/btwaila-1.1.2-7.2-pre2.jar')
-
-	// UselessSolutions
-	modImplementation "com.github.UselessSolutions:TerrainAPI:v${project.terrain_api_version}"
-	modImplementation "com.github.UselessSolutions:dragonfly:${project.dragonfly_version}"
-
 	// Catalyst
-	modImplementation files('dependencies/catalyst-core-1.4.4.jar')
-	modImplementation files('dependencies/catalyst-energy-1.0.13.jar')
-	modImplementation files('dependencies/catalyst-fluids-1.1.7.jar')
+	modImplementation(files("lib/catalyst-core-1.8.1.jar"))
+	modImplementation(files("lib/catalyst-energy-1.1.0-7.2_01.jar"))
+	modImplementation(files("lib/catalyst-fluids-1.4.0-7.2_01.jar"))
+
+	modImplementation "ModMenu:ModMenu:${project.mod_menu_version}"
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"
 	implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.16.0"

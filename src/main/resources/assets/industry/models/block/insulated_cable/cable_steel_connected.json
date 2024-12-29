@@ -1,8 +1,0 @@
-{
-	"parent": "industry:block/cable_base_connected",
-	"ambientocclusion": false,
-	"textures": {
-		"texture": "industry:block/insulated_steel_cable",
-		"particle": "industry:block/insulated_steel_cable"
-	}
-}
